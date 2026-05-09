@@ -1,0 +1,4 @@
+# Ignore the generated hardware config
+hosts/*/hardware-configuration.nix
+hardware-configuration.nix
+
