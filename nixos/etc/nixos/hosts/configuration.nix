@@ -3,8 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    inputs.silentSDDM.nixosModules.default
-
     ../modules/boot.nix
     ../modules/networking.nix
     ../modules/locale.nix

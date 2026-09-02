@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 {
   users.users.anand = {
     isNormalUser = true;
@@ -7,9 +6,4 @@
     extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
-  users.users.akhil = {
-    isNormalUser = true;
-    description = "akhil";
-    extraGroups = [ "networkmanager" ];
-  };
 }
