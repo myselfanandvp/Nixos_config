@@ -29,8 +29,8 @@ mangowm = {
    system = "x86_64-linux";
    specialArgs = {inherit inputs;};
    modules=[
-            ./hosts/configuration.nix
-	          ./hosts/noctalia.nix
+            ./hosts/desktop/configuration.nix
+	          ./hosts/desktop/noctalia.nix
              home-manager.nixosModules.home-manager{
              home-manager.useGlobalPkgs = true;
              home-manager.useUserPackages = true;
