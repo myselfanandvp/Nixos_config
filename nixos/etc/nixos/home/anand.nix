@@ -5,7 +5,7 @@ inputs.noctalia.homeModules.default
 ./kitty.nix
 ./git.nix
 ./noctalia.nix
-./ghostty.nix
+# ./ghostty.nix
 ];
 home.username = "anand";
 home.homeDirectory = "/home/anand";
@@ -23,4 +23,5 @@ xdg.configFile."starship.toml".source = ./starship.toml;
 xdg.configFile."herdr".source = ./herdr;
 xdg.configFile."fish".source = ./fish;
 xdg.configFile."fastfetch".source = ./fastfetch;
+xdg.configFile."ghostty".source = ./ghostty;
 }
