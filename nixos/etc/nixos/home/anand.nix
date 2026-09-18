@@ -13,8 +13,12 @@ home.enableNixpkgsReleaseCheck = false;
 
 programs.git = {
   enable = true;
-  userName = "myselfanandvp";
-  userEmail = "mailanandvp@gmail.com";
+  settings={
+      user={
+          name="myselfanandvp";
+          email="mailanandvp@gmail.com";
+        };
+    };
 };
 
 programs.noctalia = {
