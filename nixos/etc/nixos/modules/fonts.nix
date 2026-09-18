@@ -63,46 +63,7 @@
 
     fontconfig = {
       enable = true;
-
-      defaultFonts = {
-        sansSerif = [
-          "Noto Sans"
-          "Noto Sans CJK"
-        ];
-
-        serif = [
-          "Noto Serif"
-          "Noto Serif CJK"
-        ];
-
-        monospace = [
-          "JetBrainsMono Nerd Font"
-          "Noto Sans Mono"
-        ];
-
-        emoji = [
-          "Noto Color Emoji"
-          "Twemoji"
-        ];
-      };
     };
   };
 
-programs.kitty = {
-  enable = true;
-  
-  font = {
-    name = "JetBrainsMono Nerd Font";
-    size = 12;
-  };
-
-  settings = {
-    background_opacity = "0.95";
-    confirm_os_window_close = 0; # Disables confirmation prompt on exit
-    enable_audio_bell = false;
-  };
-
-  # Optional: Choose a built-in color theme name (run `kitty +kitten themes` to see options)
-  themeFile = "Catppuccin-Mocha"; 
-};
 }

@@ -5,6 +5,8 @@
     stow
     fastfetch
     lua
+    ghostty
+    tmux
     kitty
     brave
     mpv
