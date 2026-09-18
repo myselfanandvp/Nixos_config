@@ -37,6 +37,8 @@
     alejandra     # Nix formatter
     stylua        # Lua formatter
     eza
+    yazi
+    less
     ];
 
 }

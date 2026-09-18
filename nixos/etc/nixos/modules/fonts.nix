@@ -7,6 +7,13 @@
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-color-emoji
+      google-fonts
+      fira-code
+      fira-code-symbols
+      mplus-outline-fonts.githubRelease
+      dina-font
+      proggyfonts
+
 
       # Noto language/script coverage
       noto-fonts-extra
@@ -39,10 +46,13 @@
       nerd-fonts.profont
       nerd-fonts.terminess-ttf
       nerd-fonts.victor-mono
+      nerd-fonts.monaspace
 
       # ── Emoji / symbol fonts ────────────────────────────────────
       twemoji-color-font
       noto-fonts-color-emoji
+      noto-fonts-monochrome-emoji
+
 
       # ── Other broad Unicode coverage ────────────────────────────
       dejavu_fonts
