@@ -2,10 +2,14 @@
 {
      fonts = {
     packages = with pkgs; [
-      noto-fonts noto-fonts-cjk-sans noto-fonts-color-emoji
-      liberation_ttf fira-code
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.fira-code
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
+      liberation_ttf 
+      fira-code
+      jetbrains-mono
+      fira-code
+
     ];
     fontconfig.enable = true;
   };
