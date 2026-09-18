@@ -63,6 +63,28 @@
 
     fontconfig = {
       enable = true;
+
+      defaultFonts = {
+        sansSerif = [
+          "Noto Sans"
+          "Noto Sans CJK"
+        ];
+
+        serif = [
+          "Noto Serif"
+          "Noto Serif CJK"
+        ];
+
+        monospace = [
+          "JetBrainsMono Nerd Font"
+          "Noto Sans Mono"
+        ];
+
+        emoji = [
+          "Noto Color Emoji"
+          "Twemoji"
+        ];
+      };
     };
   };
 
