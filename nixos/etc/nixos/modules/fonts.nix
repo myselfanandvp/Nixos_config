@@ -55,6 +55,30 @@
       unifont_upper
     ];
 
-      fonts.fontconfig.enable = true;
+    fontconfig = {
+      enable = true;
+
+      defaultFonts = {
+        sansSerif = [
+          "Noto Sans"
+          "Noto Sans CJK HK"
+        ];
+
+        serif = [
+          "Noto Serif"
+          "Noto Serif CJK HK"
+        ];
+
+        monospace = [
+          "JetBrainsMono Nerd Font"
+          "Noto Sans Mono"
+        ];
+
+        emoji = [
+          "Noto Color Emoji"
+          "Twemoji"
+        ];
+      };
+    };
   };
 }
