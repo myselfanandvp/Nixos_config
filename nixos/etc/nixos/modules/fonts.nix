@@ -1,29 +1,29 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
+
 {
   fonts = {
+    enableDefaultPackages = true;
+
     packages = with pkgs; [
-      # ── Google / Noto fonts ─────────────────────────────────────
+      # ── Google / Noto / Core Fonts ──────────────────────────────
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-color-emoji
+      noto-fonts-extra
       google-fonts
+      
+      # ── Base Monospace Fonts ────────────────────────────────────
       fira-code
       fira-code-symbols
       mplus-outline-fonts.githubRelease
       dina-font
       proggyfonts
-
-
-      # Noto language/script coverage
-      noto-fonts-extra
-
-      # ── Liberation fonts ────────────────────────────────────────
       liberation_ttf
-      liberation_ttf_bin
+      dejavu_fonts
 
-      # ── Nerd Fonts ──────────────────────────────────────────────
-      nerd-fonts.symbols-only
+      # ── Nerd Fonts (Full Patched Fonts) ─────────────────────────
+      # Note: 'symbols-only' is intentionally excluded to avoid symbol lookup collisions in Kitty
       nerd-fonts.jetbrains-mono
       nerd-fonts.fira-code
       nerd-fonts.fira-mono
@@ -49,43 +49,12 @@
       nerd-fonts.victor-mono
       nerd-fonts.monaspace
 
-      # ── Emoji / symbol fonts ────────────────────────────────────
+      # ── Emoji & Unicode Coverage ────────────────────────────────
       twemoji-color-font
-      noto-fonts-color-emoji
-      noto-fonts-monochrome-emoji
-
-
-      # ── Other broad Unicode coverage ────────────────────────────
-      dejavu_fonts
       unifont
       unifont_upper
     ];
 
-    fontconfig = {
-      enable = true;
-
-      defaultFonts = {
-        sansSerif = [
-          "Noto Sans"
-          "Noto Sans CJK"
-        ];
-
-        serif = [
-          "Noto Serif"
-          "Noto Serif CJK"
-        ];
-
-        monospace = [
-          "JetBrainsMono Nerd Font"
-          "Noto Sans Mono"
-        ];
-
-        emoji = [
-          "Noto Color Emoji"
-          "Twemoji"
-        ];
-      };
-    };
+      fonts.fontconfig.enable = true;
   };
-
 }

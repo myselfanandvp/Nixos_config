@@ -7,7 +7,6 @@
     lua
     ghostty
     tmux
-    kitty
     brave
     mpv
     obs-studio
@@ -39,6 +38,7 @@
     eza
     less
     trash-cli
+    kitty
     ];
 
 }

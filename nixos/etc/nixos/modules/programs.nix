@@ -15,10 +15,9 @@ programs.yazi = {
     plugins = with pkgs.yaziPlugins; {
       mount = mount;
       zoom = zoom;
-      full-border = full-border;
+      "full-border" = full-border;
       restore = restore;
     };
   };
-
 
 }
