@@ -6,6 +6,7 @@ inputs.noctalia.homeModules.default
 ./git.nix
 ./noctalia.nix
 ./ghostty.nix
+./niri.nix
 ];
 home.username = "anand";
 home.homeDirectory = "/home/anand";

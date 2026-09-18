@@ -1,0 +1,3 @@
+spawn-at-startup "noctalia"
+spawn-at-startup "flatpak run com.github.wwmm.easyeffects"
+// spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"

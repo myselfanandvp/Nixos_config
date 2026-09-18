@@ -1,0 +1,27 @@
+input {
+    keyboard {
+        xkb { 
+          layout "us"
+          // options "caps:swapescape"
+        }
+        numlock
+    }
+
+    touchpad {
+        accel-profile "adaptive"
+        tap
+        natural-scroll
+        scroll-factor 1.0
+    }
+
+    mouse { 
+        accel-profile "adaptive"
+        scroll-factor 1.0
+    }
+
+    trackpoint { }
+    focus-follows-mouse max-scroll-amount="50%"
+}
+environment {
+  QT_QPA_PLATFORMTHEME "qt6ct"
+}

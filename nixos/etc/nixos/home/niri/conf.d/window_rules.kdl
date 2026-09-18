@@ -1,0 +1,120 @@
+
+window-rule {
+    match title=r#"(?i).*sharing.*screen.*"#
+    open-floating false
+    
+}
+
+
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
+}
+
+window-rule {
+    match title=r#"(?i).*workfolio*"#
+    open-floating false
+    open-on-workspace "workfolio"
+}
+
+
+window-rule {
+    match title="Workfolio*"
+    open-floating false
+    open-on-workspace "workfolio"
+}
+
+window-rule {
+    match title=r#"(?i).*meet.google.com *"#
+    open-floating false
+    open-on-workspace "workfolio"
+    open-focused false
+}
+
+
+
+
+window-rule{
+  match title="Calculator"
+  match app-id="org.gnome.Calculator"
+  open-floating true
+  default-column-width {proportion 0.10;}
+  default-window-height {fixed 200;}
+  open-focused true
+default-floating-position x=0 y=200 relative-to="top"
+}
+
+window-rule{
+  match title="Home"
+  match app-id="org.gnome.Nautilus"
+  open-floating true
+  default-column-width {proportion 0.55;}
+  default-window-height {fixed 700;}
+  open-focused true
+  default-floating-position x=0 y=200 relative-to="top"
+}
+
+window-rule{
+  match title="^Home*"
+  match app-id="^org.gnome.Nautilus*"
+  open-floating true
+  default-column-width {proportion 0.55;}
+  default-window-height {fixed 700;}
+  open-focused true
+  default-floating-position x=0 y=200 relative-to="top"
+}
+
+
+window-rule {
+  match title="^Yazi"
+  match app-id="yazi-float"
+  open-floating true 
+  default-column-width {proportion 0.80;}
+  default-window-height {fixed 700;}
+  open-focused true
+}
+
+
+
+window-rule {
+  match title="Floating_Term"
+  match app-id="float-term" 
+  default-column-width {proportion 0.55;}
+  default-window-height {fixed 700;}
+  open-floating true
+  open-focused true
+}
+
+
+
+window-rule {
+  match title="Popsicle"
+  match app-id="^AppRun.wrapped*" 
+  default-column-width {proportion 0.20;}
+  default-window-height {fixed 300;}
+  open-floating true
+  open-focused true
+}
+
+
+
+
+window-rule {
+  match title="Btop"
+  match app-id="btop-float"
+  open-floating true 
+  default-column-width {proportion 0.80;}
+  default-window-height {fixed 700;}
+  open-focused true
+}
+
+
+window-rule{
+  match is-active=false
+  opacity 0.95
+}

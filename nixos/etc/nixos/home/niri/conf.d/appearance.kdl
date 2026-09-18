@@ -1,0 +1,11 @@
+
+overview {
+  workspace-shadow {
+    off
+  }
+}
+
+
+hotkey-overlay { 
+skip-at-startup
+}

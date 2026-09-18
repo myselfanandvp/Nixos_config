@@ -1,0 +1,7 @@
+workspace "workfolio"{
+  open-on-output "eDP-1"
+}
+
+
+
+

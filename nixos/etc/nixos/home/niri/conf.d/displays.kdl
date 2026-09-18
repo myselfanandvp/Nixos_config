@@ -1,0 +1,28 @@
+output "eDP-1" {
+    mode "1920x1080@60.000"
+    scale 1
+    position x=0 y=0
+}   
+
+
+output "HDMI-A-1"{
+mode "1366x768@59.790"
+  scale 1
+  position x=1920 y=0
+}
+
+
+// adding monitor to the left 
+// output "eDP-1" {
+//     mode "1920x1080@60.000"
+//     scale 1
+//     position x=1366 y=0
+// }
+//
+// output "HDMI-A-1" {
+//     mode "1366x768@59.790"
+//     scale 1
+//     position x=0 y=0
+// }
+//
+//
