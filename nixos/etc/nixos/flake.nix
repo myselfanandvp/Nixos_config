@@ -24,22 +24,40 @@ mangowm = {
   };
 
   outputs = { self, nixpkgs,home-manager,... } @inputs: {
+  nixosConfigurations = {
+        # Desktop Configuration
+      desktop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/desktop/configuration.nix
+          ./hosts/desktop/noctalia.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.anand = ./home/anand.nix;
+          }
+        ];
+      };
 
-  nixosConfigurations."nixos" = nixpkgs.lib.nixosSystem{
-   system = "x86_64-linux";
-   specialArgs = {inherit inputs;};
-   modules=[
-            ./hosts/desktop/configuration.nix
-	          ./hosts/desktop/noctalia.nix
-             home-manager.nixosModules.home-manager{
-             home-manager.useGlobalPkgs = true;
-             home-manager.useUserPackages = true;
-             home-manager.extraSpecialArgs = {
-                inherit inputs;
-              };
-             home-manager.users.anand = ./home/anand.nix;
-	}
-          ];
-	};
-  	};
+      laptop= nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/desktop/configuration.nix
+          ./hosts/desktop/noctalia.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = { inherit inputs; };
+            home-manager.users.anand = ./home/anand.nix;
+          }
+        ];
+      };
+
+
+    };
+
+};
 }
