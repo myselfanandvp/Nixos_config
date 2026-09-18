@@ -10,6 +10,7 @@ programs.ghostty={
     font-family = "JetBrainsMono Nerd Font Mono";
     font-size = 14;
     };
+    extraConfig = builtins.readFile ./ghostty/config;
   };
 
   }
