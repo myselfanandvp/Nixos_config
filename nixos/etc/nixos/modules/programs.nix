@@ -9,4 +9,15 @@
   zlib
   ];
 
+
+programs.yazi = {
+    enable = true;
+    plugins = with pkgs.yaziPlugins; {
+      mount = mount;
+      zoom = zoom;
+      full-border = full-border;
+      restore = restore;
+    };
+  };
+
 }

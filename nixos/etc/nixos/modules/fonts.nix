@@ -23,6 +23,7 @@
       liberation_ttf_bin
 
       # ── Nerd Fonts ──────────────────────────────────────────────
+      nerd-fonts.symbols-only
       nerd-fonts.jetbrains-mono
       nerd-fonts.fira-code
       nerd-fonts.fira-mono
@@ -86,4 +87,22 @@
       };
     };
   };
+
+programs.kitty = {
+  enable = true;
+  
+  font = {
+    name = "JetBrainsMono Nerd Font";
+    size = 12;
+  };
+
+  settings = {
+    background_opacity = "0.95";
+    confirm_os_window_close = 0; # Disables confirmation prompt on exit
+    enable_audio_bell = false;
+  };
+
+  # Optional: Choose a built-in color theme name (run `kitty +kitten themes` to see options)
+  themeFile = "Catppuccin-Mocha"; 
+};
 }
