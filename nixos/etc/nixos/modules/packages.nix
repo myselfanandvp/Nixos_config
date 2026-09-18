@@ -30,6 +30,12 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-wlr
     vimPlugins.nvim-treesitter.withAllGrammars 
+    nixd          # Nix LSP
+    pyright       # Python LSP
+    lua-language-server
+    # Formatters & Linters
+    alejandra     # Nix formatter
+    stylua        # Lua formatter
     ];
 
 }
