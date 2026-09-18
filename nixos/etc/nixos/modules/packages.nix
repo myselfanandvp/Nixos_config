@@ -36,6 +36,7 @@
     # Formatters & Linters
     alejandra     # Nix formatter
     stylua        # Lua formatter
+    eza
     ];
 
 }
