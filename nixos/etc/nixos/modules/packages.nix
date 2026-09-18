@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     stow
+    fastfetch
     lua
     kitty
     brave
