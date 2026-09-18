@@ -29,7 +29,6 @@
               };
              home-manager.users.anand = ./home/anand.nix;
 	}
-
           ];
 	};
   	};
