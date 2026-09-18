@@ -11,6 +11,21 @@
     variant = "";
   };
 
-  programs.niri.enable = true;
+
+  programs.niri={
+      enable =true;
+    };
   programs.mango.enable = true;
+
+xdg.portal = {
+  enable = true;
+  extraPortals = [
+    pkgs.xdg-desktop-portal-gtk
+    pkgs.xdg-desktop-portal-wlr
+    pkgs.xdg-desktop-portal-gnome
+  ];
+};   
+
+
+
 }

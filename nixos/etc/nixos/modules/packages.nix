@@ -26,9 +26,6 @@
     xwayland-satellite
     gcc
     fuzzel
-    xdg-desktop-portal-gnome
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-wlr
     vimPlugins.nvim-treesitter.withAllGrammars 
     nixd          # Nix LSP
     pyright       # Python LSP
