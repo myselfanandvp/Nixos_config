@@ -50,6 +50,4 @@ xdg.portal = {
   ];
 };   
 
-environment.variables.XCURSOR_SIZE = "32";
-environment.variables.XCURSOR_THEME = "Adwaita";
 }
