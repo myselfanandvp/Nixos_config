@@ -40,6 +40,7 @@
     less
     trash-cli
     kitty
+    herdr
     ];
 
 environment.variables.XCURSOR_SIZE = "32";
