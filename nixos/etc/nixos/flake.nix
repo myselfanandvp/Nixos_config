@@ -3,27 +3,14 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    qylock.url = "github:Darkkal44/qylock";
+    noctalia.url = "github:noctalia-dev/noctalia";
     home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    noctalia = {
-    url = "github:noctalia-dev/noctalia";
-    inputs.nixpkgs.follows  = "nixpkgs";
-
-    };
-
-	yazi={
-    url = "github:sxyazi/yazi";
-    inputs.nixpkgs.follows  = "nixpkgs";
-    };
-mangowm = {
-      url = "github:mangowm/mango";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    yazi.url = "github:sxyazi/yazi";
+    mangowm.url = "github:mangowm/mango";
   };
 
-  outputs = { self, nixpkgs,home-manager,... } @inputs: {
+  outputs = { self, nixpkgs,home-manager,qylock,... } @inputs: {
   nixosConfigurations = {
         # Desktop Configuration
       desktop = nixpkgs.lib.nixosSystem {
@@ -32,6 +19,7 @@ mangowm = {
         modules = [
           ./hosts/desktop/configuration.nix
           ./hosts/desktop/noctalia.nix
+          qylock.nixosModules.default
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

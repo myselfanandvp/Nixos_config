@@ -3,7 +3,6 @@
 {
   services.xserver.enable = true;
 
-  services.displayManager.sddm.enable = true;
 
 
   services.xserver.xkb = {
@@ -11,6 +10,31 @@
     variant = "";
   };
 
+
+
+ services.displayManager.sddm = {
+    enable = true;
+  };
+
+services.displayManager.sddm.wayland.enable = true;
+
+programs.qylock = {
+  enable = true;
+  theme = "Forest";
+  # quickshell.enable = true;
+
+  themeOptions = {
+    terraria.backgroundMode = "time";
+    Genshin.backgroundMode = "time";
+
+    clockwork.orbital = {
+      themeMode = "dark";
+      enableWindup = true;
+    };
+
+    osu.gameMode = "menu";
+  };
+};
 
   programs.niri={
       enable =true;
@@ -26,6 +50,6 @@ xdg.portal = {
   ];
 };   
 
-
-
+environment.variables.XCURSOR_SIZE = "32";
+environment.variables.XCURSOR_THEME = "Adwaita";
 }

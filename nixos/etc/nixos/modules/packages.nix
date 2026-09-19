@@ -14,6 +14,7 @@
     starship
     discord
     rustc
+    nautilus
     go
     vlc
     fd
@@ -41,4 +42,6 @@
     kitty
     ];
 
+environment.variables.XCURSOR_SIZE = "32";
+environment.variables.XCURSOR_THEME = "Adwaita";
 }

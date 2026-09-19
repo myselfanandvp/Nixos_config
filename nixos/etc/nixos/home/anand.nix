@@ -14,6 +14,18 @@ home.enableNixpkgsReleaseCheck = false;
 home.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
 ];
+home.pointerCursor = {
+  enable = true;
+  package = pkgs.bibata-cursors;
+  name = "Bibata-Modern-Classic";
+  size = 32;
+};
+
+home.pointerCursor.hyprcursor = {
+  enable = true;
+  size = 32;
+};   
+
 xdg.configFile."niri".source = ./niri;
 xdg.configFile."nvim".source = ./nvim;
 xdg.configFile."mango".source = ./mango;
