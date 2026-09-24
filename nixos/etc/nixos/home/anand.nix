@@ -27,9 +27,9 @@ home.packages = with pkgs; [
 ];
 home.pointerCursor = {
   enable = true;
-  package = pkgs.bibata-cursors;
-  name = "Bibata-Modern-Classic";
-  size = 32;
+  package = pkgs.volantes-cursors;
+  name = "volantes_cursors";
+  size = 18;
 };
 
 home.pointerCursor.hyprcursor = {
@@ -37,15 +37,15 @@ home.pointerCursor.hyprcursor = {
   size = 18;
 };   
 
-xdg.configFile."niri".source = ./niri;
-xdg.configFile."hypr".source = ./hypr;
-xdg.configFile."nvim".source = ./nvim;
-xdg.configFile."yazi".source = ./yazi;
-xdg.configFile."starship.toml".source = ./starship.toml;
-xdg.configFile."herdr".source = ./herdr;
-xdg.configFile."fish".source = ./fish;
-xdg.configFile."fastfetch".source = ./fastfetch;
-xdg.configFile."ghostty".source = ./ghostty;
+# xdg.configFile."niri".source = ./niri;
+# xdg.configFile."hypr".source = ./hypr;
+# xdg.configFile."nvim".source = ./nvim;
+# xdg.configFile."yazi".source = ./yazi;
+# xdg.configFile."starship.toml".source = ./starship.toml;
+# xdg.configFile."herdr".source = ./herdr;
+# xdg.configFile."fish".source = ./fish;
+# xdg.configFile."fastfetch".source = ./fastfetch;
+# xdg.configFile."ghostty".source = ./ghostty;
 
  gtk = {
     enable = true;
@@ -87,14 +87,5 @@ xdg.configFile."ghostty".source = ./ghostty;
   home.sessionVariables = {
     QT_QPA_PLATFORMTHEME = "qt6ct";
   };
-
-
-
-
-
-
-
-
-
 
 }

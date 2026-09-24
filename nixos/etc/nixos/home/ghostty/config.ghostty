@@ -1,9 +1,0 @@
-custom-shader = ./sonic_boom_cursor.glsl
-custom-shader = ./cursor_warp.glsl
-background-opacity = 0.9
-adjust-cursor-thickness = 50%
-background-blur = true 
-font-family = JetBrains Mono
-font-size = 14
-# ...
-theme = noctalia

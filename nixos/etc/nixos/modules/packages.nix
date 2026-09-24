@@ -11,6 +11,7 @@
     tree
     less
     trash-cli
+    stow
 
 
     # Editors / Development
@@ -25,6 +26,7 @@
     ripgrep
     lua
     
+
 
     # Terminal
     ghostty
