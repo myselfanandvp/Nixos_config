@@ -37,9 +37,8 @@
     obs-studio
     mediawriter
     inputs.zen.packages.${pkgs.stdenv.hostPlatform.system}.default
-
-    # nautilus
-    thunar
+    nautilus
+    # thunar
 
     # Containers
     docker
