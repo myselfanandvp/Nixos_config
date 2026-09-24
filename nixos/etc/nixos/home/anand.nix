@@ -27,9 +27,8 @@ home.pointerCursor = {
 # };   
 #
 xdg.configFile."niri".source = ./niri;
-xdg.configFile."nvim".source = ./nvim;
-xdg.configFile."mango".source = ./mango;
 xdg.configFile."hypr".source = ./hypr;
+xdg.configFile."nvim".source = ./nvim;
 xdg.configFile."yazi".source = ./yazi;
 xdg.configFile."starship.toml".source = ./starship.toml;
 xdg.configFile."herdr".source = ./herdr;
