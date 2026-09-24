@@ -19,6 +19,12 @@
           qt6Packages.qt5compat
           qt6Packages.qtmultimedia
       ];
+    setupScript = ''
+        ${pkgs.xrdb}/bin/xrdb -merge - <<EOF
+        Xcursor.theme: Bibata-Modern-Ice
+        Xcursor.size: 20
+        EOF
+      '';
     };
 
 

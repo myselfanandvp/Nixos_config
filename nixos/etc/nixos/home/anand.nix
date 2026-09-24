@@ -1,12 +1,26 @@
 {config,pkgs,inputs,...}:
+
+let
+  DotConfig = "${config.home.homeDirectory}/Nixos_config/config/.config";
+  outOfStore = config.lib.file.mkOutOfStoreSymlink;
+in
+
 {
 imports =[
 inputs.noctalia.homeModules.default
 ./git.nix
 ./noctalia.nix
 ./neovim.nix
-./yazi.nix
+# ./yazi.nix
+  (import ./yazi.nix {
+      inherit config pkgs outOfStore;
+    })
 ];
+
+
+
+
+
 home.username = "anand";
 home.homeDirectory = "/home/anand";
 home.stateVersion = "26.05";
@@ -26,6 +40,15 @@ home.packages = with pkgs; [
   herdr
 ];
 
+  xdg.configFile = {
+    "fish".source = outOfStore "${DotConfig}/fish";
+    "starship.toml".source = outOfStore "${DotConfig}/starship.toml";
+    "kitty".source = outOfStore "${DotConfig}/kitty";
+    "hypr".source = outOfStore "${DotConfig}/hypr";
+    "niri".source = outOfStore "${DotConfig}/niri";
+    "mpv".source = outOfStore "${DotConfig}/mpv";
+    "fastfetch".source = outOfStore "${DotConfig}/fastfetch";
+};
 
 home.pointerCursor = {
   enable = true;
@@ -39,7 +62,6 @@ home.pointerCursor.hyprcursor = {
   size = 18;
 };   
 
-xdg.configFile."nvim".source = ./nvim;
 
  gtk = {
     enable = true;

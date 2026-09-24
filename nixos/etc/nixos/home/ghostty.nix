@@ -11,4 +11,8 @@
       font-size = 14;
     };
   };
+ xdg.configFile."ghostty" = {
+    source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/Nixos_config/config/.config/ghostty";
+  };
 }

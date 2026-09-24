@@ -28,4 +28,8 @@ programs.kitty =  {
   };
 
 };
+
+
+xdg.configFile."kitty".source = config.lib.file.mkOutOfStoreSymlink ../../../../../Nixos_config/config/.config/kitty;
+
   }
