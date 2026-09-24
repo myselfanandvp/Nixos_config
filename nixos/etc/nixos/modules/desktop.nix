@@ -14,21 +14,22 @@
     extraPackages = [ pkgs.sddm-astronaut ];
   };
 
-  programs.niri.enable = true;
+  programs.niri = {
+      enable = true;
+    };
 
   programs.hyprland = {
     enable = true;
+    withUWSM =false;
     xwayland.enable = true;
   };
 
+
   xdg.portal = {
     enable = true;
-
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal-wlr
-      pkgs.xdg-desktop-portal-gnome
-    ];
+    extraPortals = with pkgs; [
+    xdg-desktop-portal-hyprland 
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-gnome ];
   };
 }

@@ -272,6 +272,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_8": {
+      "locked": {
+        "lastModified": 1790185690,
+        "narHash": "sha256-xJ+X4hBtOcAFGBOe5nAMyMUeF9foJBmIOu3NjBqBycU=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "4975466d324710c576dc11ad614684e6bd8cad8e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "noctalia": {
       "inputs": {
         "nixpkgs": "nixpkgs_5"
@@ -318,7 +334,8 @@
         "nixpkgs": "nixpkgs_4",
         "noctalia": "noctalia",
         "qylock": "qylock",
-        "yazi": "yazi"
+        "yazi": "yazi",
+        "zen": "zen"
       }
     },
     "rust-overlay": {
@@ -427,6 +444,24 @@
       "original": {
         "owner": "sxyazi",
         "repo": "yazi",
+        "type": "github"
+      }
+    },
+    "zen": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_8"
+      },
+      "locked": {
+        "lastModified": 1790240349,
+        "narHash": "sha256-uMC3vdi/AdbRLsKCJle4VAIV9e3HEJhe4CZzvA0FXNw=",
+        "owner": "youwen5",
+        "repo": "zen-browser-flake",
+        "rev": "6979f283e596eead5459a6f181dbb735a10c8588",
+        "type": "github"
+      },
+      "original": {
+        "owner": "youwen5",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }

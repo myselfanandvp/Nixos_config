@@ -11,7 +11,6 @@
     tree
     less
     trash-cli
-
     #sddm themes
     sddm-astronaut
 
@@ -26,6 +25,7 @@
     gnumake
     ripgrep
     lua
+    
 
     # Terminal
     ghostty
@@ -37,6 +37,8 @@
     vlc
     obs-studio
     mediawriter
+    inputs.zen.packages.${pkgs.stdenv.hostPlatform.system}.default
+
     # nautilus
     thunar
 

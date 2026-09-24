@@ -34,6 +34,12 @@ services.pipewire = {
     # Use the WirePlumber session manager
     wireplumber.enable = true;
   };
+services.flatpak.enable = true;
 
+systemd.services.flatpak-repo = {
+    script = ''
+      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    '';
+  };
 
 }

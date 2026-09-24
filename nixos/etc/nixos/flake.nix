@@ -9,9 +9,10 @@
     yazi.url = "github:sxyazi/yazi";
     mangowm.url = "github:mangowm/mango";
     helium.url = "github:oxcl/nix-flake-helium-browser";
+    zen.url =  "github:youwen5/zen-browser-flake";
   };
 
-  outputs = { self, nixpkgs,home-manager,qylock,helium,... } @inputs: {
+  outputs = { self, nixpkgs,home-manager,qylock,helium,zen,... } @inputs: {
   nixosConfigurations = {
         # Desktop Configuration
       desktop = nixpkgs.lib.nixosSystem {
