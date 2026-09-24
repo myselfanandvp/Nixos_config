@@ -2,10 +2,10 @@
 {
 imports =[
 inputs.noctalia.homeModules.default
-./kitty.nix
+# ./kitty.nix
 ./git.nix
 ./noctalia.nix
-./tmux.nix
+# ./tmux.nix
 ./neovim.nix
 ];
 home.username = "anand";
@@ -39,7 +39,7 @@ home.pointerCursor.hyprcursor = {
 
 # xdg.configFile."niri".source = ./niri;
 # xdg.configFile."hypr".source = ./hypr;
-# xdg.configFile."nvim".source = ./nvim;
+xdg.configFile."nvim".source = ./nvim;
 # xdg.configFile."yazi".source = ./yazi;
 # xdg.configFile."starship.toml".source = ./starship.toml;
 # xdg.configFile."herdr".source = ./herdr;
