@@ -8,6 +8,7 @@
     home-manager.url = "github:nix-community/home-manager";
     yazi.url = "github:sxyazi/yazi";
     mangowm.url = "github:mangowm/mango";
+    helium-flake.url = "github:oxcl/nix-flake-helium-browser";
   };
 
   outputs = { self, nixpkgs,home-manager,qylock,... } @inputs: {

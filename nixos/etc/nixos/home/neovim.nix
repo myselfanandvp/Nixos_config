@@ -8,6 +8,8 @@
 
     extraPackages = with pkgs; [
       nodejs_24
+      go
+      rustc
       python314
       nixd
       pyright

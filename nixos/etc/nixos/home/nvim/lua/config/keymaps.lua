@@ -4,11 +4,18 @@
 --
 local Util = require("lazyvim.util")
 
-vim.keymap.set("n", "<Esc>/", function()
+local map = vim.keymap.set
+
+map("n", "<Esc>/", function()
   Util.terminal(nil, { cwd = Util.root() })
 end, { desc = "Toggle Terminal" })
 
-vim.keymap.set("t", "<Esc>/", function()
+map("t", "<Esc>/", function()
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-\\><C-n>", true, false, true), "n", false)
   Util.terminal(nil, { cwd = Util.root() })
 end, { desc = "Toggle Terminal" })
+
+-- map("n", "<C-h>", "<C-w><", { desc = "Decrease window width" })
+-- map("n", "<C-l>", "<C-w>>", { desc = "Increase window width" })
+-- map("n", "<C-j>", "<C-w>+", { desc = "Increase window height" })
+-- map("n", "<C-k>", "<C-w>-", { desc = "Decrease window height" })

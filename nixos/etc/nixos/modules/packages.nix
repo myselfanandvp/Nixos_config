@@ -25,7 +25,6 @@
     rustc
     gnumake
     ripgrep
-    go
     lua
 
     # Terminal
@@ -34,7 +33,7 @@
 
     # Applications
     brave
-    discord
+    helium
     mpv
     vlc
     obs-studio
