@@ -20,8 +20,6 @@
 
   programs.hyprland = {
     enable = true;
-    withUWSM =false;
-    xwayland.enable = true;
   };
 
 
@@ -31,5 +29,9 @@
     xdg-desktop-portal-hyprland 
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome ];
+  config = {
+     hyprland.default = [ "hyprland" "gtk" ];
+     niri.default = [ "gnome" "gtk" ];
+   };
   };
 }

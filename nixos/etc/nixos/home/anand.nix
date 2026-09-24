@@ -19,6 +19,9 @@ home.packages = with pkgs; [
   adw-gtk3
   bibata-cursors
   papirus-icon-theme
+  gruvbox-plus-icons
+  volantes-cursors
+  nerd-fonts.jetbrains-mono
 ];
 home.pointerCursor = {
   enable = true;
@@ -51,18 +54,18 @@ xdg.configFile."ghostty".source = ./ghostty;
     };
 
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      name = "gruvbox-plus-icons";
+      package = pkgs.gruvbox-plus-icons;
     };
 
     cursorTheme = {
-      name = "Bibata-Modern-Classic";
-      package = pkgs.bibata-cursors;
-      size = 24;
+      name = "volantes-cursors";
+      package = pkgs.volantes-cursors;
+      size = 18;
     };
 
     font = {
-      name = "Adwaita Sans";
+      name = "JetBrainsMono Nerd Font";
       size = 11;
     };
 
