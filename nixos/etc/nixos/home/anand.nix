@@ -6,7 +6,7 @@ inputs.noctalia.homeModules.default
 ./git.nix
 ./noctalia.nix
 ./tmux.nix
-# ./ghostty.nix
+./neovim.nix
 ];
 home.username = "anand";
 home.homeDirectory = "/home/anand";
@@ -24,7 +24,7 @@ home.pointerCursor = {
 
 home.pointerCursor.hyprcursor = {
   enable = true;
-  size = 32;
+  size = 18;
 };   
 
 xdg.configFile."niri".source = ./niri;

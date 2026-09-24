@@ -7,11 +7,11 @@
     vimAlias = true;
 
     extraPackages = with pkgs; [
-      ripgrep
-      fd
-      fzf
-      gcc
-      gnumake
+      nodejs_24
+      python314
+      nixd
+      pyright
+      ruff
       tree-sitter
       lua-language-server
       nil

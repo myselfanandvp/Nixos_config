@@ -8,29 +8,25 @@
     starship
     tmux
     eza
-    fd
     tree
     less
     trash-cli
+
+    #sddm themes
+    sddm-astronaut
 
     # Editors / Development
     git
     neovim
     gh
+    fzf
+    fd
     gcc
     rustc
+    gnumake
+    ripgrep
     go
     lua
-
-    # Language Servers / Tooling
-    nixd
-    pyright
-    ruff
-    lua-language-server
-
-    # Formatters
-    alejandra
-    stylua
 
     # Terminal
     ghostty
@@ -57,7 +53,7 @@
   ];
 
   environment.variables = {
-    XCURSOR_SIZE = "32";
+    XCURSOR_SIZE = "20";
     XCURSOR_THEME = "Adwaita";
   };
 }
