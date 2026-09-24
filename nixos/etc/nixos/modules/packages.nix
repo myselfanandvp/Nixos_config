@@ -33,7 +33,6 @@
 
     # Applications
     brave
-    helium
     mpv
     vlc
     obs-studio

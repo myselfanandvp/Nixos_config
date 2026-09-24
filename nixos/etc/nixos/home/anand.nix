@@ -14,6 +14,11 @@ home.stateVersion = "26.05";
 home.enableNixpkgsReleaseCheck = false;
 home.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
+  nwg-look
+  qt6Packages.qt6ct
+  adw-gtk3
+  bibata-cursors
+  papirus-icon-theme
 ];
 home.pointerCursor = {
   enable = true;
@@ -36,4 +41,55 @@ xdg.configFile."herdr".source = ./herdr;
 xdg.configFile."fish".source = ./fish;
 xdg.configFile."fastfetch".source = ./fastfetch;
 xdg.configFile."ghostty".source = ./ghostty;
+
+ gtk = {
+    enable = true;
+
+    theme = {
+      name = "adw-gtk3-dark";
+      package = pkgs.adw-gtk3;
+    };
+
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+
+    cursorTheme = {
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
+      size = 24;
+    };
+
+    font = {
+      name = "Adwaita Sans";
+      size = 11;
+    };
+
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+    };
+
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+    };
+  };
+
+  qt = {
+    enable = true;
+  };
+
+  home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt6ct";
+  };
+
+
+
+
+
+
+
+
+
+
 }
