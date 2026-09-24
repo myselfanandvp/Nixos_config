@@ -14,14 +14,12 @@
     trash-cli
 
     # Editors / Development
-    neovim
     git
+    neovim
     gh
     gcc
     rustc
     go
-    python3
-    nodejs
     lua
 
     # Language Servers / Tooling
@@ -56,8 +54,6 @@
     xwayland-satellite
     fuzzel
 
-    # Neovim
-    vimPlugins.nvim-treesitter.withAllGrammars
   ];
 
   environment.variables = {

@@ -5,6 +5,7 @@ inputs.noctalia.homeModules.default
 ./kitty.nix
 ./git.nix
 ./noctalia.nix
+./tmux.nix
 # ./ghostty.nix
 ];
 home.username = "anand";
@@ -21,11 +22,11 @@ home.pointerCursor = {
   size = 32;
 };
 
-# home.pointerCursor.hyprcursor = {
-#   enable = true;
-#   size = 32;
-# };   
-#
+home.pointerCursor.hyprcursor = {
+  enable = true;
+  size = 32;
+};   
+
 xdg.configFile."niri".source = ./niri;
 xdg.configFile."hypr".source = ./hypr;
 xdg.configFile."nvim".source = ./nvim;
