@@ -30,43 +30,25 @@
 
 
   programs.qylock = {
-              enable = true;
-              theme = "material-you";          # any directory name under themes/
-              # Optional per-theme tweaks (replaces the interactive prompts):
-              themeOptions = {
-              };
-            };
+  enable = true;
+  theme = "material-you";          # any directory name under themes/
+  # Optional per-theme tweaks (replaces the interactive prompts):
+  themeOptions = {
+  };
+  };
 
 
-  programs.niri.enable = true;
-
-  programs.hyprland={
-      enable = true;
-      withUWSM = false;
-    };
-
+programs.hyprland = {
+  enable = true;
+  package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+  portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+};
 
 xdg.portal = {
   enable = true;
-  extraPortals = with pkgs; [
-    xdg-desktop-portal-hyprland
-    xdg-desktop-portal-gnome
-    xdg-desktop-portal-gtk
-  ];
-  config = {
-    hyprland = {
-      default = [
-        "hyprland"
-        "gtk"
-      ];
-    };
-    niri = {
-      default = [
-        "gnome"
-        "gtk"
-      ];
-    };
-  };
-};
+  xdgOpenUsePortal = true;
+  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  config.common.default = [ "hyprland" "gtk" ];
+};   
 
 }
