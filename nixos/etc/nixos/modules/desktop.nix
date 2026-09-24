@@ -9,7 +9,14 @@
   };
 
 
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm = {
+      enable = true;
+      extraPackages = with pkgs;[
+          kdePackages.qt5compat
+          kdePackages.qtsvg
+          kdePackages.qtdeclarative
+      ];
+    };
   services.displayManager.sddm.wayland.enable = true;
 
 
