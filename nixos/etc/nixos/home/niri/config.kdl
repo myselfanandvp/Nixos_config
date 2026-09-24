@@ -1,4 +1,3 @@
-
 prefer-no-csd
 include "./conf.d/displays.kdl"
 include "./conf.d/animation.kdl"
@@ -11,5 +10,4 @@ include "./conf.d/startup.kdl"
 include "./conf.d/appearance.kdl"
 include "./conf.d/rules.kdl"
 include "./noctalia.kdl"
-
 include "~/.config/niri/noctalia.kdl"

@@ -12,7 +12,8 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 10
+    tiled-state true
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 
@@ -20,6 +21,7 @@ window-rule {
     match title=r#"(?i).*workfolio*"#
     open-floating false
     open-on-workspace "workfolio"
+
 }
 
 
@@ -81,6 +83,8 @@ window-rule {
 
 
 
+
+
 window-rule {
   match title="Floating_Term"
   match app-id="float-term" 
@@ -114,7 +118,5 @@ window-rule {
 }
 
 
-window-rule{
-  match is-active=false
-  opacity 0.95
-}
+
+

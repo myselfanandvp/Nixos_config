@@ -42,8 +42,8 @@ hl.config({
 	},
 
 	decoration = {
-		rounding = 5,
-		rounding_power = 2,
+		rounding = 0,
+		rounding_power = 0,
 
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,
@@ -108,64 +108,24 @@ hl.config({
 
 --    ╭──────────────────────────────────────╮
 --    │    ╭────────────────────────────╮    │
---    │    │      ANIMATION CURVES      │    │
---    │    ╰────────────────────────────╯    │
---    ╰──────────────────────────────────────╯
-
-hl.curve("smoothOut", {
-	type = "bezier",
-	points = {
-		{ 0.25, 0.9 },
-		{ 0.3, 1.0 },
-	},
-})
-
-hl.curve("borderSnap", {
-	type = "bezier",
-	points = {
-		{ 0.4, 0.0 },
-		{ 0.2, 1.0 },
-	},
-})
-
---    ╭──────────────────────────────────────╮
---    │    ╭────────────────────────────╮    │
 --    │    │         ANIMATIONS         │    │
 --    │    ╰────────────────────────────╯    │
 --    ╰──────────────────────────────────────╯
+-- Curves
+hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })
+hl.curve("softInOut", { type = "bezier", points = { { 0.45, 0 }, { 0.25, 1 } } })
+hl.curve("linear", { type = "bezier", points = { { 0, 0 }, { 1, 1 } } })
 
-hl.animation({
-	leaf = "windows",
-	enabled = true,
-	speed = 3,
-	bezier = "smoothOut",
-})
+-- Master switch & default fallbacks
+hl.animation({ leaf = "global", enabled = true, speed = 4, bezier = "easeOutQuint" })
 
-hl.animation({
-	leaf = "windowsOut",
-	enabled = true,
-	speed = 2,
-	bezier = "smoothOut",
-	style = "popin 80%",
-})
+-- Windows: Opening/Closing & Resizing
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 3, bezier = "softInOut", style = "popin 5%" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 3, bezier = "softInOut", style = "popin 80%" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 4, bezier = "easeOutQuint" })
 
-hl.animation({
-	leaf = "border",
-	enabled = true,
-	speed = 5,
-	bezier = "borderSnap",
-})
+-- Borders
+hl.animation({ leaf = "borderangle", enabled = true, speed = 30, bezier = "linear", style = "once" })
 
-hl.animation({
-	leaf = "fade",
-	enabled = true,
-	speed = 3,
-	bezier = "default",
-})
-
-hl.animation({
-	leaf = "workspaces",
-	enabled = true,
-	speed = 3,
-	bezier = "smoothOut",
-})
+-- Workspaces
+hl.animation({ leaf = "workspaces", enabled = true, speed = 4.5, bezier = "easeOutQuint", style = "slide" })

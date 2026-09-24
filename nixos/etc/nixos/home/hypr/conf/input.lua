@@ -34,3 +34,9 @@ hl.device({
 	sensitivity = 1,
 	accel_profile = "flat",
 })
+
+hl.permission({
+	binary = "/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland",
+	type = "screencopy",
+	mode = "allow",
+})

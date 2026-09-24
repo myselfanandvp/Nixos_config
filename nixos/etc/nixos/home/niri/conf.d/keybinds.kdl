@@ -33,7 +33,7 @@ binds {
     Mod+X hotkey-overlay-title="Open The Power Menu" {spawn-sh "noctalia msg panel-toggle session"; }
     Mod+W hotkey-overlay-title="Open The Wallpaper Menu" {spawn-sh "noctalia msg panel-toggle wallpaper"; }
     Mod+Shift+W hotkey-overlay-title="Toggle The Top Bar" {spawn-sh "noctalia msg bar-toggle"; }
-    Mod+ALT+L hotkey-overlay-title="To Lock Screen" { spawn-sh "noctalia msg screen-lock"; }
+    CTRL+ALT+L hotkey-overlay-title="To Lock Screen" { spawn-sh "noctalia msg screen-lock"; }
 
     // Audio & Brightness (V5)
     XF86MonBrightnessUp {spawn-sh "noctalia msg brightness-up";}
@@ -113,6 +113,8 @@ binds {
 
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
+    Mod+MouseRight  {maximize-column; }
+    Mod+MouseMiddle repeat=false  {toggle-overview;}
     Mod+M { maximize-window-to-edges; }
     Mod+Ctrl+F { expand-column-to-available-width; }
 
@@ -138,5 +140,12 @@ binds {
     Mod+Shift+P { power-off-monitors; }
     Mod+D repeat=false { toggle-overview; }
     Mod+Shift+Slash { show-hotkey-overlay; }
+
+
+// Move current column/window to other monitors (Vim style)
+    Shift+ALT+H { move-column-to-monitor-left; }
+    Shift+ALT+J { move-column-to-monitor-down; }
+    Shift+ALT+K { move-column-to-monitor-up; }
+    Shift+ALT+L { move-column-to-monitor-right; }
 
 }

@@ -6,7 +6,8 @@
 
 terminal = "kitty"
 
-fileManager = "nautilus"
+-- fileManager = "nautilus"
+fileManager = "thunar"
 
 terminal_fileManager = "yazi"
 

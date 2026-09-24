@@ -20,6 +20,3 @@ require("conf.windowrules")
 require("conf.layerrules")
 require("conf.application-style")
 
-
--- For Noctalia Color templates
-require("noctalia").apply_theme()

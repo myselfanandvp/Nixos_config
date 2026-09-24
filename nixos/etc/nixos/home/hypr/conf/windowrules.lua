@@ -13,7 +13,6 @@ hl.window_rule({
 
 	float = true,
 	size = "1108 648",
-	-- opacity = 0.9,
 	center = true,
 	animation = "popin",
 })
@@ -27,7 +26,6 @@ hl.window_rule({
 
 	float = true,
 	size = "1108 648",
-	-- opacity = 0.9,
 	center = true,
 	animation = "popin",
 })
@@ -66,11 +64,6 @@ hl.window_rule({
 	match = {
 		class = "com.mitchellh.ghostty",
 	},
-
-	-- float = true,
-	-- size = "1108 648",
-	-- opacity = 0.9,
-	-- center = true,
 	animation = "popin",
 })
 
@@ -181,19 +174,6 @@ hl.window_rule({
 	animation = "popin",
 })
 
--- hl.window_rule({
--- 	name = "Mpv",
---
--- 	match = {
--- 		class = "mpv",
--- 	},
---
--- 	float = true,
--- 	center = true,
--- 	size = "1108 648",
--- 	animation = "popin",
--- })
---
 hl.window_rule({
 	name = "Qprompt",
 
@@ -239,6 +219,21 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	name = "Thunar",
+
+	match = {
+		class = "thunar",
+	},
+
+	float = true,
+	center = true,
+	size = "1108 648",
+	animation = "popin",
+	no_blur = true,
+	-- opacity = 0.9,
+})
+
+hl.window_rule({
 	name = "hyprlauncher",
 
 	match = {
@@ -270,8 +265,8 @@ hl.window_rule({
 	center = true,
 	size = "1092 60",
 	animation = "popin",
-	-- opacity = 0.9,
-	no_blur = true,
+	opacity = 0.9,
+	no_blur = false,
 })
 
 hl.window_rule({
@@ -339,5 +334,27 @@ hl.window_rule({
 	no_anim = true,
 	no_blur = true,
 	max_size = "1 1",
-	-- opacity = 0.0,
 })
+
+hl.window_rule({
+	name = "Zed Editor",
+
+	match = {
+		class = "dev.zed.Zed",
+	},
+	no_blur = false,
+	opacity = 0.9,
+	float = false,
+})
+
+hl.window_rule({
+	name = "Tmux",
+	match = {
+		title = "tmux",
+	},
+	no_blur = false,
+	opacity = 0.9,
+	float = false,
+})
+
+hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")

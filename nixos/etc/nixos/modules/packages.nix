@@ -45,7 +45,8 @@
     vlc
     obs-studio
     mediawriter
-    nautilus
+    # nautilus
+    thunar
 
     # Containers
     docker

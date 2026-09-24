@@ -1,7 +1,7 @@
 
 overview {
   workspace-shadow {
-    off
+    on
   }
 }
 
@@ -9,3 +9,4 @@ overview {
 hotkey-overlay { 
 skip-at-startup
 }
+

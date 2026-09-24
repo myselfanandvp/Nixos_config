@@ -43,6 +43,9 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("~/.config/hypr/conf/scripts/yazi.sh"
 --    ╭────────────────────────────╮
 --    │     WINDOW MANAGEMENT      │
 --    ╰────────────────────────────╯
+--
+
+hl.bind("SUPER + A", hl.dsp.layout("togglesplit"))
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 
@@ -121,6 +124,10 @@ end
 --    │     SPECIAL WORKSPACE      │
 --    ╰────────────────────────────╯
 
+hl.bind("SUPER + D", function()
+	hl.plugin.hyprexpo.expo("toggle")
+end)
+
 hl.bind(mainMod .. "+ALT + S", hl.dsp.workspace.toggle_special("magic"))
 
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
@@ -139,7 +146,9 @@ hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e+1" }))
 
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 
-hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+-- hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+hl.bind(mainMod .. " + mouse:273", hl.dsp.window.fullscreen({ mode = 1, action = "toggle" }))
 
 --    ╭────────────────────────────╮
 --    │        SCREENSHOTS         │
@@ -204,8 +213,6 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 --    ╭────────────────────────────╮
 --    │          GROUPING          │
 --    ╰────────────────────────────╯
-
-hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("hyprctl dispatch togglesplit"))
 
 hl.bind(mainMod .. " + G", hl.dsp.group.toggle())
 
