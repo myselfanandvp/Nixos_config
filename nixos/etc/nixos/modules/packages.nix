@@ -2,47 +2,65 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # CLI / Shell
     stow
     fastfetch
-    lua
-    ghostty
-    tmux
-    brave
-    mpv
-    obs-studio
-    mediawriter
     starship
-    discord
-    rustc
-    nautilus
-    go
-    vlc
-    fd
-    python3
-    nodejs
-    docker
-    neovim
-    distrobox
-    git
-    gh
-    tree
-    xwayland-satellite
-    gcc
-    fuzzel
-    vimPlugins.nvim-treesitter.withAllGrammars 
-    nixd          # Nix LSP
-    pyright       # Python LSP
-    lua-language-server
-    # Formatters & Linters
-    alejandra     # Nix formatter
-    stylua        # Lua formatter
+    tmux
     eza
+    fd
+    tree
     less
     trash-cli
-    kitty
-    herdr
-    ];
 
-environment.variables.XCURSOR_SIZE = "32";
-environment.variables.XCURSOR_THEME = "Adwaita";
+    # Editors / Development
+    neovim
+    git
+    gh
+    gcc
+    rustc
+    go
+    python3
+    nodejs
+    lua
+
+    # Language Servers / Tooling
+    nixd
+    pyright
+    ruff
+    lua-language-server
+
+    # Formatters
+    alejandra
+    stylua
+
+    # Terminal
+    ghostty
+    kitty
+
+    # Applications
+    brave
+    discord
+    mpv
+    vlc
+    obs-studio
+    mediawriter
+    nautilus
+
+    # Containers
+    docker
+    distrobox
+
+    # Wayland
+    xwayland-satellite
+    fuzzel
+
+    # Neovim
+    vimPlugins.nvim-treesitter.withAllGrammars
+  ];
+
+  environment.variables = {
+    XCURSOR_SIZE = "32";
+    XCURSOR_THEME = "Adwaita";
+  };
 }
