@@ -23,16 +23,9 @@ programs.yazi = {
 
 programs.qylock = {
             enable = true;
-            theme = "nier-automata";          # any directory name under themes/
-            # sddm.enable = true;             # installs theme + sets it active (default)
-            # quickshell.enable = true;       # adds `qylock-lock` to PATH (default)
-
+            theme = "material-you";          # any directory name under themes/
             # Optional per-theme tweaks (replaces the interactive prompts):
             themeOptions = {
-              terraria.backgroundMode = "time";              # time | random | static
-              Genshin.backgroundMode = "time";
-              clockwork.orbital = { themeMode = "dark"; enableWindup = true; };
-              osu.gameMode = "menu";                         # menu | game
             };
           };
 

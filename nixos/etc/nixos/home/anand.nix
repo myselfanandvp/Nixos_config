@@ -56,12 +56,12 @@ xdg.configFile."ghostty".source = ./ghostty;
     };
 
     iconTheme = {
-      name = "gruvbox-plus-icons";
+      name = "Gruvbox-Plus-Dark";
       package = pkgs.gruvbox-plus-icons;
     };
 
     cursorTheme = {
-      name = "volantes-cursors";
+      name = "volantes_cursors";
       package = pkgs.volantes-cursors;
       size = 18;
     };

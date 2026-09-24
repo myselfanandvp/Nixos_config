@@ -11,14 +11,15 @@
 
   services.displayManager.sddm = {
       enable = true;
+      wayland={
+          enable = true;
+      };
       extraPackages = with pkgs;[
-          kdePackages.qt5compat
-          kdePackages.qtsvg
-          kdePackages.qtdeclarative
+          qt6Packages.qtsvg
+          qt6Packages.qt5compat
+          qt6Packages.qtmultimedia
       ];
     };
-  services.displayManager.sddm.wayland.enable = true;
-
 
   programs.niri = {
       enable = true;
