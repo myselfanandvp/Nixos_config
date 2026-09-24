@@ -11,8 +11,7 @@
     tree
     less
     trash-cli
-    #sddm themes
-    sddm-astronaut
+
 
     # Editors / Development
     git
@@ -52,8 +51,4 @@
 
   ];
 
-  environment.variables = {
-    XCURSOR_SIZE = "20";
-    XCURSOR_THEME = "Adwaita";
-  };
 }

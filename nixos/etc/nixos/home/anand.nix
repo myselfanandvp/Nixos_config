@@ -22,6 +22,8 @@ home.packages = with pkgs; [
   gruvbox-plus-icons
   volantes-cursors
   nerd-fonts.jetbrains-mono
+  lazygit
+  lazydocker
 ];
 home.pointerCursor = {
   enable = true;

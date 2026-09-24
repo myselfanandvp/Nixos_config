@@ -19,6 +19,18 @@
       nil
       alejandra
       stylua
+      typescript
+      typescript-language-server
+      vimPlugins.nvim-treesitter-parsers.typescript
     ];
   };
+
+programs.neovim.plugins = with pkgs.vimPlugins; [
+  nvim-treesitter
+  nvim-lspconfig
+];
+
+
   }
+
+

@@ -8,11 +8,10 @@
     variant = "";
   };
 
-  services.displayManager.sddm = {
-    enable =true;
-    theme = "sddm-astronaut-theme";
-    extraPackages = [ pkgs.sddm-astronaut ];
-  };
+
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+
 
   programs.niri = {
       enable = true;
