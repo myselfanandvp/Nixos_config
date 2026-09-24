@@ -22,6 +22,7 @@
       typescript
       typescript-language-server
       vimPlugins.nvim-treesitter-parsers.typescript
+      ghostscript
     ];
   };
 
