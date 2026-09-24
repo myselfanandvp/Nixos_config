@@ -5,6 +5,7 @@ inputs.noctalia.homeModules.default
 ./git.nix
 ./noctalia.nix
 ./neovim.nix
+./yazi.nix
 ];
 home.username = "anand";
 home.homeDirectory = "/home/anand";
@@ -22,7 +23,10 @@ home.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
   lazygit
   lazydocker
+  herdr
 ];
+
+
 home.pointerCursor = {
   enable = true;
   package = pkgs.volantes-cursors;

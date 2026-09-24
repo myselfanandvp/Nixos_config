@@ -1,2 +1,2 @@
-require("recycle-bin"):setup()
+-- require("recycle-bin"):setup()
 require("full-border"):setup()
