@@ -21,13 +21,19 @@
       ];
     };
 
-  programs.niri = {
-      enable = true;
-    };
 
-  programs.hyprland = {
-    enable = true;
-  };
+
+  programs.qylock = {
+              enable = true;
+              theme = "material-you";          # any directory name under themes/
+              # Optional per-theme tweaks (replaces the interactive prompts):
+              themeOptions = {
+              };
+            };
+
+
+  programs.niri.enable = true;
+  programs.hyprland.enable = true;
 
 
   xdg.portal = {

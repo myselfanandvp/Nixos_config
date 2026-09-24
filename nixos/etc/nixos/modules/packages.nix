@@ -40,6 +40,8 @@
     mediawriter
     inputs.zen.packages.${pkgs.stdenv.hostPlatform.system}.default
     nautilus
+    yazi
+    fish
     # thunar
 
     # Containers
