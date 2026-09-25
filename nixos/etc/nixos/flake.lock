@@ -332,7 +332,7 @@
         "noctalia": "noctalia",
         "qylock": "qylock",
         "yazi": "yazi",
-        "zen": "zen"
+        "zen-browser": "zen-browser"
       }
     },
     "rust-overlay": {
@@ -444,7 +444,7 @@
         "type": "github"
       }
     },
-    "zen": {
+    "zen-browser": {
       "inputs": {
         "nixpkgs": "nixpkgs_8"
       },
