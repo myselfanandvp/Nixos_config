@@ -35,22 +35,28 @@
     withUWSM = true;
   };
 
+
+  programs.niri= {
+    enable = true;
+  };
+
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-gnome
     ];
     config = {
-      common.default = [ "gtk" "hyprland" ];
-    };
+        hyprland = {
+          default = [ "hyprland" "gtk" ];
+        };
+
+        niri = {
+          default = [ "gnome" "gtk" ];
+        };
+      };
   };
 
- environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    MOZ_ENABLE_WAYLAND = "1";
-    XDG_CURRENT_DESKTOP = "Hyprland";
-    XDG_SESSION_TYPE = "wayland";
-  };
 }

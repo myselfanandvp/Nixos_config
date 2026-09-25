@@ -18,9 +18,6 @@ inputs.noctalia.homeModules.default
 ];
 
 
-
-
-
 home.username = "anand";
 home.homeDirectory = "/home/anand";
 home.stateVersion = "26.05";
