@@ -24,9 +24,7 @@ programs.kitty =  {
     bold_font        = "auto";
     italic_font      = "auto";
     bold_italic_font = "auto";
-    font_size        = 14.0;
-    include = "themes/noctalia.conf";
-
+    font_size        = 12.0;
   };
 
 };

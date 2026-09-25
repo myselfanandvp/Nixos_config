@@ -12,7 +12,6 @@ inputs.noctalia.homeModules.default
 ./noctalia.nix
 ./neovim.nix
 ./tmux.nix
-./kitty.nix
   (import ./yazi.nix {
       inherit config pkgs outOfStore;
     })
@@ -44,6 +43,7 @@ home.packages = with pkgs; [
     "hypr".source = outOfStore "${DotConfig}/hypr";
     "niri".source = outOfStore "${DotConfig}/niri";
     "mpv".source = outOfStore "${DotConfig}/mpv";
+    "kitty".source = outOfStore "${DotConfig}/kitty";
     "fastfetch".source = outOfStore "${DotConfig}/fastfetch";
 };
 
