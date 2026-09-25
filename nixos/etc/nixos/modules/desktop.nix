@@ -10,7 +10,6 @@
 
   services.displayManager.sddm = {
     enable = true;
-
     wayland = {
       enable = true;
     };
@@ -21,12 +20,6 @@
       qt6Packages.qtmultimedia
     ];
 
-    setupScript = ''
-      ${pkgs.xrdb}/bin/xrdb -merge - <<EOF
-      Xcursor.theme: Bibata-Modern-Ice
-      Xcursor.size: 20
-      EOF
-    '';
   };
 
   programs.qylock = {
@@ -44,10 +37,20 @@
 
   xdg.portal = {
     enable = true;
-
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
-      xdg-desktop-portal-gtk
+    xdgOpenUsePortal = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal-hyprland
     ];
+    config = {
+      common.default = [ "gtk" "hyprland" ];
+    };
+  };
+
+ environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    MOZ_ENABLE_WAYLAND = "1";
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_TYPE = "wayland";
   };
 }

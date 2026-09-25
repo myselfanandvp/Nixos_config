@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+
 services.dbus = {
     enable = true;
     implementation = "broker";
@@ -8,7 +9,6 @@ services.dbus = {
       xfconf
     ];
   };
-
 
   hardware.bluetooth.enable = true;
 
@@ -19,6 +19,7 @@ services.dbus = {
   services.printing.enable = true;
 
   services.udisks2.enable = true;
+
   services.gvfs.enable = true;
 
 services.keyd = {
@@ -35,17 +36,17 @@ services.keyd = {
   };
 };
 
+security.rtkit.enable = true;
 services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # Use the WirePlumber session manager
-    wireplumber.enable = true;
-  };
+  enable = true;
+  # alsa.enable = true;
+  # alsa.support32Bit = true;
+  pulse.enable = true;
+  # If you use JACK applications:
+  jack.enable = true;
+  wireplumber.enable = true;
+};
+  
 services.flatpak.enable = true;
 
 systemd.services.flatpak-repo = {

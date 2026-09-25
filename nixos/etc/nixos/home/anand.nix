@@ -41,9 +41,6 @@ home.packages = with pkgs; [
 ];
 
 
-wayland.windowManager.hyprland.plugins = [
-    pkgs.hyprlandPlugins.PLUGIN_NAME
-  ];
 
   
 

@@ -9,5 +9,5 @@
   zlib
   ];
   programs.dconf.enable = true;
-  environment.variables.WLR_NO_HARDWARE_CURSORS = "1";   
+
 }
