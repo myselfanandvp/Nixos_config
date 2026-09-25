@@ -2,6 +2,8 @@
   description = "A very basic flake";
 
   inputs = {
+    hyprland.url = "github:hyprwm/Hyprland";
+    niri.url = "github:sodiboo/niri-flake";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     qylock.url = "github:Darkkal44/qylock";
     noctalia.url = "github:noctalia-dev/noctalia";
@@ -9,10 +11,10 @@
     yazi.url = "github:sxyazi/yazi";
     mangowm.url = "github:mangowm/mango";
     helium.url = "github:oxcl/nix-flake-helium-browser";
-    zen.url =  "github:youwen5/zen-browser-flake";
+    zen-browser.url =  "github:youwen5/zen-browser-flake";
   };
 
-  outputs = { self, nixpkgs,home-manager,qylock,helium,zen,... } @inputs: {
+  outputs = { self, nixpkgs,home-manager,qylock,helium,zen-browser,hyprland,niri,... } @inputs: {
   nixosConfigurations = {
         # Desktop Configuration
       desktop = nixpkgs.lib.nixosSystem {
@@ -23,7 +25,8 @@
           ./hosts/desktop/configuration.nix
           ./hosts/desktop/noctalia.nix
           qylock.nixosModules.default
-          helium.nixosModules.default
+          niri.nixosModules.default
+          hyprland.nixosModules.default
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

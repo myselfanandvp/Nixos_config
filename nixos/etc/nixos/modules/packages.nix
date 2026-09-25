@@ -1,4 +1,8 @@
 { config, pkgs, inputs, ... }:
+let
+  zen-browser = inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  helium = inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default;
+in
 
 {
   environment.systemPackages = with pkgs; [
@@ -26,7 +30,6 @@
     ripgrep
     lua
     xwayland-satellite
-    
 
 
     # Terminal
@@ -39,7 +42,8 @@
     vlc
     obs-studio
     mediawriter
-    inputs.zen.packages.${pkgs.stdenv.hostPlatform.system}.default
+    zen-browser
+    helium
     nautilus
     fish
     # thunar
