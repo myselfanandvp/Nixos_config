@@ -12,11 +12,11 @@
       };
 
       # Wallpaper
-      wallpaper={
-          transition = [
+      wallpaper = {
+        transition = [
           "fade"
-          ];
-        };
+        ];
+      };
 
       # Backdrop
       backdrop = {
@@ -175,24 +175,21 @@
 
       # Plugins
       plugins = {
-        # Define where to fetch plugins
+        # Current official Noctalia plugin repository
         sources = [
           {
             enabled = true;
             name = "Official Noctalia Plugins";
-            url = "https://github.com/noctalia-dev/noctalia-plugins"; # Example URL
+            url = "https://github.com/noctalia-dev/official-plugins";
           }
         ];
 
-        # Enable specific plugins
         states = {
           catwalk = {
             enabled = true;
-            sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+            sourceUrl = "https://github.com/noctalia-dev/official-plugins";
           };
         };
-
-
       };
 
       # Shell
