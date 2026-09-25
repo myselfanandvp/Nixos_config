@@ -25,11 +25,10 @@ programs.kitty =  {
     italic_font      = "auto";
     bold_italic_font = "auto";
     font_size        = 14.0;
+    include = "themes/noctalia.conf";
+
   };
 
 };
-
-
-xdg.configFile."kitty".source = config.lib.file.mkOutOfStoreSymlink ../../../../../Nixos_config/config/.config/kitty;
 
   }

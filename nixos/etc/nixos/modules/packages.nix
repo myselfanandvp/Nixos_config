@@ -1,12 +1,14 @@
 { config, pkgs, inputs, ... }:
-let
-  zen-browser = inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default;
-  helium = inputs.helium.packages.${pkgs.stdenv.hostPlatform.system}.default;
-in
 
+let
+  system = pkgs.stdenv.hostPlatform.system;
+
+  zen-browser = inputs.zen-browser.packages.${system}.default;
+  helium = inputs.helium.packages.${system}.default;
+in
 {
   environment.systemPackages = with pkgs; [
-    # CLI / Shell
+    # ── CLI / Shell ─────────────────────────────────────────────
     stow
     fastfetch
     starship
@@ -14,51 +16,41 @@ in
     tree
     less
     trash-cli
-    bibata-cursors
-volantes-cursors
-
-
-    # Editors / Development
-    git
-    neovim
-    gh
+    fish
     fzf
     fd
-    gcc
-    rustc
-    gnumake
     ripgrep
+
+    # ── Editors / Development ─────────────────────────────────
+    git
+    gh
+    neovim
+    gcc
+    gnumake
+    rustc
     lua
-    xwayland-satellite
 
-
-    # Terminal
+    # ── Terminal ───────────────────────────────────────────────
     ghostty
     kitty
 
-    # Applications
+    # ── Applications ──────────────────────────────────────────
     brave
+    zen-browser
+    helium
     mpv
     vlc
     obs-studio
     mediawriter
-    zen-browser
-    helium
     nautilus
-    fish
-    # thunar
 
-    # Containers
+    # ── Containers ─────────────────────────────────────────────
     docker
     distrobox
 
-    # Wayland
+    # ── Wayland / Desktop ──────────────────────────────────────
     xwayland-satellite
+    bibata-cursors
+    volantes-cursors
   ];
-
-
-environment.sessionVariables = {
-    XCURSOR_THEME = "volantes_cursors";
-  };
-
 }
