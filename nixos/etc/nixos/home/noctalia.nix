@@ -175,9 +175,24 @@
 
       # Plugins
       plugins = {
-        enabled = [
-          "noctalia/notes"
+        # Define where to fetch plugins
+        sources = [
+          {
+            enabled = true;
+            name = "Official Noctalia Plugins";
+            url = "https://github.com/noctalia-dev/noctalia-plugins"; # Example URL
+          }
         ];
+
+        # Enable specific plugins
+        states = {
+          catwalk = {
+            enabled = true;
+            sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+          };
+        };
+
+
       };
 
       # Shell
