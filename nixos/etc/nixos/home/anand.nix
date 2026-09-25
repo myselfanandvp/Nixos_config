@@ -12,6 +12,7 @@ inputs.noctalia.homeModules.default
 ./noctalia.nix
 ./neovim.nix
 ./tmux.nix
+./kitty.nix
   (import ./yazi.nix {
       inherit config pkgs outOfStore;
     })
@@ -40,7 +41,6 @@ home.packages = with pkgs; [
   xdg.configFile = {
     "fish".source = outOfStore "${DotConfig}/fish";
     "starship.toml".source = outOfStore "${DotConfig}/starship.toml";
-    "kitty".source = outOfStore "${DotConfig}/kitty";
     "hypr".source = outOfStore "${DotConfig}/hypr";
     "niri".source = outOfStore "${DotConfig}/niri";
     "mpv".source = outOfStore "${DotConfig}/mpv";
