@@ -13,14 +13,19 @@
     wayland = {
       enable = true;
     };
-
+    settings = {
+      Theme = {
+        CursorTheme = "volantes_cursors";
+        CursorSize = 18;
+      };
+    };
     extraPackages = with pkgs; [
       qt6Packages.qtsvg
       qt6Packages.qt5compat
       qt6Packages.qtmultimedia
     ];
-
   };
+
 
   programs.qylock = {
     enable = true;

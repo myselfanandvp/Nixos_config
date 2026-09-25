@@ -11,7 +11,6 @@ inputs.noctalia.homeModules.default
 ./git.nix
 ./noctalia.nix
 ./neovim.nix
-./tmux.nix
   (import ./yazi.nix {
       inherit config pkgs outOfStore;
     })
@@ -24,22 +23,18 @@ home.stateVersion = "26.05";
 home.enableNixpkgsReleaseCheck = false;
 home.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
-  # nwg-look
+  nwg-look
   qt6Packages.qt6ct
   adw-gtk3
   bibata-cursors
   papirus-icon-theme
   gruvbox-plus-icons
-  volantes-cursors
   nerd-fonts.jetbrains-mono
   lazygit
   lazydocker
   herdr
 ];
 
-
-
-  
 
   xdg.configFile = {
     "fish".source = outOfStore "${DotConfig}/fish";
@@ -102,7 +97,8 @@ home.pointerCursor.hyprcursor = {
   };
 
   home.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qt6ct";
+   XCURSOR_THEME = "volantes_cursors";
+   QT_QPA_PLATFORMTHEME = "qt6ct";
   };
 
 }

@@ -10,12 +10,12 @@ in
     stow
     fastfetch
     starship
-    tmux
     eza
     tree
     less
     trash-cli
     bibata-cursors
+volantes-cursors
 
 
     # Editors / Development
@@ -55,4 +55,10 @@ in
     # Wayland
     xwayland-satellite
   ];
+
+
+environment.sessionVariables = {
+    XCURSOR_THEME = "volantes_cursors";
+  };
+
 }
