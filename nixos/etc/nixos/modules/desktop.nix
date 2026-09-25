@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   services.xserver.enable = true;
@@ -8,47 +8,46 @@
     variant = "";
   };
 
-
   services.displayManager.sddm = {
+    enable = true;
+
+    wayland = {
       enable = true;
-      wayland={
-          enable = true;
-      };
-      extraPackages = with pkgs;[
-          qt6Packages.qtsvg
-          qt6Packages.qt5compat
-          qt6Packages.qtmultimedia
-      ];
-    setupScript = ''
-        ${pkgs.xrdb}/bin/xrdb -merge - <<EOF
-        Xcursor.theme: Bibata-Modern-Ice
-        Xcursor.size: 20
-        EOF
-      '';
     };
 
+    extraPackages = with pkgs; [
+      qt6Packages.qtsvg
+      qt6Packages.qt5compat
+      qt6Packages.qtmultimedia
+    ];
 
+    setupScript = ''
+      ${pkgs.xrdb}/bin/xrdb -merge - <<EOF
+      Xcursor.theme: Bibata-Modern-Ice
+      Xcursor.size: 20
+      EOF
+    '';
+  };
 
   programs.qylock = {
-  enable = true;
-  theme = "material-you";          # any directory name under themes/
-  # Optional per-theme tweaks (replaces the interactive prompts):
-  themeOptions = {
+    enable = true;
+    theme = "material-you";
+    themeOptions = {
+    };
   };
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+    withUWSM = true;
   };
 
+  xdg.portal = {
+    enable = true;
 
-programs.hyprland = {
-  enable = true;
-  package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-  portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-};
-
-xdg.portal = {
-  enable = true;
-  xdgOpenUsePortal = true;
-  extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  config.common.default = [ "hyprland" "gtk" ];
-};   
-
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
+    ];
+  };
 }

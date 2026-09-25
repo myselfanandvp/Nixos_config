@@ -11,7 +11,7 @@
     tree
     less
     trash-cli
-    stow
+    bibata-cursors
 
 
     # Editors / Development
@@ -25,6 +25,7 @@
     gnumake
     ripgrep
     lua
+    xwayland-satellite
     
 
 
@@ -49,8 +50,7 @@
 
     # Wayland
     xwayland-satellite
-    fuzzel
-
   ];
 
+  environment.variables.WLR_NO_HARDWARE_CURSORS = "1";   
 }

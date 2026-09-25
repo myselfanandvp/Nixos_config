@@ -1,6 +1,15 @@
 { config, pkgs, ... }:
 
 {
+services.dbus = {
+    enable = true;
+    implementation = "broker";
+    packages = with pkgs; [
+      xfconf
+    ];
+  };
+
+
   hardware.bluetooth.enable = true;
 
   hardware.usb-modeswitch.enable = true;

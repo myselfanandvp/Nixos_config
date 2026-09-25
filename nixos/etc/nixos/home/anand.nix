@@ -40,6 +40,13 @@ home.packages = with pkgs; [
   herdr
 ];
 
+
+wayland.windowManager.hyprland.plugins = [
+    pkgs.hyprlandPlugins.PLUGIN_NAME
+  ];
+
+  
+
   xdg.configFile = {
     "fish".source = outOfStore "${DotConfig}/fish";
     "starship.toml".source = outOfStore "${DotConfig}/starship.toml";
