@@ -45,6 +45,7 @@ home.packages = with pkgs; [
     "mpv".source = outOfStore "${DotConfig}/mpv";
     "kitty".source = outOfStore "${DotConfig}/kitty";
     "fastfetch".source = outOfStore "${DotConfig}/fastfetch";
+    "ghostty".source = outOfStore "${DotConfig}/ghostty";
 };
 
 home.pointerCursor = {
