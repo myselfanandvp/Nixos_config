@@ -7,6 +7,8 @@
 local mainMod = "SUPER"
 local ipc = "noctalia msg"
 local colorPicker = "~/.config/hypr/conf/scripts/hyprpicker.sh"
+local terminal2 = "ghostty"
+local terminal = "kitty"
 
 --    ╭────────────────────────────╮
 --    │        APPLICATIONS        │
@@ -14,7 +16,7 @@ local colorPicker = "~/.config/hypr/conf/scripts/hyprpicker.sh"
 
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 
-hl.bind("ALT + RETURN", hl.dsp.exec_cmd((terminal .. " -e tmux")))
+hl.bind("ALT + RETURN", hl.dsp.exec_cmd(terminal2))
 
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(colorPicker))
 
