@@ -24,7 +24,7 @@ home.stateVersion = "26.05";
 home.enableNixpkgsReleaseCheck = false;
 home.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
-  nwg-look
+  # nwg-look
   qt6Packages.qt6ct
   adw-gtk3
   bibata-cursors
