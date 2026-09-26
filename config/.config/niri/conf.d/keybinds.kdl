@@ -20,7 +20,8 @@ binds {
     Mod+T hotkey-overlay-title="Open A Terminal:Kitty (Floating)" {spawn "sh" "-c" "~/.config/niri/scripts/kitty_toggle.sh";}
     Mod+ALT+B hotkey-overlay-title="Open A Google Chrome Window" { spawn "google-chrome"; }
     Mod+ALT+C hotkey-overlay-title="Open A LazyVim Window" { spawn-sh "kitty -e nvim"; }
-    Mod+ALT+E hotkey-overlay-title="Open File Explore  Window" { spawn "nautilus"; }
+    // Mod+ALT+E hotkey-overlay-title="Open File Explore  Window" { spawn "nautilus"; }
+    Mod+ALT+E hotkey-overlay-title="Open File Explore  Window" {spawn "sh" "-c" "~/.config/niri/scripts/gui_filepicker.sh";}
     Mod+E hotkey-overlay-title="Open Yazi Explore Window" {spawn "sh" "-c" "~/.config/niri/scripts/yazi.sh";}
     Mod+Alt+D hotkey-overlay-title="To Open LazyDocker" {spawn-sh "kitty -e lazydocker";}
 
