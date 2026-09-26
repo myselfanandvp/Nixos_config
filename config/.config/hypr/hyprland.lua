@@ -12,14 +12,12 @@ require("conf.monitors")
 require("conf.autostart")
 require("conf.environment")
 require("conf.input")
-require("conf.programs")
 require("conf.appearance")
 require("conf.keybindings")
 require("conf.workspaces")
 require("conf.windowrules")
 require("conf.layerrules")
 require("conf.application-style")
-
 
 -- For Noctalia Color templates
 require("noctalia").apply_theme()
