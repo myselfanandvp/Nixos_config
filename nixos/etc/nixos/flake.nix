@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "Custom Nixos + Hyprland and Niri with Noctalia System flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -14,7 +14,7 @@
 
   outputs = { self, nixpkgs,home-manager,qylock,helium,zen-browser,... } @inputs: {
   nixosConfigurations = {
-        # Desktop Configuration
+      # Desktop Configuration
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
