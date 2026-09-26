@@ -120,6 +120,7 @@ if status is-interactive
     alias hr="herdr"
     alias q='exit'
     alias cs='clear'
+    alias sy="sudo nixos-rebuild switch --flake ~/Nixos_config/nixos/etc/nixos/.#desktop"
 
     set -gx SUDO_EDITOR /usr/bin/nvim
     set -gx EDITOR nvim

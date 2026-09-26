@@ -42,7 +42,7 @@ in
     vlc
     obs-studio
     mediawriter
-    nautilus
+    thunar
 
     # ── Containers ─────────────────────────────────────────────
     docker

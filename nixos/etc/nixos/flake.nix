@@ -20,7 +20,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/desktop/configuration.nix
-          ./hosts/desktop/noctalia.nix
           qylock.nixosModules.default
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
@@ -37,7 +36,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/desktop/configuration.nix
-          ./hosts/desktop/noctalia.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

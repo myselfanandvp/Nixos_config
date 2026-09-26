@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./noctalia.nix
     ../../modules/boot.nix
     ../../modules/networking.nix
     ../../modules/locale.nix
