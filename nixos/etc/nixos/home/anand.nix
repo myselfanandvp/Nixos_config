@@ -50,19 +50,17 @@ home.packages = with pkgs; [
     "ghostty".source = outOfStore "${DotConfig}/ghostty";
 };
 
-# home.pointerCursor = {
-#   enable = true;
-#   package = pkgs.volantes-cursors;
-#   name = "volantes_cursors";
-#   size = 18;
-# };
+home.pointerCursor = {
+  enable = true;
+  package = pkgs.bibata-cursors;
+  name = "Bibata-Modern-Classic";
+  size = 18;
+};
 
 # home.pointerCursor.hyprcursor = {
 #   enable = true;
 #   size = 18;
 # };   
-
-
 
 
  gtk = {
@@ -74,13 +72,13 @@ home.packages = with pkgs; [
     };
 
     iconTheme = {
-      name = "Gruvbox-Plus-Dark";
-      package = pkgs.gruvbox-plus-icons;
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
     };
 
     cursorTheme = {
-      name = "volantes_cursors";
-      package = pkgs.volantes-cursors;
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
       size = 18;
     };
 

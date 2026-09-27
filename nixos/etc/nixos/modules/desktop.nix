@@ -14,7 +14,7 @@
     };
     settings = {
       Theme = {
-        CursorTheme = "volantes_cursors";
+        CursorTheme = "Bibata-Modern-Classic";
         CursorSize = 18;
       };
     };
@@ -33,11 +33,11 @@
     };
   };
 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-    withUWSM = true;
-  };
+  # programs.hyprland = {
+  #   enable = true;
+  #   xwayland.enable = true;
+  #   withUWSM = true;
+  # };
 
 
   programs.niri= {
@@ -49,14 +49,14 @@
     xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-hyprland
+      # pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gnome
     ];
     config = {
-        hyprland = {
-          default = [ "hyprland" "gtk" ];
-        };
-
+        # hyprland = {
+        #   default = [ "hyprland" "gtk" ];
+        # };
+        #
         niri = {
           default = [ "gnome" "gtk" ];
         };
