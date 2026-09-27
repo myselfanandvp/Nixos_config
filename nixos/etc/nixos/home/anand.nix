@@ -24,7 +24,7 @@ home.stateVersion = "26.05";
 home.enableNixpkgsReleaseCheck = false;
 home.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
-  # nwg-look
+  nwg-look
   qt6Packages.qt6ct
   adw-gtk3
   bibata-cursors
@@ -34,6 +34,8 @@ home.packages = with pkgs; [
   lazygit
   lazydocker
   herdr
+  python3
+  nodejs_latest
 ];
 
 
@@ -48,17 +50,19 @@ home.packages = with pkgs; [
     "ghostty".source = outOfStore "${DotConfig}/ghostty";
 };
 
-home.pointerCursor = {
-  enable = true;
-  package = pkgs.volantes-cursors;
-  name = "volantes_cursors";
-  size = 18;
-};
+# home.pointerCursor = {
+#   enable = true;
+#   package = pkgs.volantes-cursors;
+#   name = "volantes_cursors";
+#   size = 18;
+# };
 
-home.pointerCursor.hyprcursor = {
-  enable = true;
-  size = 18;
-};   
+# home.pointerCursor.hyprcursor = {
+#   enable = true;
+#   size = 18;
+# };   
+
+
 
 
  gtk = {
@@ -99,7 +103,7 @@ home.pointerCursor.hyprcursor = {
   };
 
   home.sessionVariables = {
-   XCURSOR_THEME = "volantes_cursors";
+   # XCURSOR_THEME = "volantes_cursors";
    QT_QPA_PLATFORMTHEME = "qt6ct";
   };
 

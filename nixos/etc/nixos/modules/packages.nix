@@ -20,6 +20,7 @@ in
     fzf
     fd
     ripgrep
+    btop
 
     # ── Editors / Development ─────────────────────────────────
     git

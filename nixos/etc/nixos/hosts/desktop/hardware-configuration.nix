@@ -28,4 +28,20 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+
+
+hardware.graphics = {
+  enable = true;
+  extraPackages = with pkgs; [
+    intel-media-driver      # VA-API (iHD) userspace driver
+    vpl-gpu-rt              # oneVPL (QSV) runtime
+    intel-compute-runtime   # OpenCL (NEO) + Level Zero (optional)
+  ];
+};
+
+hardware.amdgpu = {
+  initrd.enable = true;   # Load driver early in boot
+  opencl.enable = true;   # Enable OpenCL
+};
+
 }
