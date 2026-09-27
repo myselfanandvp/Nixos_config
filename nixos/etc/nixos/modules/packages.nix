@@ -2,7 +2,6 @@
 
 let
   system = pkgs.stdenv.hostPlatform.system;
-
   zen-browser = inputs.zen-browser.packages.${system}.default;
   helium = inputs.helium.packages.${system}.default;
 in
@@ -36,7 +35,6 @@ in
     kitty
 
     # ── Applications ──────────────────────────────────────────
-    brave
     zen-browser
     helium
     mpv
