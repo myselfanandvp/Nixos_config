@@ -13,7 +13,6 @@
     ../../modules/packages.nix
     ../../modules/programs.nix
     ../../modules/services.nix
-    ../../modules/virtualization.nix
     ../../modules/nix.nix
     ../../modules/security.nix
   ];
