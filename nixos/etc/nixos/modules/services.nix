@@ -32,15 +32,15 @@ services.dbus = {
 
   services.gvfs.enable = true;
 
-  # virtualisation.docker.enable = true;
+  virtualisation.docker.enable = true;
 
 # Enable Rootless Docker for your user
-virtualisation.docker.rootless = {
-  enable = true;
-  setSocketVariable = true; 
-};
+# virtualisation.docker.rootless = {
+#   enable = true;
+#   setSocketVariable = true; 
+# };
 # Automatically enable and start the user service on login/boot
-systemd.user.services.docker.wantedBy = [ "default.target" ];
+# systemd.user.services.docker.wantedBy = [ "default.target" ];
   
 
 services.keyd = {
