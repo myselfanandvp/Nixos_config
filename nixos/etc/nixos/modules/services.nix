@@ -31,7 +31,7 @@ services.dbus = {
   services.udisks2.enable = true;
 
   services.gvfs.enable = true;
-  
+
   virtualisation.docker={
     enable = true;
     rootless = {
@@ -39,6 +39,7 @@ services.dbus = {
         setSocketVariable = true;
       };
   };
+  
 
 services.keyd = {
   enable = true;
