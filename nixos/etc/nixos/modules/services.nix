@@ -32,7 +32,13 @@ services.dbus = {
 
   services.gvfs.enable = true;
   
-  virtualisation.docker.rootless.enable = true;
+  virtualisation.docker={
+    enable = true;
+    rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
+  };
 
 services.keyd = {
   enable = true;
