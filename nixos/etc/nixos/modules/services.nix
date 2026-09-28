@@ -19,8 +19,8 @@ services.dbus = {
 
   services.tuned = {
       enable = true;
-      settings.main={
-              default= "throughput-performance";
+      settings = {
+        dynamic_tuning = true;
         };
     };
 
