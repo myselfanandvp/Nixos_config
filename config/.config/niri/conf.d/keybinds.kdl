@@ -16,12 +16,11 @@ binds {
     Mod+B hotkey-overlay-title="Open A Terminal: Btop" {spawn "sh" "-c" "~/.config/niri/scripts/btop_toggle.sh";}
     Mod+P hotkey-overlay-title="Open Color-picker" {spawn-sh "niri msg pick-color  | grep -o '#[0-9a-fA-F]\\{6\\}' | wl-copy";}
     Mod+RETURN hotkey-overlay-title="Open A Terminal: Kitty" { spawn "kitty"; }
-    ALT+RETURN hotkey-overlay-title="Open A Terminal: Ghostty" { spawn "ghostty"; }
+    ALT+RETURN hotkey-overlay-title="Open A Terminal: Wezterm" { spawn "wezterm"; }
     Mod+T hotkey-overlay-title="Open A Terminal:Kitty (Floating)" {spawn "sh" "-c" "~/.config/niri/scripts/kitty_toggle.sh";}
     Mod+ALT+B hotkey-overlay-title="Open A Google Chrome Window" { spawn "google-chrome"; }
     Mod+ALT+C hotkey-overlay-title="Open A LazyVim Window" { spawn-sh "kitty -e nvim"; }
-    // Mod+ALT+E hotkey-overlay-title="Open File Explore  Window" { spawn "nautilus"; }
-    Mod+ALT+E hotkey-overlay-title="Open File Explore  Window" {spawn "sh" "-c" "~/.config/niri/scripts/gui_filepicker.sh";}
+    Mod+ALT+E hotkey-overlay-title="Open File Explore  Window" { spawn "nautilus"; }
     Mod+E hotkey-overlay-title="Open Yazi Explore Window" {spawn "sh" "-c" "~/.config/niri/scripts/yazi.sh";}
     Mod+Alt+D hotkey-overlay-title="To Open LazyDocker" {spawn-sh "kitty -e lazydocker";}
 
@@ -148,5 +147,4 @@ binds {
     Shift+ALT+J { move-column-to-monitor-down; }
     Shift+ALT+K { move-column-to-monitor-up; }
     Shift+ALT+L { move-column-to-monitor-right; }
-
 }

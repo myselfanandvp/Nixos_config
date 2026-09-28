@@ -16,7 +16,16 @@ services.dbus = {
 
   hardware.usb-modeswitch.enable = true;
 
-  services.tuned.enable = true;
+
+  services.tuned = {
+      enable = true;
+      settings={
+          main = {
+              default= "throughput-performance";
+            };
+        };
+    };
+
 
   services.printing.enable = true;
 

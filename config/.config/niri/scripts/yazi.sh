@@ -4,5 +4,5 @@
 if pgrep -x "yazi" >/dev/null; then
   pkill -x "yazi"
 else
-  kitty --class="yazi-float" -e yazi &
+  kitty --title="yazi-float" -e yazi &
 fi

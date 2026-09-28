@@ -21,7 +21,7 @@ hl.window_rule({
 	name = "Yazi",
 
 	match = {
-		class = "yazi-float",
+		title = "yazi-float",
 	},
 
 	float = true,
@@ -34,7 +34,7 @@ hl.window_rule({
 	name = "Btop",
 
 	match = {
-		class = "btop-float",
+		title = "btop-float",
 	},
 
 	float = true,
@@ -48,7 +48,7 @@ hl.window_rule({
 	name = "Term",
 
 	match = {
-		class = "float-term",
+		title = "float-term",
 	},
 
 	float = true,
@@ -172,22 +172,6 @@ hl.window_rule({
 	center = true,
 	size = "1108 648",
 	animation = "popin",
-})
-
-hl.window_rule({
-	name = "Qprompt",
-
-	match = {
-		class = "com.cuperino.qprompt",
-	},
-
-	float = true,
-	center = true,
-	fullscreen = true,
-	size = "1108 648",
-	-- opacity = 0.4,
-	animation = "popin",
-	workspace = "special:qprompt",
 })
 
 hl.window_rule({

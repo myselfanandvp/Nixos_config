@@ -7,13 +7,17 @@
 local mainMod = "SUPER"
 local ipc = "noctalia msg"
 local colorPicker = "~/.config/hypr/conf/scripts/hyprpicker.sh"
-local terminal2 = "ghostty"
 local terminal = "kitty"
--- local fileManager = "nautilus"
-local fileManager = "thunar"
+local terminal2 = "wezterm"
+
+local fileManager = "nautilus"
+
 local terminal_fileManager = "yazi"
+
 local menu = "~/.config/hypr/scripts/toggle_rofi.sh"
+
 local browser = "google-chrome-stable"
+
 local mail = "thunderbird"
 
 --    ╭────────────────────────────╮

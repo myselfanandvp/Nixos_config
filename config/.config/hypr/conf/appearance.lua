@@ -1,12 +1,12 @@
 --    ╭──────────────────────────────────────╮
 --    │    ╭────────────────────────────╮    │
---    │    │         Appearance         │    │
+--    │    │          Appearance        │    │
 --    │    ╰────────────────────────────╯    │
 --    ╰──────────────────────────────────────╯
 
 hl.config({
 
-	-- Scrolling layout configuration (Hyprscroller)
+	-- Scrolling layout configuration (Hyprscroller plugin support)
 	scrolling = {
 		fullscreen_on_one_column = false,
 	},
@@ -42,8 +42,8 @@ hl.config({
 	},
 
 	decoration = {
+		-- Cleaned up zero-rounding properties
 		rounding = 0,
-		rounding_power = 0,
 
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,
@@ -57,7 +57,7 @@ hl.config({
 			enabled = true,
 			size = 6,
 			passes = 3,
-			new_optimizations = true,
+			-- REMOVED: new_optimizations (deprecated in modern Hyprland)
 			xray = false,
 			vibrancy = 0.2,
 			vibrancy_darkness = 0.1,
@@ -108,24 +108,24 @@ hl.config({
 
 --    ╭──────────────────────────────────────╮
 --    │    ╭────────────────────────────╮    │
---    │    │         ANIMATIONS         │    │
+--    │    │          ANIMATIONS        │    │
 --    │    ╰────────────────────────────╯    │
 --    ╰──────────────────────────────────────╯
--- Curves
-hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })
-hl.curve("softInOut", { type = "bezier", points = { { 0.45, 0 }, { 0.25, 1 } } })
+-- Custom Bezier Curves (Tuned for maximum snappiness)
+hl.curve("snappyQuint", { type = "bezier", points = { { 0.16, 1 }, { 0.3, 1 } } })
+hl.curve("smoothInOut", { type = "bezier", points = { { 0.65, 0 }, { 0.35, 1 } } })
 hl.curve("linear", { type = "bezier", points = { { 0, 0 }, { 1, 1 } } })
 
 -- Master switch & default fallbacks
-hl.animation({ leaf = "global", enabled = true, speed = 4, bezier = "easeOutQuint" })
+hl.animation({ leaf = "global", enabled = true, speed = 5, bezier = "snappyQuint" })
 
--- Windows: Opening/Closing & Resizing
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 3, bezier = "softInOut", style = "popin 5%" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 3, bezier = "softInOut", style = "popin 80%" })
-hl.animation({ leaf = "windowsMove", enabled = true, speed = 4, bezier = "easeOutQuint" })
+-- Windows: Opening/Closing & Resizing (Optimized speeds: faster close than open)
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 4, bezier = "snappyQuint", style = "popin 60%" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "smoothInOut", style = "popin 40%" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 4.5, bezier = "snappyQuint" })
 
--- Borders
-hl.animation({ leaf = "borderangle", enabled = true, speed = 30, bezier = "linear", style = "once" })
+-- Borders (Only active if using a shifting border gradient; kept optimized)
+hl.animation({ leaf = "border", enabled = true, speed = 4, bezier = "linear" })
 
--- Workspaces
-hl.animation({ leaf = "workspaces", enabled = true, speed = 4.5, bezier = "easeOutQuint", style = "slide" })
+-- Workspaces (Fluid horizontal/slide transition without lag)
+hl.animation({ leaf = "workspaces", enabled = true, speed = 4, bezier = "snappyQuint", style = "slide" })

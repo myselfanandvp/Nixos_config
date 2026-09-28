@@ -1,6 +1,7 @@
 custom-shader = ./sonic_boom_cursor.glsl
 custom-shader = ./cursor_warp.glsl
 background-opacity = 0.8
+confirm-close-surface = false
 adjust-cursor-thickness = 50%
 font-family = JetBrains Mono
 font-size = 13
