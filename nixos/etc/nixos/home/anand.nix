@@ -39,7 +39,6 @@ home.packages = with pkgs; [
   nodejs_latest
 ];
 
-  virtualisation.docker.rootless.enable = true;
 
   xdg.configFile = {
     "fish".source = outOfStore "${DotConfig}/fish";
