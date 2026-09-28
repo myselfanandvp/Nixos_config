@@ -13,6 +13,7 @@ inputs.noctalia.homeModules.default
 ./neovim.nix
 ./tmux.nix
 ./zed.nix
+./bashrc.nix
   (import ./yazi.nix {
       inherit config pkgs outOfStore;
     })
