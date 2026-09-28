@@ -33,6 +33,7 @@ in
     # ── Terminal ───────────────────────────────────────────────
     ghostty
     kitty
+    wezterm
 
     # ── Applications ──────────────────────────────────────────
     zen-browser
@@ -41,7 +42,7 @@ in
     vlc
     obs-studio
     mediawriter
-    thunar
+    nautilus
 
     # ── Containers ─────────────────────────────────────────────
     docker
