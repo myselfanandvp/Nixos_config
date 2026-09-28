@@ -13,7 +13,6 @@ inputs.noctalia.homeModules.default
 ./neovim.nix
 ./tmux.nix
 ./zed.nix
-./virtualization.nix
   (import ./yazi.nix {
       inherit config pkgs outOfStore;
     })
@@ -40,6 +39,7 @@ home.packages = with pkgs; [
   nodejs_latest
 ];
 
+  virtualisation.docker.rootless.enable = true;
 
   xdg.configFile = {
     "fish".source = outOfStore "${DotConfig}/fish";
