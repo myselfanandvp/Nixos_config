@@ -21,6 +21,7 @@
         modules = [
           ./hosts/desktop/configuration.nix
           qylock.nixosModules.default
+          inputs.mangowm.nixosModules.mango
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -36,6 +37,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/desktop/configuration.nix
+          inputs.mangowm.nixosModules.mango
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

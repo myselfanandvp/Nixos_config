@@ -34,6 +34,7 @@ home.packages = with pkgs; [
   gruvbox-plus-icons
   nerd-fonts.jetbrains-mono
   lazygit
+  fuzzel
   lazydocker
   herdr
   python3
@@ -51,13 +52,14 @@ home.packages = with pkgs; [
     "fastfetch".source = outOfStore "${DotConfig}/fastfetch";
     "ghostty".source = outOfStore "${DotConfig}/ghostty";
     "wezterm".source = outOfStore "${DotConfig}/wezterm";
+    "mango".source = outOfStore "${DotConfig}/manago";
 };
 
 home.pointerCursor = {
   enable = true;
   package = pkgs.bibata-cursors;
   name = "Bibata-Modern-Classic";
-  size = 18;
+  size = 10;
 };
 
 # home.pointerCursor.hyprcursor = {
@@ -82,7 +84,7 @@ home.pointerCursor = {
     cursorTheme = {
       name = "Bibata-Modern-Classic";
       package = pkgs.bibata-cursors;
-      size = 18;
+      size = 10;
     };
 
     font = {

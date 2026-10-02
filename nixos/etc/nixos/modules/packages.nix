@@ -10,6 +10,7 @@ in
     # ── CLI / Shell ─────────────────────────────────────────────
     stow
     fastfetch
+    fuzzel
     starship
     eza
     tree

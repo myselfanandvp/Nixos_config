@@ -33,30 +33,22 @@
     };
   };
 
-  # programs.hyprland = {
-  #   enable = true;
-  #   xwayland.enable = true;
-  #   withUWSM = true;
-  # };
+
+  programs.niri.enable = true;
+
+  programs.mango.enable = true;
 
 
-  programs.niri= {
-    enable = true;
-  };
 
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      # pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-wlr
       pkgs.xdg-desktop-portal-gnome
     ];
     config = {
-        # hyprland = {
-        #   default = [ "hyprland" "gtk" ];
-        # };
-        #
         niri = {
           default = [ "gnome" "gtk" ];
         };
