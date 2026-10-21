@@ -34,25 +34,15 @@
   };
 
 
-programs.hyprland.enable = true;
-  programs.niri.enable = true;
+programs.hyprland={
+enable = true;
+    withUWSM = false;
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+    xwayland.enable =true;
+  };
 
-  xdg.portal = {
+  programs.niri  = {
     enable = true;
-    xdgOpenUsePortal = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-gnome
-      pkgs.xdg-desktop-portal-hyprland
-    ];
-    config = {
-        niri = {
-          default = [ "gnome" "gtk" ];
-        };
-	hyprland = {
-	default = ["hyprland"];
-	};
-      };
   };
 
 }
