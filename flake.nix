@@ -5,11 +5,12 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     qylock.url = "github:Darkkal44/qylock";
     noctalia.url = "github:noctalia-dev/noctalia";
+  umbriel.url = "github:noctalia-dev/umbriel";
     home-manager.url = "github:nix-community/home-manager";
     yazi.url = "github:sxyazi/yazi";
   };
 
-  outputs = { self, nixpkgs,home-manager,qylock,... } @inputs: {
+  outputs = { self, nixpkgs,home-manager,qylock,umbriel,... } @inputs: {
   nixosConfigurations={
   #Desktop config
   desktop=nixpkgs.lib.nixosSystem {
@@ -18,6 +19,7 @@
         modules = [
           ./hosts/desktop/configuration.nix
           qylock.nixosModules.default
+          umbriel.nixosModules.default
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

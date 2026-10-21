@@ -1,0 +1,93 @@
+[keybinds]
+#    ╭────────────────────────────╮
+#    │     Window Management      │
+#    ╰────────────────────────────╯
+
+"ALT+W" = "scratchpad-toggle:workfolio"
+"Mod+Q" = "window-close"
+
+
+#    ╭────────────────────────────╮
+#    │        Application         │
+#    ╰────────────────────────────╯
+
+"Mod+RETURN" = { action = "spawn:kitty", repeat = false }
+"ALT+RETURN" = { action = "spawn:wezterm", repeat = false }
+"Mod+E" = { action = "spawn:~/Dotfiles/config/.config/umbriel/scripts/yazi.sh", repeat = false }
+"Mod+Z" = { action = "spawn:~/Dotfiles/config/.config/umbriel/scripts/hyprmag.sh", repeat = false }
+"Mod+ALT+E" = { action = "spawn:nautilus", repeat = false }
+"Mod+T" = { action = "spawn:~/Dotfiles/config/.config/umbriel/scripts/kitty_toggle.sh", repeat = false }
+"Mod+B" = { action = "spawn:~/Dotfiles/config/.config/umbriel/scripts/btop_toggle.sh", repeat = false }
+"Mod+Shift+Semicolon" = { action = "cheatsheet-toggle", repeat = false }
+
+#    ╭────────────────────────────╮
+#    │          Overview          │
+#    ╰────────────────────────────╯
+
+"Mod+D" = "overview-toggle"
+
+#    ╭────────────────────────────╮
+#    │           Focus            │
+#    ╰────────────────────────────╯
+
+"Mod+H" = "window-focus-left"
+"Mod+L" = "window-focus-right"
+
+#    ╭────────────────────────────╮
+#    │           Mouse            │
+#    ╰────────────────────────────╯
+
+
+"Mod+MouseMiddle" = "layout-scroll-drag"
+"Super+MouseRight" = { action = "window-toggle-maximize", repeat = false }
+"Mod+WheelUp" = { action = "window-focus-left", cooldown_ms = 150 }
+"Mod+WheelDown" = { action = "window-focus-right", cooldown_ms = 150 }
+"Mod+Shift+WheelUp" = "column-move-left"
+"Mod+Shift+WheelDown" = "column-move-right"
+
+#    ╭────────────────────────────╮
+#    │          Windows           │
+#    ╰────────────────────────────╯
+
+
+"Mod+F" = { action = "window-toggle-maximize", repeat = false }
+"Mod+M" = { action = "window-toggle-maximize-to-edges", repeat = false }
+
+#    ╭────────────────────────────╮
+#    │         Workspace          │
+#    ╰────────────────────────────╯
+
+
+"CTRL+Mod+WheelUp" = { action = "workspace-previous", cooldown_ms = 150 }
+"CTRL+Mod+WheelDown" = { action = "workspace-next", cooldown_ms = 150 }
+
+
+#    ╭────────────────────────────╮
+#    │          Noctalia          │
+#    ╰────────────────────────────╯
+
+"Mod+Space" = "spawn:noctalia msg panel-toggle launcher"
+"Mod+period" = "spawn:noctalia msg panel-toggle launcher /emo"
+"Mod+V" = "spawn:noctalia msg panel-toggle clipboard"
+"Mod+W" = "spawn:noctalia msg panel-toggle wallpaper"
+"Mod+P" = "spawn:noctalia msg screenshot-region"
+"Mod+X" = "spawn:noctalia msg panel-toggle session"
+
+
+#    ╭────────────────────────────╮
+#    │           Audio            │
+#    ╰────────────────────────────╯
+
+"XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+"XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+"XF86AudioPlay" = "spawn:playerctl play-pause"
+"XF86AudioNext" = "spawn:playerctl next"
+"XF86AudioPrev" = "spawn:playerctl previous"
+
+
+#    ╭────────────────────────────╮
+#    │         Brightness         │
+#    ╰────────────────────────────╯
+
+"XF86MonBrightnessUp" = "spawn:brightnessctl set +5%"
+"XF86MonBrightnessDown" = "spawn:brightnessctl set 5%-"

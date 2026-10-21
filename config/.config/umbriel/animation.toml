@@ -1,0 +1,49 @@
+[animation]
+enabled = true
+duration_ms = 280
+curve = "easeout"
+
+[animation.windows_in]
+enabled = true
+curve = "spring:1,800"
+style = "popin"
+scale = 0.96
+
+[animation.windows_out]
+enabled = true
+curve = "easeout"
+style = "fade"
+
+[animation.windows_move]
+enabled = true
+curve = "spring:1,700"
+
+[animation.workspaces]
+enabled = true
+style = "slide"
+curve = "spring:1,650"
+
+[animation.overview]
+enabled = true
+curve = "spring:1,700"
+workspace_curve = "spring:1,850"
+
+[animation.scratchpad]
+enabled = true
+curve = "spring:1,750"
+dim = 0.78
+blur = false
+scale = 0.96
+maximize = false
+fullscreen = false
+
+[animation.border]
+enabled = true
+curve = "spring:1,850"
+
+[animation.dim_unfocused]
+enabled = false
+dim = 0.0
+
+[animation.windows_drag]
+physics = false

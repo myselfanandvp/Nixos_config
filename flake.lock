@@ -130,6 +130,19 @@
     },
     "nixpkgs_5": {
       "locked": {
+        "lastModified": 1792094642,
+        "narHash": "sha256-LPFRbrCWWyNsdQLO3SX1B/5UMkFK0hfe7bZR6lENvpc=",
+        "rev": "fe13242281a67641c0102cdb1087f0ebe586c7df",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1093333.fe13242281a6/nixexprs.tar.xz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
+      }
+    },
+    "nixpkgs_6": {
+      "locked": {
         "lastModified": 1790769526,
         "narHash": "sha256-5AIVFLRcx8YAwbFTVPTs7YhwJH7JyHfAQsvXmpovcXI=",
         "owner": "NixOS",
@@ -188,6 +201,7 @@
         "nixpkgs": "nixpkgs_2",
         "noctalia": "noctalia",
         "qylock": "qylock",
+        "umbriel": "umbriel",
         "yazi": "yazi"
       }
     },
@@ -242,10 +256,50 @@
         "type": "github"
       }
     },
+    "umbriel": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_5",
+        "xdg-desktop-portal-umbriel": "xdg-desktop-portal-umbriel"
+      },
+      "locked": {
+        "lastModified": 1792605344,
+        "narHash": "sha256-g5wojkRUCMRroU/Qr1SAjBRTvaChq3KB4OaZP4RdEaw=",
+        "owner": "noctalia-dev",
+        "repo": "umbriel",
+        "rev": "8449975579a23d191f375a7d53cfe56e260ce19e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "umbriel",
+        "type": "github"
+      }
+    },
+    "xdg-desktop-portal-umbriel": {
+      "inputs": {
+        "nixpkgs": [
+          "umbriel",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792417147,
+        "narHash": "sha256-uCM9pwVAG4Csf8n+IvFdhEAlXjqVWPidUNY3I1oUkzE=",
+        "owner": "noctalia-dev",
+        "repo": "xdg-desktop-portal-umbriel",
+        "rev": "1cc6eb18ba0d6c82dd66999646d7e554f76a85b6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "xdg-desktop-portal-umbriel",
+        "type": "github"
+      }
+    },
     "yazi": {
       "inputs": {
         "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs_5",
+        "nixpkgs": "nixpkgs_6",
         "rust-overlay": "rust-overlay"
       },
       "locked": {

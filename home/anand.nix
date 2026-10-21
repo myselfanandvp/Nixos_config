@@ -51,6 +51,7 @@ home.packages = with pkgs; [
     "ghostty".source = outOfStore "${DotConfig}/ghostty";
     "wezterm".source = outOfStore "${DotConfig}/wezterm";
     "mango".source = outOfStore "${DotConfig}/manago";
+    "umbriel".source = outOfStore "${DotConfig}/umbriel";
 };
 
 home.pointerCursor = {
