@@ -9,9 +9,10 @@
     yazi.url = "github:sxyazi/yazi";
     helium.url = "github:oxcl/nix-flake-helium-browser";
     zen-browser.url =  "github:youwen5/zen-browser-flake";
+    umbriel.url = "github:noctalia-dev/umbriel";
   };
 
-  outputs = { self, nixpkgs,home-manager,qylock,helium,zen-browser,... } @inputs: {
+  outputs = { self, nixpkgs,home-manager,qylock,helium,zen-browser,umbriel,... } @inputs: {
   nixosConfigurations={
   #Desktop config
   desktop=nixpkgs.lib.nixosSystem {
@@ -20,6 +21,7 @@
         modules = [
           ./hosts/desktop/configuration.nix
           qylock.nixosModules.default
+          umbriel.nixosModules.default
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -36,6 +38,7 @@
         modules = [
           ./hosts/laptop/configuration.nix
           qylock.nixosModules.default
+          umbriel.nixosModules.default
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

@@ -22,6 +22,7 @@ in
     ripgrep
     btop
 
+
     # ── Editors / Development ─────────────────────────────────
     git
     gh
@@ -46,7 +47,6 @@ in
     nautilus
 
     # ── Containers ─────────────────────────────────────────────
-    docker
     distrobox
 
     # ── Wayland / Desktop ──────────────────────────────────────
