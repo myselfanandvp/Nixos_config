@@ -15,6 +15,7 @@
     fd
     ripgrep
     btop
+    devenv
 
 
     # ── Editors / Development ─────────────────────────────────
