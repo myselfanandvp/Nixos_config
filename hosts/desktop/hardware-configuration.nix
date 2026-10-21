@@ -14,12 +14,12 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/0b7b1c1b-7550-43ca-9040-ca874bcc84c3";
+    { device = "/dev/disk/by-uuid/1f62332e-e085-4176-841c-79797bb02c66";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/D189-0DA4";
+    { device = "/dev/disk/by-uuid/2852-7634";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
@@ -28,20 +28,4 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-
-hardware.graphics = {
-  enable = true;
-  extraPackages = with pkgs; [
-    intel-media-driver      # VA-API (iHD) userspace driver
-    vpl-gpu-rt              # oneVPL (QSV) runtime
-    intel-compute-runtime   # OpenCL (NEO) + Level Zero (optional)
-  ];
-};
-
-hardware.amdgpu = {
-  initrd.enable = true;   # Load driver early in boot
-  opencl.enable = true;   # Enable OpenCL
-};
-
 }
