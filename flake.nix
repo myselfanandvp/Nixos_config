@@ -8,6 +8,7 @@
   umbriel.url = "github:noctalia-dev/umbriel";
     home-manager.url = "github:nix-community/home-manager";
     yazi.url = "github:sxyazi/yazi";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs,home-manager,qylock,umbriel,... } @inputs: {
