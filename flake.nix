@@ -13,9 +13,9 @@
   };
 
   outputs = { self, nixpkgs,home-manager,qylock,helium,zen-browser,... } @inputs: {
-  nixosConfigurations = {
-      # Desktop Configuration
-      desktop = nixpkgs.lib.nixosSystem {
+  nixosConfigurations={
+  #Desktop config
+  desktop=nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
@@ -30,13 +30,14 @@
           }
         ];
       };
-
-      # Laptop Configuration
-      laptop= nixpkgs.lib.nixosSystem {
+      
+      #Laptop config
+      laptop=nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./hosts/desktop/configuration.nix
+          ./hosts/laptop/configuration.nix
+          qylock.nixosModules.default
           inputs.mangowm.nixosModules.mango
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
@@ -46,9 +47,7 @@
           }
         ];
       };
-
-
-    };
-
+      
+      };
 };
 }
