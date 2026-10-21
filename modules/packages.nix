@@ -1,10 +1,4 @@
 { config, pkgs, inputs, ... }:
-
-let
-  system = pkgs.stdenv.hostPlatform.system;
-  zen-browser = inputs.zen-browser.packages.${system}.default;
-  helium = inputs.helium.packages.${system}.default;
-in
 {
   environment.systemPackages = with pkgs; [
     # ── CLI / Shell ─────────────────────────────────────────────
@@ -38,8 +32,6 @@ in
     wezterm
 
     # ── Applications ──────────────────────────────────────────
-    zen-browser
-    helium
     mpv
     vlc
     obs-studio
