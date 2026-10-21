@@ -7,7 +7,6 @@
     noctalia.url = "github:noctalia-dev/noctalia";
     home-manager.url = "github:nix-community/home-manager";
     yazi.url = "github:sxyazi/yazi";
-    mangowm.url = "github:mangowm/mango";
     helium.url = "github:oxcl/nix-flake-helium-browser";
     zen-browser.url =  "github:youwen5/zen-browser-flake";
   };
@@ -21,7 +20,6 @@
         modules = [
           ./hosts/desktop/configuration.nix
           qylock.nixosModules.default
-          inputs.mangowm.nixosModules.mango
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -38,7 +36,6 @@
         modules = [
           ./hosts/laptop/configuration.nix
           qylock.nixosModules.default
-          inputs.mangowm.nixosModules.mango
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
