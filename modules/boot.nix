@@ -5,12 +5,15 @@
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
 
- # Use latest kernel.
+    # Use latest kernel.
     kernelPackages = pkgs.linuxPackages_latest;
 
     initrd = {
       systemd.enable = true;
-      kernelModules = [ "amdgpu" "i915" ];
+      kernelModules = [
+        "amdgpu"
+        "i915"
+      ];
     };
 
     plymouth = {

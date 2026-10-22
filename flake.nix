@@ -5,47 +5,58 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     qylock.url = "github:Darkkal44/qylock";
     noctalia.url = "github:noctalia-dev/noctalia";
-  umbriel.url = "github:noctalia-dev/umbriel";
+    umbriel.url = "github:noctalia-dev/umbriel";
     home-manager.url = "github:nix-community/home-manager";
     yazi.url = "github:sxyazi/yazi";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs,home-manager,qylock,umbriel,... } @inputs: {
-  nixosConfigurations={
-  #Desktop config
-  desktop=nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/desktop/configuration.nix
-          qylock.nixosModules.default
-          umbriel.nixosModules.default
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.anand = ./home/anand.nix;
-          }
-        ];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      qylock,
+      umbriel,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations = {
+        #Desktop config
+        desktop = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/desktop/configuration.nix
+            qylock.nixosModules.default
+            umbriel.nixosModules.default
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.users.anand = ./home/anand.nix;
+            }
+          ];
+        };
+
+        #Laptop config
+        laptop = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/laptop/configuration.nix
+            qylock.nixosModules.default
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.users.anand = ./home/anand.nix;
+            }
+          ];
+        };
+
       };
-      
-      #Laptop config
-      laptop=nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/laptop/configuration.nix
-          qylock.nixosModules.default
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { inherit inputs; };
-            home-manager.users.anand = ./home/anand.nix;
-          }
-        ];
-      };
-      
-      };
-};
+    };
 }

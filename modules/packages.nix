@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 {
   environment.systemPackages = with pkgs; [
     # ── CLI / Shell ─────────────────────────────────────────────
@@ -16,7 +21,6 @@
     ripgrep
     btop
     devenv
-
 
     # ── Editors / Development ─────────────────────────────────
     git

@@ -1,5 +1,9 @@
-
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   programs.noctalia = {
@@ -71,7 +75,7 @@
       desktop_widgets = {
         enabled = false;
         schema_version = 2;
-        widget_order = [];
+        widget_order = [ ];
 
         grid = {
           cell_size = 24;
@@ -79,7 +83,7 @@
           visible = true;
         };
 
-        widget = {};
+        widget = { };
       };
 
       # Dock

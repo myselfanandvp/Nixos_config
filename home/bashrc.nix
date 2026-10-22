@@ -1,14 +1,22 @@
-{config,pkgs,inputs,...}:
 {
-programs.bash = {
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
+{
+  programs.bash = {
     enable = true;
 
     # ---- History Settings ----
     historySize = 10000;
     historyFileSize = 20000;
-    historyControl = [ "ignoredups" "erasedups" ];
+    historyControl = [
+      "ignoredups"
+      "erasedups"
+    ];
     historyIgnore = [ ];
-    
+
     # Enable window size checking and history appending
     shellOptions = [
       "histappend"
@@ -92,4 +100,4 @@ programs.bash = {
       }
     '';
   };
-  }
+}

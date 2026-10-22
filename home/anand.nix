@@ -1,4 +1,9 @@
-{config,pkgs,inputs,...}:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 let
   DotConfig = "${config.home.homeDirectory}/Nixos_config/config/.config";
@@ -6,39 +11,37 @@ let
 in
 
 {
-imports =[
-inputs.noctalia.homeModules.default
-./git.nix
-./noctalia.nix
-./neovim.nix
-./tmux.nix
-./zed.nix
-./bashrc.nix
-  (import ./yazi.nix {
+  imports = [
+    inputs.noctalia.homeModules.default
+    ./git.nix
+    ./noctalia.nix
+    ./neovim.nix
+    ./tmux.nix
+    ./zed.nix
+    ./bashrc.nix
+    (import ./yazi.nix {
       inherit config pkgs outOfStore;
     })
-];
+  ];
 
-
-home.username = "anand";
-home.homeDirectory = "/home/anand";
-home.stateVersion = "26.05";
-home.enableNixpkgsReleaseCheck = false;
-home.packages = with pkgs; [
-  nerd-fonts.jetbrains-mono
-  adw-gtk3
-  bibata-cursors
-  papirus-icon-theme
-  gruvbox-plus-icons
-  nerd-fonts.jetbrains-mono
-  lazygit
-  fuzzel
-  lazydocker
-  herdr
-  python3
-  nodejs_latest
-];
-
+  home.username = "anand";
+  home.homeDirectory = "/home/anand";
+  home.stateVersion = "26.05";
+  home.enableNixpkgsReleaseCheck = false;
+  home.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    adw-gtk3
+    bibata-cursors
+    papirus-icon-theme
+    gruvbox-plus-icons
+    nerd-fonts.jetbrains-mono
+    lazygit
+    fuzzel
+    lazydocker
+    herdr
+    python3
+    nodejs_latest
+  ];
 
   xdg.configFile = {
     "fish".source = outOfStore "${DotConfig}/fish";
@@ -52,22 +55,21 @@ home.packages = with pkgs; [
     "wezterm".source = outOfStore "${DotConfig}/wezterm";
     "mango".source = outOfStore "${DotConfig}/manago";
     "umbriel".source = outOfStore "${DotConfig}/umbriel";
-};
+  };
 
-home.pointerCursor = {
-  enable = true;
-  package = pkgs.bibata-cursors;
-  name = "Bibata-Modern-Classic";
-  size = 10;
-};
+  home.pointerCursor = {
+    enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 10;
+  };
 
-# home.pointerCursor.hyprcursor = {
-#   enable = true;
-#   size = 18;
-# };   
+  # home.pointerCursor.hyprcursor = {
+  #   enable = true;
+  #   size = 18;
+  # };
 
-
- gtk = {
+  gtk = {
     enable = true;
     theme = {
       name = "adw-gtk3-dark";
@@ -99,7 +101,7 @@ home.pointerCursor = {
   };
 
   home.sessionVariables = {
-   QT_QPA_PLATFORMTHEME = "qt6ct";
+    QT_QPA_PLATFORMTHEME = "qt6ct";
   };
 
 }

@@ -12,7 +12,7 @@
       noto-fonts-color-emoji
       noto-fonts-extra
       google-fonts
-      
+
       # ── Base Monospace Fonts ────────────────────────────────────
       fira-code
       fira-code-symbols

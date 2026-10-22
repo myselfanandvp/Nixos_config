@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
 
@@ -25,7 +30,6 @@
     ];
   };
 
-
   programs.qylock = {
     enable = true;
     theme = "material-you";
@@ -33,11 +37,9 @@
     };
   };
 
-
-
   programs.umbriel.enable = true;
 
-  programs.niri  = {
+  programs.niri = {
     enable = true;
   };
 
@@ -49,10 +51,13 @@
       pkgs.xdg-desktop-portal-gnome
     ];
     config = {
-        niri = {
-          default = [ "gnome" "gtk" ];
-        };
+      niri = {
+        default = [
+          "gnome"
+          "gtk"
+        ];
       };
+    };
   };
 
 }
