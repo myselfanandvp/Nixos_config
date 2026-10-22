@@ -1,7 +1,12 @@
-{config,pkgs,inputs,...}:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 {
 
- programs.neovim = {
+  programs.neovim = {
     enable = true;
     defaultEditor = true;
     viAlias = true;
@@ -20,6 +25,7 @@
       ruff
       tree-sitter
       lua-language-server
+      nixfmt
       nil
       alejandra
       stylua
@@ -33,14 +39,13 @@
     ];
   };
 
-programs.neovim.plugins = with pkgs.vimPlugins; [
-  nvim-treesitter
-  nvim-lspconfig
-];
+  programs.neovim.plugins = with pkgs.vimPlugins; [
+    nvim-treesitter
+    nvim-lspconfig
+  ];
 
- xdg.configFile."nvim" = {
-    source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/Nixos_config/config/.config/nvim";
+  xdg.configFile."nvim" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nixos_config/config/.config/nvim";
   };
 
 }
