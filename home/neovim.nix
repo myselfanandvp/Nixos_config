@@ -28,6 +28,8 @@
       vimPlugins.nvim-treesitter-parsers.typescript
       ghostscript
       bun
+      nixd
+      statix
     ];
   };
 
