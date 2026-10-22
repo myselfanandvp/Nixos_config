@@ -34,12 +34,9 @@
   };
 
 
-programs.hyprland={
-    enable = true;
-    xwayland.enable =true;
-  };
 
   programs.umbriel.enable = true;
+
   programs.niri  = {
     enable = true;
   };
@@ -50,14 +47,10 @@ programs.hyprland={
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-gnome
-      pkgs.xdg-desktop-portal-hyprland
     ];
     config = {
         niri = {
           default = [ "gnome" "gtk" ];
-        };
-        hyprland = {
-        default = ["hyprland"];
         };
       };
   };
