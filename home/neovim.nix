@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  inputs,
   ...
 }:
 {
@@ -30,6 +29,7 @@
       bun
       nixd
       statix
+      less
       fd
     ];
   };
