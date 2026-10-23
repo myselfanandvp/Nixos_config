@@ -5,19 +5,6 @@
 --    ╰──────────────────────────────────────╯
 
 hl.window_rule({
-	name = "ISO Image Writer",
-
-	match = {
-		class = "org.kde.isoimagewriter",
-	},
-
-	float = true,
-	size = "1108 648",
-	center = true,
-	animation = "popin",
-})
-
-hl.window_rule({
 	name = "Yazi",
 
 	match = {
@@ -59,55 +46,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "ghostty",
-
-	match = {
-		class = "com.mitchellh.ghostty",
-	},
-	animation = "popin",
-})
-
-hl.window_rule({
-	name = "hypr-share",
-
-	match = {
-		class = "hyprland-share-picker",
-	},
-
-	float = true,
-	size = "400 200",
-	center = true,
-	animation = "popin",
-})
-
-hl.window_rule({
-	name = "connections",
-
-	match = {
-		class = "TUI-float",
-	},
-
-	float = true,
-	size = "1108 648",
-	-- opacity = 0.9,
-	center = true,
-	animation = "popin",
-})
-
-hl.window_rule({
-	name = "pavu-control",
-
-	match = {
-		class = "org.pulseaudio.pavucontrol",
-	},
-
-	float = true,
-	center = true,
-	size = "1108 648",
-	animation = "popin",
-})
-
-hl.window_rule({
 	name = "workfolio",
 
 	match = {
@@ -119,20 +57,6 @@ hl.window_rule({
 	size = "500 700",
 	animation = "popin",
 	workspace = "special:workfolio",
-})
-
-hl.window_rule({
-	name = "spotify",
-
-	match = {
-		class = "Spotify",
-	},
-
-	float = true,
-	center = true,
-	size = "1108 648",
-	animation = "popin",
-	workspace = "special:spotify",
 })
 
 hl.window_rule({
@@ -175,19 +99,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "Warpinator",
-
-	match = {
-		class = "warpinator-launch.py",
-	},
-
-	float = true,
-	center = true,
-	size = "530 480",
-	animation = "popin",
-})
-
-hl.window_rule({
 	name = "Nautilus",
 
 	match = {
@@ -203,32 +114,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "Thunar",
-
-	match = {
-		class = "thunar",
-	},
-
-	float = true,
-	center = true,
-	size = "1108 648",
-	animation = "popin",
-	no_blur = true,
-	-- opacity = 0.9,
-})
-
-hl.window_rule({
-	name = "hyprlauncher",
-
-	match = {
-		class = "hyprlauncher",
-	},
-
-	-- opacity = 0.9,
-	no_blur = true,
-})
-
-hl.window_rule({
 	name = "google-meet",
 
 	match = {
@@ -236,21 +121,6 @@ hl.window_rule({
 	},
 
 	workspace = "special:google-meet silent",
-})
-
-hl.window_rule({
-	name = "Cava",
-
-	match = {
-		title = "cava",
-	},
-
-	float = true,
-	center = true,
-	size = "1092 60",
-	animation = "popin",
-	opacity = 0.9,
-	no_blur = false,
 })
 
 hl.window_rule({
@@ -277,31 +147,6 @@ hl.window_rule({
 
 	animation = "popin",
 	size = "385 616",
-	float = true,
-	center = true,
-})
-
-hl.window_rule({
-	name = "Amberol",
-
-	match = {
-		class = "io.bassi.Amberol",
-		title = "Amberol",
-	},
-
-	size = "1108 648",
-	float = true,
-	center = true,
-})
-
-hl.window_rule({
-	name = "Octopi",
-
-	match = {
-		class = "octopi-cachecleaner",
-	},
-
-	size = "1108 648",
 	float = true,
 	center = true,
 })
@@ -340,5 +185,3 @@ hl.window_rule({
 	opacity = 0.9,
 	float = false,
 })
-
-hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")

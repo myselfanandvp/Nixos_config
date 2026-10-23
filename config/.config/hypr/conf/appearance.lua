@@ -43,7 +43,7 @@ hl.config({
 
 	decoration = {
 		-- Cleaned up zero-rounding properties
-		rounding = 0,
+		rounding = 8,
 
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,

@@ -20,11 +20,30 @@ local browser = "google-chrome-stable"
 
 local mail = "thunderbird"
 
+-- Helper function to change zoom safely
+local function adjust_zoom(offset)
+	local current = hl.get_config("cursor.zoom_factor") or 1.0
+	local new_zoom = math.max(1.0, current + offset) -- Prevent zooming out past 1.0
+	hl.config({ cursor = { zoom_factor = new_zoom } })
+end
+-- Bind zoom to MainMod + ALT + Mouse Wheel
+hl.bind(mainMod .. " + ALT + mouse_down", function()
+	adjust_zoom(0.8)
+end)
+hl.bind(mainMod .. " + ALT + mouse_up", function()
+	adjust_zoom(-0.8)
+end)
+hl.bind(mainMod .. " + ALT + mouse:272", function()
+	hl.config({ cursor = { zoom_factor = 1.0 } })
+end)
+
 --    ╭────────────────────────────╮
 --    │        APPLICATIONS        │
 --    ╰────────────────────────────╯
 
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
+
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("~/Dotfiles/config/.config/hypr/conf/scripts/hyprmag.sh"))
 
 hl.bind("ALT + RETURN", hl.dsp.exec_cmd(terminal2))
 
@@ -144,6 +163,10 @@ hl.bind(mainMod .. "+ALT + S", hl.dsp.workspace.toggle_special("magic"))
 
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
+hl.bind("ALT + W", hl.dsp.workspace.toggle_special("workfolio"))
+
+hl.bind("ALT + M", hl.dsp.workspace.toggle_special("spotify"))
+
 --    ╭────────────────────────────╮
 --    │         SCROLL WS          │
 --    ╰────────────────────────────╯
@@ -252,6 +275,7 @@ hl.bind(mainMod .. "+Space", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher"))
 hl.bind(mainMod .. "+N", hl.dsp.exec_cmd(ipc .. " panel-toggle noctalia/notes:panel"))
 hl.bind(mainMod .. "+S", hl.dsp.exec_cmd(ipc .. " panel-toggle control-center"))
 hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(ipc .. " settings-toggle"))
+hl.bind(mainMod .. "+period", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher /emo"))
 hl.bind(mainMod .. "+X", hl.dsp.exec_cmd(ipc .. " panel-toggle session"))
 hl.bind(mainMod .. "+W", hl.dsp.exec_cmd(ipc .. " panel-toggle wallpaper"))
 hl.bind(mainMod .. " +ALT+L", hl.dsp.exec_cmd(ipc .. " session lock"))
