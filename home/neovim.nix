@@ -23,7 +23,6 @@
       lua-language-server
       nixfmt
       nil
-      less
       alejandra
       stylua
       typescript-language-server

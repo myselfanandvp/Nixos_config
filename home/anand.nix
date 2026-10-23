@@ -24,24 +24,26 @@ in
     })
   ];
 
-  home.username = "anand";
-  home.homeDirectory = "/home/anand";
-  home.stateVersion = "26.05";
-  home.enableNixpkgsReleaseCheck = false;
-  home.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-    adw-gtk3
-    bibata-cursors
-    papirus-icon-theme
-    gruvbox-plus-icons
-    nerd-fonts.jetbrains-mono
-    lazygit
-    fuzzel
-    lazydocker
-    herdr
-    python3
-    nodejs_latest
-  ];
+  home = {
+    username = "anand";
+    homeDirectory = "/home/anand";
+    stateVersion = "26.05";
+    enableNixpkgsReleaseCheck = false;
+    packages = with pkgs; [
+      nerd-fonts.jetbrains-mono
+      adw-gtk3
+      bibata-cursors
+      papirus-icon-theme
+      gruvbox-plus-icons
+      nerd-fonts.jetbrains-mono
+      lazygit
+      fuzzel
+      lazydocker
+      herdr
+      python3
+      nodejs_latest
+    ];
+  };
 
   xdg.configFile = {
     "fish".source = outOfStore "${DotConfig}/fish";
@@ -64,10 +66,10 @@ in
     size = 10;
   };
 
-  # home.pointerCursor.hyprcursor = {
-  #   enable = true;
-  #   size = 18;
-  # };
+  home.pointerCursor.hyprcursor = {
+    enable = true;
+    size = 18;
+  };
 
   gtk = {
     enable = true;
@@ -102,60 +104,62 @@ in
     style.name = "Fusion";
   };
 
-  xdg.configFile."qt5ct/qt5ct.conf".text = ''
-    [Appearance]
-    color_scheme_path=${config.home.homeDirectory}/.config/qt5ct/colors/noctalia.conf
-    custom_palette=true
-    icon_theme=Papirus-Dark
-    standard_dialogs=gtk3
-    style=Fusion
+  xdg.configFile = {
 
-    [Fonts]
-    fixed="DejaVu Sans,12,-1,5,50,0,0,0,0,0,Regular"
-    general="JetBrainsMono Nerd Font,12,-1,5,50,0,0,0,0,0,Regular"
+    "qt5ct/qt5ct.conf".text = ''
+      [Appearance]
+      color_scheme_path=${config.home.homeDirectory}/.config/qt5ct/colors/noctalia.conf
+      custom_palette=true
+      icon_theme=Papirus-Dark
+      standard_dialogs=gtk3
+      style=Fusion
 
-    [Interface]
-    activate_item_on_single_click=1
-    buttonbox_layout=0
-    cursor_flash_time=1000
-    dialog_buttons_have_icons=1
-    double_click_interval=400
-    gui_effects=@Invalid()
-    keyboard_scheme=2
-    menus_have_icons=true
-    show_shortcuts_in_context_menus=true
-    stylesheets=@Invalid()
-    toolbutton_style=4
-    underline_shortcut=1
-    wheel_scroll_lines=3
-  '';
+      [Fonts]
+      fixed="DejaVu Sans,12,-1,5,50,0,0,0,0,0,Regular"
+      general="JetBrainsMono Nerd Font,12,-1,5,50,0,0,0,0,0,Regular"
 
-  xdg.configFile."qt6ct/qt6ct.conf".text = ''
-    [Appearance]
-    color_scheme_path=${config.home.homeDirectory}/.config/qt5ct/colors/noctalia.conf
-    custom_palette=true
-    icon_theme=Papirus-Dark
-    standard_dialogs=gtk3
-    style=Fusion
+      [Interface]
+      activate_item_on_single_click=1
+      buttonbox_layout=0
+      cursor_flash_time=1000
+      dialog_buttons_have_icons=1
+      double_click_interval=400
+      gui_effects=@Invalid()
+      keyboard_scheme=2
+      menus_have_icons=true
+      show_shortcuts_in_context_menus=true
+      stylesheets=@Invalid()
+      toolbutton_style=4
+      underline_shortcut=1
+      wheel_scroll_lines=3
+    '';
+    "qt6ct/qt6ct.conf".text = ''
+      [Appearance]
+      color_scheme_path=${config.home.homeDirectory}/.config/qt5ct/colors/noctalia.conf
+      custom_palette=true
+      icon_theme=Papirus-Dark
+      standard_dialogs=gtk3
+      style=Fusion
 
-    [Fonts]
-    fixed="DejaVu Sans,12,-1,5,50,0,0,0,0,0,Regular"
-    general="JetBrainsMono Nerd Font,12,-1,5,50,0,0,0,0,0,Regular"
+      [Fonts]
+      fixed="DejaVu Sans,12,-1,5,50,0,0,0,0,0,Regular"
+      general="JetBrainsMono Nerd Font,12,-1,5,50,0,0,0,0,0,Regular"
 
-    [Interface]
-    activate_item_on_single_click=1
-    buttonbox_layout=0
-    cursor_flash_time=1000
-    dialog_buttons_have_icons=1
-    double_click_interval=400
-    gui_effects=@Invalid()
-    keyboard_scheme=2
-    menus_have_icons=true
-    show_shortcuts_in_context_menus=true
-    stylesheets=@Invalid()
-    toolbutton_style=4
-    underline_shortcut=1
-    wheel_scroll_lines=3
-  '';
+      [Interface]
+      activate_item_on_single_click=1
+      buttonbox_layout=0
+      cursor_flash_time=1000
+      dialog_buttons_have_icons=1
+      double_click_interval=400
+      gui_effects=@Invalid()
+      keyboard_scheme=2
+      menus_have_icons=true
+      show_shortcuts_in_context_menus=true
+      stylesheets=@Invalid()
+      toolbutton_style=4
+      underline_shortcut=1
+      wheel_scroll_lines=3
+    '';
+  };
 
 }
