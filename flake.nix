@@ -8,7 +8,12 @@
     # umbriel.url = "github:noctalia-dev/umbriel";
     home-manager.url = "github:nix-community/home-manager";
     yazi.url = "github:sxyazi/yazi";
+    hyprland.url = "github:hyprwm/Hyprland";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland"; # Prevents version mismatch.
+    };
   };
 
   outputs =

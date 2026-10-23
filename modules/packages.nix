@@ -21,6 +21,10 @@
     devenv
     wl-clipboard
     firewalld-gui
+    hyprpicker
+    hyprshot
+    hyprcursor
+    wf-recorder
     # ── Editors / Development ─────────────────────────────────
     git
     gh

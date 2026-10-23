@@ -24,6 +24,7 @@ in
     })
   ];
 
+  wayland.windowManager.hyprland.enable = false;
   home = {
     username = "anand";
     homeDirectory = "/home/anand";
