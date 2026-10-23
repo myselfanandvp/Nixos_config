@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     qylock.url = "github:Darkkal44/qylock";
     noctalia.url = "github:noctalia-dev/noctalia";
-    umbriel.url = "github:noctalia-dev/umbriel";
+    # umbriel.url = "github:noctalia-dev/umbriel";
     home-manager.url = "github:nix-community/home-manager";
     yazi.url = "github:sxyazi/yazi";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -29,13 +29,17 @@
           modules = [
             ./hosts/desktop/configuration.nix
             qylock.nixosModules.default
-            umbriel.nixosModules.default
+            # umbriel.nixosModules.default
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.anand = ./home/anand.nix;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs; };
+                users = {
+                  anand = ./home/anand.nix;
+                };
+              };
             }
           ];
         };
@@ -47,12 +51,17 @@
           modules = [
             ./hosts/laptop/configuration.nix
             qylock.nixosModules.default
+            # umbriel.nixosModules.default
             home-manager.nixosModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.users.anand = ./home/anand.nix;
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs; };
+                users = {
+                  anand = ./home/anand.nix;
+                };
+              };
             }
           ];
         };

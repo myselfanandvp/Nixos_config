@@ -43,6 +43,7 @@
     mediawriter
     nautilus
     brave
+    firefox
 
     # ── Containers ─────────────────────────────────────────────
     distrobox
@@ -51,5 +52,14 @@
     xwayland-satellite
     bibata-cursors
     volantes-cursors
+
+    #  ─────────── Languages ────────────
+    nodejs_24
+    go
+    rustc
+    cargo
+    unzip
+    python314
+    typescript
   ];
 }

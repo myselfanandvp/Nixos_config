@@ -38,9 +38,6 @@
 
       };
     };
-    umbriel = {
-      enable = true;
-    };
     niri = {
       enable = true;
     };

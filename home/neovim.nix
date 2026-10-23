@@ -16,12 +16,6 @@
     sideloadInitLua = true;
 
     extraPackages = with pkgs; [
-      nodejs_24
-      go
-      rustc
-      cargo
-      unzip
-      python314
       nixd
       pyright
       ruff
@@ -32,7 +26,6 @@
       less
       alejandra
       stylua
-      typescript
       typescript-language-server
       ghostscript
       bun
