@@ -17,7 +17,7 @@
     };
     hyprland = {
       enable = true;
-      withUWSM = false;
+      withUWSM = true;
       xwayland = {
         enable = true;
       };
@@ -27,28 +27,19 @@
 
   xdg.portal = {
     enable = true;
-    xdgOpenUsePortal = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-gnome
-      pkgs.xdg-desktop-portal-hyprland
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-gnome
+      xdg-desktop-portal-hyprland
     ];
     config = {
-      common = {
-        default = [ "gtk" ];
-      };
-      niri = {
-        default = [
-          "gnome"
-          "gtk"
-        ];
-      };
+      common.default = [ "gtk" ];
       hyprland = {
         default = [
           "hyprland"
-          "gnome"
-          "gtk"
         ];
+        "org.freedesktop.impl.portal.ScreenCast" = [ "hyprland" ];
+        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
       };
     };
   };
