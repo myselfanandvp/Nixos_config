@@ -15,6 +15,7 @@
         443
         5555
         5037
+        8081
       ];
       allowedUDPPortRanges = [
         {
