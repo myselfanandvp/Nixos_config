@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  inputs,
   ...
 }:
 
@@ -75,7 +73,6 @@
           "gnome"
           "gtk"
         ];
-        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
       };
     };
   };
