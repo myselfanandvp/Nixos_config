@@ -32,6 +32,7 @@
 
   programs = {
     qylock = {
+      enable = true;
       theme = "material-you";
       themeOptions = {
 
