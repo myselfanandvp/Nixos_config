@@ -19,6 +19,8 @@
       nodejs_24
       go
       rustc
+      cargo
+      unzip
       python314
       nixd
       pyright
@@ -27,22 +29,18 @@
       lua-language-server
       nixfmt
       nil
+      less
       alejandra
       stylua
       typescript
       typescript-language-server
-      vimPlugins.nvim-treesitter-parsers.typescript
       ghostscript
       bun
       nixd
       statix
+      fd
     ];
   };
-
-  programs.neovim.plugins = with pkgs.vimPlugins; [
-    nvim-treesitter
-    nvim-lspconfig
-  ];
 
   xdg.configFile."nvim" = {
     source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nixos_config/config/.config/nvim";
