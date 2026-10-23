@@ -30,17 +30,27 @@
     ];
   };
 
-  programs.qylock = {
-    enable = true;
-    theme = "material-you";
-    themeOptions = {
+  programs = {
+    qylock = {
+      theme = "material-you";
+      themeOptions = {
+
+      };
     };
-  };
+    umbriel = {
+      enable = true;
+    };
+    niri = {
+      enable = true;
+    };
+    hyprland = {
+      enable = true;
+      withUWSM = true;
+      xwayland = {
+        enable = true;
+      };
+    };
 
-  programs.umbriel.enable = true;
-
-  programs.niri = {
-    enable = true;
   };
 
   xdg.portal = {
@@ -49,10 +59,21 @@
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-gnome
+      pkgs.xdg-desktop-portal-hyprland
     ];
     config = {
+      common = {
+        default = [ "gtk" ];
+      };
       niri = {
         default = [
+          "gnome"
+          "gtk"
+        ];
+      };
+      hyprland = {
+        default = [
+          "hyprland"
           "gnome"
           "gtk"
         ];
