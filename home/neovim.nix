@@ -30,6 +30,7 @@
       nixd
       statix
       less
+      lessc
       fd
     ];
   };
