@@ -124,6 +124,26 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	name = "google-meet",
+
+	match = {
+		title = "meet.google.com is sharing your screen.",
+	},
+
+	workspace = "special:google-meet silent",
+})
+
+hl.window_rule({
+	name = "google-meet",
+
+	match = {
+		title = ".*meet\\.google\\.com.*",
+	},
+
+	workspace = "special:google-meet silent",
+})
+
+hl.window_rule({
 	name = "calculator",
 
 	match = {
