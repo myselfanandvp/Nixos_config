@@ -20,6 +20,7 @@
     btop
     devenv
     wl-clipboard
+    firewalld-gui
     # ── Editors / Development ─────────────────────────────────
     git
     gh

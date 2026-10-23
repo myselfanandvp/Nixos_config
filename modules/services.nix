@@ -1,60 +1,82 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-
-  services.xserver.videoDrivers = [ "amdgpu" ];
-
-  services.dbus = {
-    enable = true;
-    implementation = "broker";
-    packages = with pkgs; [
-      xfconf
-    ];
-  };
-
-  hardware.bluetooth.enable = true;
-
-  hardware.usb-modeswitch.enable = true;
-
-  services.tuned = {
-    enable = true;
-    settings = {
-      dynamic_tuning = true;
+  services = {
+    displayManager.sddm = {
+      enable = true;
+      wayland = {
+        enable = true;
+      };
+      settings = {
+        Theme = {
+          CursorTheme = "Bibata-Modern-Classic";
+          CursorSize = 18;
+        };
+      };
+      extraPackages = with pkgs; [
+        qt6Packages.qtsvg
+        qt6Packages.qt5compat
+        qt6Packages.qtmultimedia
+      ];
     };
-  };
 
-  services.printing.enable = true;
+    firewalld.enable = true;
 
-  services.udisks2.enable = true;
+    xserver = {
+      videoDrivers = [ "amdgpu" ];
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
+    };
 
-  services.gvfs.enable = true;
+    dbus = {
+      enable = true;
+      implementation = "broker";
+      packages = with pkgs; [ xfconf ];
+    };
+    tuned = {
+      enable = true;
+      settings = {
+        dynamic_tuning = true;
+      };
+    };
+    printing.enable = true;
+    udisks2.enable = true;
+    gvfs.enable = true;
+    flatpak.enable = true;
 
-  virtualisation.docker.enable = true;
-
-  services.keyd = {
-    enable = true;
-    keyboards = {
-      default = {
-        ids = [ "*" ]; # Selects all connected keyboards
-        settings = {
-          main = {
-            capslock = "overload(control, esc)"; # CapsLock acts as Ctrl when held, Esc when tapped
+    keyd = {
+      enable = true;
+      keyboards = {
+        default = {
+          ids = [ "*" ]; # Selects all connected keyboards
+          settings = {
+            main = {
+              capslock = "overload(control, esc)"; # CapsLock acts as Ctrl when held, Esc when tapped
+            };
           };
         };
       };
     };
+
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      # jack.enable = true;
+      wireplumber.enable = true;
+    };
+
   };
 
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # jack.enable = true;
-    wireplumber.enable = true;
+  hardware = {
+    bluetooth.enable = true;
+    usb-modeswitch.enable = true;
   };
 
-  services.flatpak.enable = true;
+  virtualisation.docker.enable = true;
 
   systemd.services.flatpak-repo = {
     script = ''

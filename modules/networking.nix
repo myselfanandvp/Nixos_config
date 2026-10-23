@@ -1,6 +1,28 @@
-{ config, pkgs, ... }:
+{ _, ... }:
 
 {
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "nixos";
+    networkmanager = {
+      enable = true;
+    };
+    nftables.enable = true;
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [
+        22
+        80
+        443
+        5555
+        5037
+      ];
+      allowedUDPPortRanges = [
+        {
+          from = 5555;
+          to = 5585;
+        }
+      ];
+    };
+  };
+
 }
