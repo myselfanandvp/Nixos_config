@@ -99,7 +99,7 @@ in
   };
 
   qt = {
-    # enable = true;
+    enable = true;
     platformTheme.name = "qtct";
     style.name = "Fusion";
   };
