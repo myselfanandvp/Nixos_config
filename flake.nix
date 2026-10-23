@@ -17,7 +17,6 @@
       nixpkgs,
       home-manager,
       qylock,
-      umbriel,
       ...
     }@inputs:
     {
