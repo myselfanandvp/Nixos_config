@@ -19,7 +19,7 @@
     ripgrep
     btop
     devenv
-
+    wl-clipboard
     # ── Editors / Development ─────────────────────────────────
     git
     gh
