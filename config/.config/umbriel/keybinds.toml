@@ -68,6 +68,7 @@
 
 "Mod+Space" = "spawn:noctalia msg panel-toggle launcher"
 "Mod+period" = "spawn:noctalia msg panel-toggle launcher /emo"
+"Mod+Comma" = "spawn:noctalia msg settings-toggle"
 "Mod+V" = "spawn:noctalia msg panel-toggle clipboard"
 "Mod+W" = "spawn:noctalia msg panel-toggle wallpaper"
 "Mod+P" = "spawn:noctalia msg screenshot-region"
