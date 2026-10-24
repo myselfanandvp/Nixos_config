@@ -32,7 +32,7 @@ default_scratchpad = "workfolio"
 default_floating_size_px = { width = 1000, height = 600 }
 
 [[window_rule]]
-match.title = ".*is sharing a window.*"
+match.title = ".*meet.google.com is sharing *"
 default_scratchpad = "googlemeet"
 default_floating_size_px = { width = 1, height = 1 }
 
