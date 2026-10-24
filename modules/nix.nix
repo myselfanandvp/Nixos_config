@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ _, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -7,7 +7,7 @@
     gc = {
       automatic = true;
       dates = "daily";
-      options = "--delete-older-than 2d";
+      options = "--delete-older-than 30d";
     };
 
     settings = {

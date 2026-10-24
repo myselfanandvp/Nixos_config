@@ -20,8 +20,6 @@
       ];
     };
 
-    firewalld.enable = true;
-
     xserver = {
       videoDrivers = [ "amdgpu" ];
       xkb = {
@@ -35,6 +33,7 @@
       implementation = "broker";
       packages = with pkgs; [ xfconf ];
     };
+
     tuned = {
       enable = true;
       settings = {
@@ -44,8 +43,8 @@
     printing.enable = true;
     udisks2.enable = true;
     gvfs.enable = true;
+    firewalld.enable = true;
     flatpak.enable = true;
-
     keyd = {
       enable = true;
       keyboards = {
@@ -79,6 +78,8 @@
   virtualisation.docker.enable = true;
 
   systemd.services.flatpak-repo = {
+    wantedBy = [ "multi-user.target" ];
+    path = [ pkgs.flatpak ];
     script = ''
       flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     '';

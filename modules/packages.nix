@@ -25,6 +25,7 @@
     hyprshot
     hyprcursor
     wf-recorder
+    uv
     # ── Editors / Development ─────────────────────────────────
     git
     gh
