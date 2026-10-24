@@ -1,9 +1,14 @@
 {
   pkgs,
+  inputs,
   ...
 }:
 
 {
+  imports = [
+    inputs.umbriel.nixosModules.default
+    inputs.qylock.nixosModules.default
+  ];
   programs = {
     qylock = {
       enable = true;
@@ -15,6 +20,7 @@
     niri = {
       enable = true;
     };
+    umbriel.enable = true;
     hyprland = {
       enable = true;
       withUWSM = true;

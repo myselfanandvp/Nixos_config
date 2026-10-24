@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     qylock.url = "github:Darkkal44/qylock";
     noctalia.url = "github:noctalia-dev/noctalia";
-    # umbriel.url = "github:noctalia-dev/umbriel";
+    umbriel.url = "github:noctalia-dev/umbriel";
     home-manager.url = "github:nix-community/home-manager";
     yazi.url = "github:sxyazi/yazi";
     hyprland.url = "github:hyprwm/Hyprland";
@@ -32,8 +32,6 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/desktop/configuration.nix
-            qylock.nixosModules.default
-            # umbriel.nixosModules.default
             home-manager.nixosModules.home-manager
             {
               home-manager = {
