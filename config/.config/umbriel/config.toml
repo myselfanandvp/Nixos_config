@@ -21,3 +21,6 @@ files = [
   "animation.toml",
   "monitors.toml",
 ]
+
+[include.optional]
+files = ["noctalia.toml"]

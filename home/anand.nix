@@ -45,14 +45,12 @@ in
   xdg.configFile = {
     "fish".source = outOfStore "${DotConfig}/fish";
     "starship.toml".source = outOfStore "${DotConfig}/starship.toml";
-    "hypr".source = outOfStore "${DotConfig}/hypr";
     "niri".source = outOfStore "${DotConfig}/niri";
     "mpv".source = outOfStore "${DotConfig}/mpv";
     "kitty".source = outOfStore "${DotConfig}/kitty";
     "fastfetch".source = outOfStore "${DotConfig}/fastfetch";
     "ghostty".source = outOfStore "${DotConfig}/ghostty";
     "wezterm".source = outOfStore "${DotConfig}/wezterm";
-    "mango".source = outOfStore "${DotConfig}/mango";
     "umbriel".source = outOfStore "${DotConfig}/umbriel";
   };
 
@@ -60,12 +58,7 @@ in
     enable = true;
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
-    size = 10;
-  };
-
-  home.pointerCursor.hyprcursor = {
-    enable = true;
-    size = 18;
+    size = 8;
   };
 
   gtk = {
@@ -81,11 +74,11 @@ in
     cursorTheme = {
       name = "Bibata-Modern-Classic";
       package = pkgs.bibata-cursors;
-      size = 10;
+      size = 8;
     };
     font = {
       name = "JetBrainsMono Nerd Font";
-      size = 11;
+      size = 12;
     };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = true;
@@ -98,7 +91,6 @@ in
   qt = {
     enable = true;
     platformTheme.name = "qtct";
-    style.name = "Fusion";
   };
 
   xdg.configFile = {

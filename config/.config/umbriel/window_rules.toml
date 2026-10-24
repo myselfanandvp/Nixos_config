@@ -32,6 +32,12 @@ default_scratchpad = "workfolio"
 default_floating_size_px = { width = 1000, height = 600 }
 
 [[window_rule]]
+match.title = ".*is sharing a window.*"
+default_scratchpad = "googlemeet"
+default_floating_size_px = { width = 1, height = 1 }
+
+
+[[window_rule]]
 match.app_id = "^org.gnome.Nautilus$"
 default_floating = true
 default_floating_size_px = { width = 1000, height = 600 }
