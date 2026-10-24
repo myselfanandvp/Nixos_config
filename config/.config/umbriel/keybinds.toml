@@ -13,11 +13,10 @@
 
 "Mod+RETURN" = { action = "spawn:kitty", repeat = false }
 "ALT+RETURN" = { action = "spawn:wezterm", repeat = false }
-"Mod+E" = { action = "spawn:~/Dotfiles/config/.config/umbriel/scripts/yazi.sh", repeat = false }
-"Mod+Z" = { action = "spawn:~/Dotfiles/config/.config/umbriel/scripts/hyprmag.sh", repeat = false }
+"Mod+E" = { action = "spawn:~/Nixos_config/config/.config/umbriel/scripts/yazi.sh", repeat = false }
 "Mod+ALT+E" = { action = "spawn:nautilus", repeat = false }
-"Mod+T" = { action = "spawn:~/Dotfiles/config/.config/umbriel/scripts/kitty_toggle.sh", repeat = false }
-"Mod+B" = { action = "spawn:~/Dotfiles/config/.config/umbriel/scripts/btop_toggle.sh", repeat = false }
+"Mod+T" = { action = "spawn:~/Nixos_config/config/.config/umbriel/scripts/kitty_toggle.sh", repeat = false }
+"Mod+B" = { action = "spawn:~/Nixos_config/config/.config/umbriel/scripts/btop_toggle.sh", repeat = false }
 "Mod+Shift+Semicolon" = { action = "cheatsheet-toggle", repeat = false }
 
 #    ╭────────────────────────────╮
