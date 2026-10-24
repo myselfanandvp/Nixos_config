@@ -23,8 +23,6 @@ in
       inherit config pkgs outOfStore;
     })
   ];
-
-  wayland.windowManager.hyprland.enable = false;
   home = {
     username = "anand";
     homeDirectory = "/home/anand";
@@ -38,11 +36,9 @@ in
       gruvbox-plus-icons
       nerd-fonts.jetbrains-mono
       lazygit
-      fuzzel
       lazydocker
       herdr
-      python3
-      nodejs_latest
+      xwayland-satellite
     ];
   };
 
@@ -56,7 +52,7 @@ in
     "fastfetch".source = outOfStore "${DotConfig}/fastfetch";
     "ghostty".source = outOfStore "${DotConfig}/ghostty";
     "wezterm".source = outOfStore "${DotConfig}/wezterm";
-    "mango".source = outOfStore "${DotConfig}/manago";
+    "mango".source = outOfStore "${DotConfig}/mango";
     "umbriel".source = outOfStore "${DotConfig}/umbriel";
   };
 
@@ -113,7 +109,6 @@ in
       custom_palette=true
       icon_theme=Papirus-Dark
       standard_dialogs=gtk3
-      style=Fusion
 
       [Fonts]
       fixed="DejaVu Sans,12,-1,5,50,0,0,0,0,0,Regular"
@@ -140,7 +135,6 @@ in
       custom_palette=true
       icon_theme=Papirus-Dark
       standard_dialogs=gtk3
-      style=Fusion
 
       [Fonts]
       fixed="DejaVu Sans,12,-1,5,50,0,0,0,0,0,Regular"

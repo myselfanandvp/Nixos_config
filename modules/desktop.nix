@@ -1,53 +1,27 @@
 {
-  pkgs,
   inputs,
   ...
 }:
-
 {
   imports = [
     inputs.umbriel.nixosModules.default
     inputs.qylock.nixosModules.default
   ];
+
   programs = {
     qylock = {
       enable = true;
       theme = "material-you";
-      themeOptions = {
-
-      };
+      themeOptions = { };
     };
+
+    umbriel.enable = true;
     niri = {
       enable = true;
     };
-    umbriel.enable = true;
-    hyprland = {
-      enable = true;
-      withUWSM = true;
-      xwayland = {
-        enable = true;
-      };
-    };
-
   };
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-gnome
-      xdg-desktop-portal-hyprland
-    ];
-    config = {
-      common.default = [ "gtk" ];
-      hyprland = {
-        default = [
-          "hyprland"
-        ];
-        "org.freedesktop.impl.portal.ScreenCast" = [ "hyprland" ];
-        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
-      };
-    };
+  xdg.portal.config.niri = {
+    "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ]; # or "kde"
   };
-
 }

@@ -5,9 +5,8 @@
 {
   environment.systemPackages = with pkgs; [
     # ── CLI / Shell ─────────────────────────────────────────────
-    stow
     fastfetch
-    fuzzel
+    wlr-randr
     starship
     eza
     tree
@@ -21,9 +20,9 @@
     devenv
     wl-clipboard
     firewalld-gui
-    hyprpicker
-    hyprshot
-    hyprcursor
+    grim
+    slurp
+    satty
     wf-recorder
     uv
     # ── Editors / Development ─────────────────────────────────
@@ -34,7 +33,6 @@
     gnumake
     rustc
     lua
-
     # ── Terminal ───────────────────────────────────────────────
     ghostty
     kitty
@@ -47,13 +45,11 @@
     mediawriter
     nautilus
     brave
-    firefox
 
     # ── Containers ─────────────────────────────────────────────
     distrobox
 
     # ── Wayland / Desktop ──────────────────────────────────────
-    xwayland-satellite
     bibata-cursors
     volantes-cursors
 
