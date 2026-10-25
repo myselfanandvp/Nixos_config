@@ -1,14 +1,14 @@
 {
-  config,
-  pkgs,
+  _,
   inputs,
   ...
 }:
 
 {
   imports = [
+
+    inputs.home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
-    ./noctalia.nix
     ../../modules/boot.nix
     ../../modules/networking.nix
     ../../modules/locale.nix
@@ -18,10 +18,17 @@
     ../../modules/packages.nix
     ../../modules/programs.nix
     ../../modules/services.nix
-    ../../modules/virtualization.nix
     ../../modules/nix.nix
     ../../modules/security.nix
   ];
 
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      anand = ../.././home/anand.nix;
+    };
+  };
   system.stateVersion = "26.05";
 }

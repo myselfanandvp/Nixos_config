@@ -38,18 +38,6 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/laptop/configuration.nix
-            # qylock.nixosModules.default
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                extraSpecialArgs = { inherit inputs; };
-                users = {
-                  anand = ./home/anand.nix;
-                };
-              };
-            }
           ];
         };
 

@@ -1,10 +1,12 @@
 {
+  inputs,
   pkgs,
   ...
 }:
 {
   environment.systemPackages = with pkgs; [
     # ── CLI / Shell ─────────────────────────────────────────────
+    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     fastfetch
     wlr-randr
     starship
