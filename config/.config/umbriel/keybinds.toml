@@ -31,6 +31,8 @@
 
 "Mod+H" = "window-focus-left"
 "Mod+L" = "window-focus-right"
+"Mod+Tab" = "output-focus-next"
+"Mod+Shift+Tab" = "output-focus-previous"
 
 #    ╭────────────────────────────╮
 #    │           Mouse            │
@@ -51,6 +53,8 @@
 
 "Mod+F" = { action = "window-toggle-maximize", repeat = false }
 "Mod+M" = { action = "window-toggle-maximize-to-edges", repeat = false }
+"Mod+Alt+L" = "workspace-next"
+"Mod+Alt+J" = "workspace-previous"
 
 #    ╭────────────────────────────╮
 #    │         Workspace          │
