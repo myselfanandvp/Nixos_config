@@ -9,6 +9,7 @@
     nftables.enable = true;
     firewall = {
       enable = true;
+      checkReversePath = false;
       trustedInterfaces = [ "docker0" ];
       allowedTCPPorts = [
         5555

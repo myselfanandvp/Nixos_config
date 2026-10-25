@@ -36,6 +36,7 @@ in
       gruvbox-plus-icons
       nerd-fonts.jetbrains-mono
       lazygit
+      docker-compose
       lazydocker
       herdr
       xwayland-satellite
