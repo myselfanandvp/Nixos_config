@@ -1,11 +1,17 @@
 {
   inputs,
+  pkgs,
   ...
+
 }:
+let
+  pkgs-unstable = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+in
 {
   imports = [
     inputs.umbriel.nixosModules.default
     inputs.qylock.nixosModules.default
+    inputs.hyprland.nixosModules.default
   ];
 
   programs = {
@@ -15,13 +21,36 @@
       themeOptions = { };
     };
 
+    hyprland = {
+      enable = true;
+      # set the flake package
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      # make sure to also set the portal package, so that they are in sync
+      portalPackage =
+        inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+
+    };
+
     umbriel.enable = true;
     niri = {
       enable = true;
     };
   };
 
-  xdg.portal.config.niri = {
-    "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ]; # or "kde"
+  xdg.portal = {
+    enable = true;
+    config = {
+      niri = {
+        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+      };
+    };
   };
+
+  hardware.graphics = {
+    package = pkgs-unstable.mesa;
+    # if you also want 32-bit support (e.g for Steam)
+    enable32Bit = true;
+    package32 = pkgs-unstable.pkgsi686Linux.mesa;
+  };
+
 }

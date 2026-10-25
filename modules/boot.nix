@@ -30,5 +30,11 @@
       "rd.udev.log_level=3"
       "vt.global_cursor_default=0" # Hides the blinking cursor during boot
     ];
+
+    kernel.sysctl = {
+      "net.ipv4.conf.eth0.forwarding" = 1; # enable port forwarding for the docker
+    };
+
   };
+
 }

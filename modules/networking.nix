@@ -9,23 +9,27 @@
     nftables.enable = true;
     firewall = {
       enable = true;
-      checkReversePath = false;
+      checkReversePath = true;
       trustedInterfaces = [ "docker0" ];
       allowedTCPPorts = [
         5555
         5432
         5037
-        8081
         80
-        443
-        2375
-        2375
+        8081
+        8000
+        1025
+        5173
+        8025
       ];
-      allowedUDPPortRanges = [
-        {
-          from = 5555;
-          to = 5585;
-        }
+      allowedUDPPorts = [
+        5585
+        8025
+        53
+        5300
+        5173
+        1025
+        8000
       ];
     };
   };

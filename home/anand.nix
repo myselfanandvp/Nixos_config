@@ -23,6 +23,15 @@ in
       inherit config pkgs outOfStore;
     })
   ];
+
+  wayland.windowManager.hyprland = {
+    enable = false;
+    systemd.enable = false;
+    plugins = [
+      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders_plus_plus
+    ];
+  };
+
   home = {
     username = "anand";
     homeDirectory = "/home/anand";
@@ -36,7 +45,6 @@ in
       gruvbox-plus-icons
       nerd-fonts.jetbrains-mono
       lazygit
-      docker-compose
       lazydocker
       herdr
       xwayland-satellite
@@ -53,6 +61,7 @@ in
     "ghostty".source = outOfStore "${DotConfig}/ghostty";
     "wezterm".source = outOfStore "${DotConfig}/wezterm";
     "umbriel".source = outOfStore "${DotConfig}/umbriel";
+    "hypr".source = outOfStore "${DotConfig}/hypr";
   };
 
   home.pointerCursor = {
