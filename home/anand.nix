@@ -8,6 +8,7 @@
 let
   DotConfig = "${config.home.homeDirectory}/Nixos_config/config/.config";
   outOfStore = config.lib.file.mkOutOfStoreSymlink;
+  hyrprPlugin = inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system};
 in
 
 {
@@ -29,7 +30,8 @@ in
       enable = false;
       systemd.enable = false;
       plugins = [
-        inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders_plus_plus
+        hyrprPlugin.borders_plus_plus
+        hyrprPlugin.hyprexpo
       ];
     };
 
