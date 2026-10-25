@@ -21,7 +21,6 @@
     btop
     devenv
     wl-clipboard
-    firewalld-gui
     grim
     slurp
     satty
