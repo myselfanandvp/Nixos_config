@@ -11,10 +11,9 @@
     kernelPackages = pkgs.linuxPackages_latest;
 
     initrd = {
-      systemd.enable = true;
       kernelModules = [
         "amdgpu"
-        # "i915"
+        "i915"
       ];
     };
 
