@@ -90,7 +90,7 @@ in
 
   qt = {
     enable = true;
-    platformTheme.name = "qtct";
+    platformTheme.name = "gtk3";
   };
 
   xdg.configFile = {
