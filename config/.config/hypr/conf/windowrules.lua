@@ -117,7 +117,7 @@ hl.window_rule({
 	name = "google-meet",
 
 	match = {
-		title = "meet.google.com is sharing a window.",
+		title = "^.*meet\\.google\\.com is sharing.*$",
 	},
 
 	workspace = "special:google-meet silent",
