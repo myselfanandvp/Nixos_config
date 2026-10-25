@@ -9,7 +9,6 @@ let
 in
 {
   imports = [
-    inputs.umbriel.nixosModules.default
     inputs.qylock.nixosModules.default
     inputs.hyprland.nixosModules.default
   ];
@@ -31,19 +30,10 @@ in
 
     };
 
-    umbriel.enable = true;
-    niri = {
-      enable = true;
-    };
   };
 
   xdg.portal = {
     enable = true;
-    config = {
-      niri = {
-        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
-      };
-    };
   };
 
   hardware.graphics = {
