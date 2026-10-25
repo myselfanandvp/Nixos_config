@@ -24,12 +24,15 @@ in
     })
   ];
 
-  wayland.windowManager.hyprland = {
-    enable = false;
-    systemd.enable = false;
-    plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders_plus_plus
-    ];
+  wayland.windowManager = {
+    hyprland = {
+      enable = false;
+      systemd.enable = false;
+      plugins = [
+        inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.borders_plus_plus
+      ];
+    };
+
   };
 
   home = {
