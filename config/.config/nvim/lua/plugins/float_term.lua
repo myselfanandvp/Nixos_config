@@ -39,5 +39,26 @@ return {
       end,
       desc = "Toggle floating terminal (file dir)",
     },
+    {
+      "<leader>fm",
+      function()
+        local Terminal = require("toggleterm.terminal").Terminal
+
+        -- Get the existing terminal or create it once
+        if not _G.my_float_terminal then
+          _G.my_float_terminal = Terminal:new({
+            direction = "float",
+            float_opts = {
+              border = "rounded",
+              width = 100,
+              height = 20,
+            },
+          })
+        end
+
+        _G.my_float_terminal:toggle()
+      end,
+      desc = "Minimize / restore floating terminal",
+    },
   },
 }
