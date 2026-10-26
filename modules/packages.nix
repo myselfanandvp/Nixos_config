@@ -3,10 +3,18 @@
   pkgs,
   ...
 }:
+let
+  noctalia = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
+in
 {
+
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+  ];
   environment.systemPackages = with pkgs; [
     # ── CLI / Shell ─────────────────────────────────────────────
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+    home-manager
+    noctalia
     fastfetch
     wlr-randr
     starship

@@ -6,7 +6,6 @@
 
 {
   imports = [
-
     inputs.home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../modules/boot.nix
