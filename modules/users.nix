@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ _, pkgs, ... }:
 {
 
   users.users.anand = {
