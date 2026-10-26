@@ -2,6 +2,7 @@
   description = "Custom Nixos + Hyprland and Niri with Noctalia System flake";
 
   inputs = {
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     qylock.url = "github:Darkkal44/qylock";
     noctalia.url = "github:noctalia-dev/noctalia";
@@ -23,6 +24,7 @@
     {
       self,
       nixpkgs,
+      nix-cachyos-kernel,
       ...
     }@inputs:
     let

@@ -1,5 +1,4 @@
 {
-  _,
   inputs,
   ...
 }:
@@ -20,13 +19,12 @@
     ../../modules/nix.nix
     ../../modules/security.nix
   ];
-
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
     extraSpecialArgs = { inherit inputs; };
     users = {
-      anand = ../.././home/anand.nix;
+      anand = ../../home/anand.nix;
     };
   };
   system.stateVersion = "26.05";

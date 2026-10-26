@@ -1,4 +1,8 @@
-{ _, pkgs, ... }:
+{
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   boot = {
@@ -8,7 +12,7 @@
     };
 
     # Use latest kernel.
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
 
     initrd = {
       kernelModules = [
@@ -37,4 +41,7 @@
 
   };
 
+  nixpkgs.overlays = [
+    inputs.nix-cachyos-kernel.overlays.pinned
+  ];
 }
