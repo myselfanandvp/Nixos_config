@@ -1,6 +1,5 @@
 {
-  pkgs,
-  inputs,
+  _,
   ...
 }:
 
@@ -10,9 +9,6 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
-
-    # Use latest kernel.
-    kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
 
     initrd = {
       kernelModules = [
@@ -41,7 +37,4 @@
 
   };
 
-  nixpkgs.overlays = [
-    inputs.nix-cachyos-kernel.overlays.pinned
-  ];
 }
