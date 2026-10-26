@@ -15,6 +15,8 @@ in
     # ── CLI / Shell ─────────────────────────────────────────────
     home-manager
     noctalia
+    hyprpicker
+    hyprshot
     fastfetch
     wlr-randr
     starship
