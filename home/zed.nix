@@ -5,7 +5,12 @@
 {
   programs.zed-editor = {
     enable = true;
-
+    extensions = [
+      "nix"
+      "python"
+      "javascript"
+      "go"
+    ];
     userSettings = {
       icon_theme = "Catppuccin Mocha";
       vim_mode = true;

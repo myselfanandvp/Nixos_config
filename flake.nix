@@ -25,19 +25,23 @@
       nixpkgs,
       ...
     }@inputs:
+    let
+      system = "x86_64-linux";
+    in
     {
       nixosConfigurations = {
         #Desktop config
         desktop = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          inherit system;
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/desktop/configuration.nix
           ];
+
         };
         #Laptop config
         laptop = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          inherit system;
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/laptop/configuration.nix
@@ -48,7 +52,7 @@
 
       homeConfigurations = {
         anand = inputs.home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          pkgs = nixpkgs.legacyPackages.${system};
           extraSpecialArgs = { inherit inputs; };
           modules = [
             ./home/anand.nix

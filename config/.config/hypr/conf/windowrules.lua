@@ -166,17 +166,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "Zed Editor",
-
-	match = {
-		class = "dev.zed.Zed",
-	},
-	no_blur = false,
-	opacity = 0.9,
-	float = false,
-})
-
-hl.window_rule({
 	name = "Tmux",
 	match = {
 		title = "tmux",
