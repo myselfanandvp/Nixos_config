@@ -45,12 +45,16 @@
         };
 
       };
-      homeConfigurations."anand" = inputs.home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = { inherit inputs; };
-        modules = [
-          ./home/anand.nix
-        ];
+
+      homeConfigurations = {
+        anand = inputs.home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs; };
+          modules = [
+            ./home/anand.nix
+          ];
+        };
       };
+
     };
 }
