@@ -5,6 +5,7 @@
 }:
 let
   noctalia = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  zen-browser = inputs.zen-browser.packages.${pkgs.system}.default;
 in
 {
 
@@ -24,6 +25,7 @@ in
     tree
     less
     trash-cli
+    zen-browser
     fish
     fzf
     fd
