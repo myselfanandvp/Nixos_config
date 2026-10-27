@@ -1,55 +1,45 @@
 {
-  pkgs,
   inputs,
+  pkgs,
   ...
 }:
-
+let
+  pkgs-unstable = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+in
 {
   imports = [
-    inputs.umbriel.nixosModules.default
     inputs.qylock.nixosModules.default
+    inputs.hyprland.nixosModules.default
   ];
+
   programs = {
     qylock = {
       enable = true;
-      theme = "material-you";
-      themeOptions = {
+      theme = "material-you-dark";
+      themeOptions = { };
+    };
 
-      };
-    };
-    niri = {
-      enable = true;
-    };
-    umbriel.enable = true;
     hyprland = {
       enable = true;
-      withUWSM = true;
-      xwayland = {
-        enable = true;
-      };
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+      portalPackage =
+        inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
-
   };
 
+  # Change this part to use the GNOME portal backend for Niri
   xdg.portal = {
     enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-gnome
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gnome
+      pkgs.xdg-desktop-portal-gtk
     ];
-    config = {
-      common.default = [ "gtk" ];
-      hyprland = {
-        default = [
-          "hyprland"
-          "gtk"
-        ];
-        "org.freedesktop.impl.portal.ScreenCast" = [ "hyprland" ];
-        "org.freedesktop.impl.portal.Screenshot" = [ "hyprland" ];
-        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
-      };
-    };
+    config.common.default = "gnome";
   };
 
+  hardware.graphics = {
+    package = pkgs-unstable.mesa;
+    enable32Bit = true;
+    package32 = pkgs-unstable.pkgsi686Linux.mesa;
+  };
 }
