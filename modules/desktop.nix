@@ -16,7 +16,7 @@ in
   programs = {
     qylock = {
       enable = true;
-      theme = "material-you";
+      theme = "material-you-dark";
       themeOptions = { };
     };
 
