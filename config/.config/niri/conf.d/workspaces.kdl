@@ -1,4 +1,4 @@
-workspace "workfolio"{
+workspace "googlemeet"{
   open-on-output "eDP-1"
 }
 

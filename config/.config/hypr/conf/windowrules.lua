@@ -46,20 +46,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "workfolio",
-
-	match = {
-		class = "workfolio",
-	},
-
-	float = true,
-	center = true,
-	size = "500 700",
-	animation = "popin",
-	workspace = "special:workfolio",
-})
-
-hl.window_rule({
 	name = "SoundRecorder",
 
 	match = {

@@ -1,6 +1,6 @@
 
 [general]
-autostart = ["noctalia", "workfolio"]
+autostart = ["noctalia"]
 mod_key = "Super"
 xwayland = true
 xwayland_native_resolution = true

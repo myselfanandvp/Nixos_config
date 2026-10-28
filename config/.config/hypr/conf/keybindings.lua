@@ -157,8 +157,6 @@ hl.bind(mainMod .. "+ALT + S", hl.dsp.workspace.toggle_special("magic"))
 
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
-hl.bind("ALT + W", hl.dsp.workspace.toggle_special("workfolio"))
-
 hl.bind("ALT + M", hl.dsp.workspace.toggle_special("spotify"))
 
 --    ╭────────────────────────────╮

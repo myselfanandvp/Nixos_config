@@ -27,11 +27,6 @@ default_floating_size_px = { width = 1000, height = 600 }
 
 
 [[window_rule]]
-match.app_id = "^workfolio$"
-default_scratchpad = "workfolio"
-default_floating_size_px = { width = 1000, height = 600 }
-
-[[window_rule]]
 match.title = ".*meet.google.com is sharing *"
 default_scratchpad = "googlemeet"
 default_floating_size_px = { width = 1, height = 1 }
