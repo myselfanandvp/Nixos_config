@@ -273,6 +273,7 @@ hl.bind(mainMod .. "+period", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher /em
 hl.bind(mainMod .. "+X", hl.dsp.exec_cmd(ipc .. " panel-toggle session"))
 hl.bind(mainMod .. "+W", hl.dsp.exec_cmd(ipc .. " panel-toggle wallpaper"))
 hl.bind(mainMod .. " +ALT+L", hl.dsp.exec_cmd(ipc .. " session lock"))
+hl.bind(mainMod .. "+semicolon", hl.dsp.exec_cmd(ipc .. " panel-toggle launcher /emo"))
 
 --  ─────────── Media keys ───────────
 
