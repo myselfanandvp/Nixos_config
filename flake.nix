@@ -3,6 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    artcraft = {
+      url = "github:MajorR/artcraft-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     workfolio = {
       url = "github:myselfanandvp/workfolio-flake";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -28,7 +28,12 @@ in
   };
 
   # Change this part to use the GNOME portal backend for Niri
-  xdg.portal.enable = true;
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+  };
 
   hardware.graphics = {
     package = pkgs-unstable.mesa;

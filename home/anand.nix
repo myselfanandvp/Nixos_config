@@ -51,7 +51,7 @@ in
       lazygit
       lazydocker
       herdr
-      xwayland-satellite
+      inputs.artcraft.packages.${pkgs.stdenv.hostPlatform.system}.filmcraft
     ];
   };
 
