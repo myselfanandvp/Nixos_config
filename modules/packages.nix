@@ -6,6 +6,7 @@
 let
   noctalia = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
   zen-browser = inputs.zen-browser.packages.${pkgs.system}.default;
+  workfolio = inputs.workfolio.packages.${pkgs.system}.default;
 in
 {
 
@@ -58,6 +59,7 @@ in
     mediawriter
     nautilus
     brave
+    workfolio
 
     # ── Containers ─────────────────────────────────────────────
     distrobox

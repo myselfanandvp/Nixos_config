@@ -612,6 +612,7 @@
         "nixpkgs": "nixpkgs_2",
         "noctalia": "noctalia",
         "qylock": "qylock",
+        "workfolio": "workfolio",
         "yazi": "yazi",
         "zen-browser": "zen-browser"
       }
@@ -679,6 +680,26 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "workfolio": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793175938,
+        "narHash": "sha256-6KoQG4I2PS64ynoyZP4ZTnjR44Lwp0amhhYsSpJZxPk=",
+        "owner": "myselfanandvp",
+        "repo": "workfolio-flake",
+        "rev": "3486ab8639165bd1e0e5f9b13bde40c87f6e434a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "myselfanandvp",
+        "repo": "workfolio-flake",
         "type": "github"
       }
     },

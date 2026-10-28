@@ -3,6 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    workfolio = {
+      url = "github:myselfanandvp/workfolio-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     qylock.url = "github:Darkkal44/qylock";
     noctalia.url = "github:noctalia-dev/noctalia";
     yazi.url = "github:sxyazi/yazi";
