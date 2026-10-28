@@ -166,6 +166,36 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	name = "Kitty",
+
+	match = {
+		class = "kitty",
+	},
+	opacity = 0.8,
+	no_blur = false,
+})
+
+hl.window_rule({
+	name = "Wezterm",
+
+	match = {
+		class = "wezterm",
+	},
+	opacity = 0.8,
+	no_blur = false,
+})
+
+hl.window_rule({
+	name = "ghostty",
+
+	match = {
+		class = "com.mitchellh.ghostty",
+	},
+	opacity = 0.8,
+	no_blur = false,
+})
+
+hl.window_rule({
 	name = "Tmux",
 	match = {
 		title = "tmux",

@@ -2,9 +2,16 @@
 edit = [{ run = "kitty -e nvim %s", orphan = true, for = "unix" }]
 play = [{ run = "mpv %s", orphan = true, for = "unix" }]
 pdf_viewer = [{ run = "zathura %s", orphan = true, for = "unix" }]
+image = [
+  { run = 'loupe %s', desc = "Loupe Image Viewer", orphan = true, for = "unix" },
+]
 
 [open]
 prepend_rules = [
+  { mime = "image/*", use = [
+    "image",
+    "reveal",
+  ] },
   { url = "*.json", use = "edit" },
   { url = "*.html", use = "edit" },
   { url = "*.pdf", use = "pdf_viewer" },

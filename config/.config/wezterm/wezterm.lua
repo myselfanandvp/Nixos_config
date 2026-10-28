@@ -3,11 +3,11 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- Background opacity
-config.window_background_opacity = 0.90
+-- config.window_background_opacity = 0.90
 
 -- Font
 config.font = wezterm.font("JetBrains Mono")
-config.font_size = 12.0
+config.font_size = 13.0
 
 -- Cursor thickness
 config.default_cursor_style = "BlinkingBar"
