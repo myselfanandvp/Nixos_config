@@ -5,6 +5,7 @@ scan_timeout = 1000
 
 format = """
 $os\
+$hostname\
 $directory\
 $git_branch\
 $git_status\
@@ -188,7 +189,11 @@ symbol = " "
 symbol = " "
 
 [hostname]
+ssh_only = false
 ssh_symbol = " "
+format = "[@$hostname]($style) "
+style = "bold cyan"
+disabled = false
 
 [java]
 symbol = " "
