@@ -30,8 +30,7 @@ in
       enable = false;
       systemd.enable = false;
       plugins = [
-        hyrprPlugin.borders_plus_plus
-        hyrprPlugin.hyprexpo
+        hyrprPlugin."borders-plus-plus"
       ];
     };
 
