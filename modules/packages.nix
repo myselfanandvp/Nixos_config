@@ -16,6 +16,7 @@ in
   environment.systemPackages = with pkgs; [
     # ── CLI / Shell ─────────────────────────────────────────────
     home-manager
+    loupe
     noctalia
     hyprpicker
     hyprshot
