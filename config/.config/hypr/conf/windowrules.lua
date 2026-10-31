@@ -157,7 +157,7 @@ hl.window_rule({
 	match = {
 		class = "kitty",
 	},
-	opacity = 0.8,
+	opacity = 0.9,
 	no_blur = false,
 })
 
@@ -167,7 +167,7 @@ hl.window_rule({
 	match = {
 		class = "wezterm",
 	},
-	opacity = 0.8,
+	opacity = 0.9,
 	no_blur = false,
 })
 
@@ -177,7 +177,7 @@ hl.window_rule({
 	match = {
 		class = "com.mitchellh.ghostty",
 	},
-	opacity = 0.8,
+	opacity = 0.9,
 	no_blur = false,
 })
 
