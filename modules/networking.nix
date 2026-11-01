@@ -5,6 +5,7 @@
     hostName = "Nixos";
     networkmanager = {
       enable = true;
+      dns = "systemd-resolved";
     };
     nftables.enable = true;
     firewall = {
@@ -33,5 +34,7 @@
       ];
     };
   };
+
+  services.resolved.enable = true;
 
 }

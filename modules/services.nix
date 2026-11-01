@@ -34,7 +34,6 @@
     dbus = {
       enable = true;
       implementation = "broker";
-      packages = with pkgs; [ xfconf ];
     };
 
     tuned = {
@@ -88,12 +87,23 @@
 
   virtualisation.docker.enable = true;
 
+  # Docker probes for nft when configuring its firewall integration. The
+  # executable is needed in the service PATH even when nftables is enabled.
+  systemd.services.docker.path = [ pkgs.nftables ];
+
   systemd.services.flatpak-repo = {
     wantedBy = [ "multi-user.target" ];
+    wants = [ "network-online.target" ];
+    after = [ "network-online.target" ];
     path = [ pkgs.flatpak ];
     script = ''
       flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     '';
+    serviceConfig = {
+      Type = "oneshot";
+      Restart = "on-failure";
+      RestartSec = "30s";
+    };
   };
 
 }

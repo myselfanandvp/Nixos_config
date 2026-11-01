@@ -1,6 +1,8 @@
 { _, pkgs, ... }:
 {
 
+  users.groups.keyd = { };
+
   users.users.anand = {
     isNormalUser = true;
     description = "anand";
