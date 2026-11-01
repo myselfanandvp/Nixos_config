@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   services = {
@@ -21,7 +21,10 @@
     };
 
     xserver = {
-      videoDrivers = [ "amdgpu" ];
+      videoDrivers = [
+        "amdgpu"
+        "nvidia"
+      ];
       xkb = {
         layout = "us";
         variant = "";
@@ -73,6 +76,14 @@
   hardware = {
     bluetooth.enable = true;
     usb-modeswitch.enable = true;
+    graphics.enable = true;
+    nvidia = {
+      modesetting.enable = true;
+      open = false;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
+
   };
 
   virtualisation.docker.enable = true;
