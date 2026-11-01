@@ -1,5 +1,5 @@
 {
-  config,
+  _,
   ...
 }:
 
@@ -270,7 +270,4 @@
 
   };
 
-  xdg.configFile."noctalia" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nixos_config/config/.config/noctalia";
-  };
 }
