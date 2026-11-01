@@ -4,7 +4,6 @@
   ...
 }:
 let
-  noctalia = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
   zen-browser = inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 {
@@ -16,7 +15,6 @@ in
     # ── CLI / Shell ─────────────────────────────────────────────
     home-manager
     loupe
-    noctalia
     hyprpicker
     hyprshot
     fastfetch

@@ -9,6 +9,7 @@ let
   DotConfig = "${config.home.homeDirectory}/Nixos_config/config/.config";
   outOfStore = config.lib.file.mkOutOfStoreSymlink;
   hyrprPlugin = inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system};
+  noctalia = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 
 {
@@ -52,6 +53,7 @@ in
       lazydocker
       herdr
       inputs.artcraft.packages.${pkgs.stdenv.hostPlatform.system}.filmcraft
+      noctalia
     ];
   };
 
