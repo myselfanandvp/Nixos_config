@@ -68,48 +68,6 @@ in
     "wezterm".source = outOfStore "${DotConfig}/wezterm";
     "umbriel".source = outOfStore "${DotConfig}/umbriel";
     "hypr".source = outOfStore "${DotConfig}/hypr";
-  };
-
-  home.pointerCursor = {
-    enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Classic";
-    size = 8;
-  };
-
-  gtk = {
-    enable = true;
-    theme = {
-      name = "adw-gtk3-dark";
-      package = pkgs.adw-gtk3;
-    };
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-    cursorTheme = {
-      name = "Bibata-Modern-Classic";
-      package = pkgs.bibata-cursors;
-      size = 8;
-    };
-    font = {
-      name = "JetBrainsMono Nerd Font";
-      size = 12;
-    };
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
-    };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = true;
-    };
-  };
-
-  qt = {
-    enable = true;
-    platformTheme.name = "gtk3";
-  };
-
-  xdg.configFile = {
 
     "qt5ct/qt5ct.conf".text = ''
       [Appearance]
@@ -163,6 +121,49 @@ in
       underline_shortcut=1
       wheel_scroll_lines=3
     '';
+  };
+
+  home.pointerCursor = {
+    enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 8;
+  };
+
+  gtk = {
+    enable = true;
+    theme = {
+      name = "adw-gtk3-dark";
+      package = pkgs.adw-gtk3;
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+    cursorTheme = {
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
+      size = 8;
+    };
+    font = {
+      name = "JetBrainsMono Nerd Font";
+      size = 12;
+    };
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = true;
+    };
+  };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk3";
+  };
+
+  xdg.configFile = {
+
   };
 
 }
