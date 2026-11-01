@@ -239,17 +239,6 @@
       transition = [ "disc" ]
       transition_duration = 1900
 
-          [wallpaper.default]
-          path = "/home/anand/Pictures/Wallpapers/roronoa-zoro-loyalty-over-everything-anime-desktop-wallpaper-variant_1k_1.jpg"
-
-          [wallpaper.last]
-          path = "/home/anand/Pictures/Wallpapers/roronoa-zoro-loyalty-over-everything-anime-desktop-wallpaper-variant_1k_1.jpg"
-
-          [wallpaper.monitors.HDMI-A-1]
-          path = "/home/anand/Pictures/Wallpapers/roronoa-zoro-loyalty-over-everything-anime-desktop-wallpaper-variant_1k_1.jpg"
-
-          [wallpaper.monitors.eDP-1]
-          path = "/home/anand/Pictures/Wallpapers/roronoa-zoro-loyalty-over-everything-anime-desktop-wallpaper-variant_1k_1.jpg"
 
       [widget.audio_visualizer]
       color = "secondary"
