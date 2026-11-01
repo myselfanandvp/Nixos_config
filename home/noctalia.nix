@@ -7,266 +7,288 @@
   programs.noctalia = {
     enable = true;
 
-    settings = {
-      # Audio
-      audio = {
-        enable_sounds = true;
-      };
+    settings = builtins.fromTOML ''
+                config_version = 15
 
-      # Wallpaper
-      wallpaper = {
-        transition = [
-          "fade"
-        ];
-      };
+                [audio]
+                enable_sounds = true
 
-      # Backdrop
-      backdrop = {
-        blur_intensity = 0.16;
-        tint_intensity = 0.2;
-      };
+                [backdrop]
+                blur_intensity = 0.15999999642372131
+                tint_intensity = 0.19999999552965164
 
-      # Bar
-      bar = {
-        default = {
-          background_opacity = 0.88;
-          border_width = 1.5;
+                [bar.default]
+                background_opacity = 0.87999998033046722
+                border_width = 1.5
+                end = [
+                    "tray",
+                    "notifications",
+                    "clipboard",
+                    "network",
+                    "bluetooth",
+                    "widget_3",
+                    "volume",
+                    "brightness",
+                    "battery",
+                    "control-center",
+                    "session"
+                ]
+                layer = "overlay"
+                margin_edge = 1
+                radius = 7
+                reserve_space = false
+                smart_auto_hide = true
+                start = [ "launcher", "wallpaper", "workspaces", "cpu", "bar", "media", "audio_visualizer" ]
 
-          end = [
-            "tray"
-            "notifications"
-            "clipboard"
-            "network"
-            "bluetooth"
-            "widget_3"
-            "volume"
-            "brightness"
-            "battery"
-            "control-center"
-            "session"
-          ];
+                [battery]
+                warning_threshold = 50
 
-          margin_edge = 1;
-          radius = 5;
-          reserve_space = false;
-          shadow = false;
-          smart_auto_hide = true;
+                [brightness]
+                enable_ddcutil = true
+                sync_all_monitors = true
 
-          start = [
-            "launcher"
-            "wallpaper"
-            "workspaces"
-            "cpu"
-            "bar"
-            "media"
-          ];
-        };
-      };
+                [desktop_widgets]
+                schema_version = 2
+                widget_order = []
 
-      # Brightness
-      brightness = {
-        enable_ddcutil = true;
-        sync_all_monitors = true;
-      };
+                    [desktop_widgets.grid]
+                    cell_size = 24
+                    major_interval = 4
+                    visible = true
 
-      # Desktop Widgets
-      desktop_widgets = {
-        enabled = false;
-        schema_version = 2;
-        widget_order = [ ];
+                    [desktop_widgets.widget]
 
-        grid = {
-          cell_size = 24;
-          major_interval = 4;
-          visible = true;
-        };
+                [dock]
+                border_width = 1.5
+                enabled = true
+                icon_size = 20
+                inactive_scale = 1.0
+                launcher_position = "start"
+                margin_edge = 1
+                pinned = [ "kitty", "brave-browser" ]
+                radius = 10
+                radius_bottom_left = 5
+                radius_bottom_right = 5
+                radius_top_left = 5
+                radius_top_right = 5
+                reserve_space = false
+                shadow = false
+                show_dots = true
+                smart_auto_hide = true
 
-        widget = { };
-      };
+                [hot_corners]
+                enabled = true
 
-      # Dock
-      dock = {
-        active_monitor_only = true;
-        border_width = 1.5;
-        enabled = true;
-        icon_size = 25;
-        inactive_scale = 1.0;
-        item_spacing = 10;
-        launcher_position = "start";
-        layer = "overlay";
-        magnification = false;
-        margin_edge = 2;
+                [idle]
+                behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
 
-        pinned = [
-          "kitty"
-          "app.zen_browser.zen"
-          "helium"
-          "com.mitchellh.ghostty"
-        ];
+                    [idle.behavior.lock]
+                    action = "lock"
+                    enabled = false
+                    timeout = 600.0
 
-        radius = 0;
-        radius_bottom_left = 5;
-        radius_bottom_right = 5;
-        radius_top_left = 5;
-        radius_top_right = 5;
+                    [idle.behavior.lock-and-suspend]
+                    action = "lock_and_suspend"
+                    enabled = true
+                    timeout = 900.0
 
-        reserve_space = false;
-        shadow = false;
-        show_dots = true;
-        smart_auto_hide = true;
-      };
+                    [idle.behavior.screen-off]
+                    action = "screen_off"
+                    enabled = true
+                    timeout = 660.0
 
-      # Hot Corners
-      hot_corners = {
-        top_left = {
-          action = "window_switcher";
-        };
-      };
+                [location]
+                auto_locate = true
 
-      # Idle
-      idle = {
-        behavior_order = [
-          "lock"
-          "screen-off"
-          "lock-and-suspend"
-        ];
+                [lockscreen_widgets]
+                enabled = false
+                schema_version = 2
+                widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
 
-        behavior = {
-          lock = {
-            action = "lock";
-            enabled = false;
-            timeout = 600.0;
-          };
+                    [lockscreen_widgets.grid]
+                    cell_size = 16
+                    major_interval = 4
+                    visible = true
 
-          lock-and-suspend = {
-            action = "lock_and_suspend";
-            enabled = true;
-            timeout = 900.0;
-          };
+                  [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+                  box_height = 196.0
+                  box_width = 720.0
+                  cx = 683.00006103515625
+                  cy = 586.0001220703125
+                  output = "HDMI-A-1"
+                  placement_height = 768.0
+                  placement_width = 1366.0
+                  rotation = 0.0
+                  type = "login_box"
 
-          screen-off = {
-            action = "screen_off";
-            enabled = true;
-            timeout = 660.0;
-          };
-        };
-      };
+                      [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+                      background_color = "surface_variant"
+                      background_opacity = 0.88
+                      background_radius = 12.0
+                      center_password_text = false
+                      input_opacity = 1.0
+                      input_radius = 6.0
+                      layout = "regular"
+                  show_caps_lock = true
+                  show_keyboard_layout = true
+                  show_login_button = true
+                  show_media = true
+                  show_session_buttons = true
+                  show_unlock_hint = true
+                  show_weather = true
 
-      # Location
-      location = {
-        auto_locate = true;
-      };
+              [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+              box_height = 196.0
+              box_width = 810.0
+              cx = 960.0
+              cy = 898.0
+              output = "eDP-1"
+              placement_height = 1080.0
+              placement_width = 1920.0
+              rotation = 0.0
+              type = "login_box"
 
-      # Night Light
-      nightlight = {
-        enabled = true;
-      };
+                  [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+                  background_color = "surface_variant"
+                  background_opacity = 0.88
+                  background_radius = 12.0
+                  center_password_text = false
+                  input_opacity = 1.0
+                  input_radius = 6.0
+                  layout = "regular"
+                  show_caps_lock = true
+                  show_keyboard_layout = true
+                  show_login_button = true
+                  show_media = true
+                  show_session_buttons = true
+                  show_unlock_hint = true
+                  show_weather = true
 
-      # Notifications
-      notification = {
-        background_opacity = 0.7;
-        offset_y = 40;
-      };
+          [nightlight]
+          enabled = true
 
-      # OSD
-      osd = {
-        background_opacity = 1.0;
-        offset_y = 40;
-        position_vertical = "bottom_center";
-      };
+          [notification]
+          background_opacity = 0.69999998435378075
+          offset_y = 40
 
-      # Plugins
-      plugins = {
-        # Current official Noctalia plugin repository
-        sources = [
-          {
-            enabled = true;
-            name = "Official Noctalia Plugins";
-            url = "https://github.com/noctalia-dev/official-plugins";
-          }
-        ];
+          [osd]
+          background_opacity = 0.99999997764825821
+          offset_y = 40
+          position_vertical = "bottom_center"
 
-        states = {
-          catwalk = {
-            enabled = true;
-            sourceUrl = "https://github.com/noctalia-dev/official-plugins";
-          };
-        };
-      };
+          [plugin_settings."noctalia/notes"]
+          panel_placement = "attached"
+          panel_position = "top_right"
 
-      # Shell
-      shell = {
-        font_family = "JetBrainsMono NF SemiBold";
-        polkit_agent = true;
+          [plugin_settings."yocraft/qrcode"]
+          notify = "all"
 
-        launcher = {
-          categories = false;
-        };
+          [plugin_settings."yuuto/calculator"]
+          panel_placement = "floating"
+          panel_position = "center"
 
-        panel = {
-          control_center_placement = "floating";
-          transparency_mode = "soft";
-          wallpaper_placement = "floating";
-        };
-      };
+      [plugins]
+      enabled = [ "noctalia/notes" ]
 
-      # Theme
-      theme = {
-        mode = "dark";
-        source = "builtin";
-        builtin = "Ayu";
-        community_palette = "Catppuccin Mocha Sapphire";
-        wallpaper_scheme = "m3-fruit-salad";
+      [shell]
+      font_family = "JetBrains Mono SemiBold"
+      polkit_agent = true
 
-        templates = {
+          [shell.launcher]
+          categories = false
+          layout = "simple"
+          pinned = [ "zen", "com.mitchellh.ghostty", "brave-browser" ]
+
+          [shell.panel]
+          control_center_placement = "floating"
+          session_placement = "floating"
+          transparency_mode = "soft"
+          wallpaper_placement = "floating"
+
+      [theme]
+      builtin = "Ayu"
+      community_palette = "Tokyo Night Storm"
+      mode = "dark"
+      source = "builtin"
+      wallpaper_scheme = "muted"
+
+          [theme.templates]
           builtin_ids = [
-            "alacritty"
-            "btop"
-            "cava"
-            "gtk3"
-            "gtk4"
-            "ghostty"
-            "kcolorscheme"
-            "kitty"
-            "mango"
-            "niri"
-            "qt"
-            "starship"
-          ];
+              "alacritty",
+              "btop",
+              "gtk3",
+              "gtk4",
+              "ghostty",
+              "helix",
+              "hyprland",
+              "kcolorscheme",
+              "kitty",
+              "mango",
+              "niri",
+              "qt",
+              "starship",
+              "wezterm"
+          ]
+          community_ids = [ "telegram", "fastfetch", "zathura", "papirus-icons", "herdr", "yazi" ]
 
-          community_ids = [
-            "zen-browser"
-            "fastfetch"
-            "zathura"
-            "yazi"
-          ];
-        };
-      };
+      [wallpaper]
+      directory = "/home/anand/Pictures/Wallpapers"
+      directory_dark = "/home/anand/Pictures/Wallpapers"
+      directory_light = "/home/anand/Pictures/Wallpapers"
+      edge_smoothness = 0.44999998994171619
+      transition = [ "disc" ]
+      transition_duration = 1900
 
-      # Widgets
-      widget = {
-        bar = {
-          type = "yuuto/calculator:bar";
-        };
+          [wallpaper.default]
+          path = "/home/anand/Pictures/Wallpapers/roronoa-zoro-loyalty-over-everything-anime-desktop-wallpaper-variant_1k_1.jpg"
 
-        clock = {
-          format = "{:%I:%M %p}";
-        };
+          [wallpaper.last]
+          path = "/home/anand/Pictures/Wallpapers/roronoa-zoro-loyalty-over-everything-anime-desktop-wallpaper-variant_1k_1.jpg"
 
-        control-center = {
-          glyph = "settings";
-        };
+          [wallpaper.monitors.HDMI-A-1]
+          path = "/home/anand/Pictures/Wallpapers/roronoa-zoro-loyalty-over-everything-anime-desktop-wallpaper-variant_1k_1.jpg"
 
-        media = {
-          font_family = "JetBrainsMonoNL NF Medium";
-          font_weight = 500;
-        };
+          [wallpaper.monitors.eDP-1]
+          path = "/home/anand/Pictures/Wallpapers/roronoa-zoro-loyalty-over-everything-anime-desktop-wallpaper-variant_1k_1.jpg"
 
-        widget_3 = {
-          type = "autumn/network-toolkit:widget";
-        };
-      };
-    };
+      [widget.audio_visualizer]
+      color = "secondary"
+      color_1 = "tertiary"
+      color_2 = "secondary"
+      font_family = "JetBrains Mono Medium"
+      icon_color = "tertiary"
+
+      [widget.bar]
+      type = "yuuto/calculator:bar"
+
+      [widget.clock]
+      format = "{:%I:%M %P}"
+
+      [widget.control-center]
+      glyph = "settings"
+
+      [widget.media]
+      album_art_only = true
+      capsule = true
+      capsule_fill = "on_secondary"
+      color = "secondary"
+      font_family = "JetBrainsMonoNL NF Medium"
+      font_weight = 500
+      hide_when_no_media = true
+      icon_color = "tertiary"
+      max_length = 122
+      min_length = 94
+      show_progress = true
+
+      [widget.widget_3]
+      type = "autumn/network-toolkit:widget"
+
+      [widget.workspaces]
+      focused_color = "tertiary"
+      occupied_color = "primary"
+      style = "minimal"
+
+    '';
 
   };
 
