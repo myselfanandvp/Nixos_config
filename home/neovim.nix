@@ -10,9 +10,6 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    # Prevent Home Manager from generating init.lua
-    # inside the symlinked ~/.config/nvim directory.
-    sideloadInitLua = true;
 
     extraPackages = with pkgs; [
       nixd
@@ -21,13 +18,11 @@
       tree-sitter
       lua-language-server
       nixfmt
-      nil
       alejandra
       stylua
       typescript-language-server
       ghostscript
       bun
-      nixd
       statix
       less
       lessc
