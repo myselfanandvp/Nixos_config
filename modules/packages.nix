@@ -22,12 +22,9 @@ in
     starship
     eza
     tree
-    less
     trash-cli
-    zen-browser
     fish
     fzf
-    fd
     ripgrep
     btop
     devenv
@@ -36,17 +33,13 @@ in
     slurp
     satty
     wf-recorder
-    uv
     unzip
 
     # ── Editors / Development ─────────────────────────────────
     git
     gh
-    neovim
     gcc
     gnumake
-    rustc
-    lua
     # ── Terminal ───────────────────────────────────────────────
     ghostty
     kitty
@@ -59,6 +52,7 @@ in
     mediawriter
     nautilus
     brave
+    zen-browser
 
     # ── Containers ─────────────────────────────────────────────
     distrobox
@@ -66,30 +60,5 @@ in
     # ── Wayland / Desktop ──────────────────────────────────────
     bibata-cursors
     volantes-cursors
-
-    #  ─────────── Languages ────────────
-    nodejs_26
-    go
-    rustc
-    cargo
-    python314
-    typescript
-
-    #  ──────── Lazyvim packages ────────
-    nixd
-    pyright
-    ruff
-    tree-sitter
-    lua-language-server
-    nixfmt
-    alejandra
-    stylua
-    typescript-language-server
-    ghostscript
-    bun
-    statix
-    less
-    lessc
-    fd
   ];
 }

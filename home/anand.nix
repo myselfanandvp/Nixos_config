@@ -20,6 +20,7 @@ in
     ./tmux.nix
     ./zed.nix
     ./bashrc.nix
+    ./neovim.nix
     (import ./yazi.nix {
       inherit config pkgs outOfStore;
     })
