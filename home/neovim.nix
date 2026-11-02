@@ -5,31 +5,28 @@
 
 {
   programs.neovim = {
+    enable = true;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    plugins = with pkgs; [
+    sideloadInitLua = true;
+    extraPackages = with pkgs; [
+      # LazyVim basics
+      git
+      ripgrep
+      fd
+      gcc # treesitter parser compilation
+      tree-sitter
+      lazygit
+      # LSPs / formatters (use these instead of Mason on NixOS)
       nixd
-      less
-      lua
-      rustc
-      nodejs_26
-      go
-      cargo
-      python314
-      typescript
+      nixfmt # pick one of nixfmt / alejandra
+      statix
+      lua-language-server
+      stylua
       pyright
       ruff
-      tree-sitter
-      lua-language-server
-      nixfmt
-      alejandra
-      stylua
       typescript-language-server
-      ghostscript
-      bun
-      statix
-      fd
     ];
   };
 

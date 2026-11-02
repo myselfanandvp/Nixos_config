@@ -54,6 +54,13 @@ in
       herdr
       inputs.artcraft.packages.${pkgs.stdenv.hostPlatform.system}.filmcraft
       noctalia
+      rustc
+      cargo
+      go
+      nodejs_26
+      python314
+      bun
+      ghostscript
     ];
   };
 
@@ -161,10 +168,6 @@ in
   qt = {
     enable = true;
     platformTheme.name = "gtk3";
-  };
-
-  xdg.configFile = {
-
   };
 
 }
