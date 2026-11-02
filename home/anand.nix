@@ -61,6 +61,7 @@ in
       python314
       bun
       ghostscript
+      uv
     ];
   };
 
