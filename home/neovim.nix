@@ -1,7 +1,10 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  ...
+}:
+
 {
   programs.neovim = {
-    enable = true;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
@@ -12,7 +15,6 @@
       rustc
       nodejs_26
       go
-      rustc
       cargo
       python314
       typescript
@@ -27,9 +29,8 @@
       ghostscript
       bun
       statix
-      less
-      lessc
       fd
     ];
   };
+
 }
