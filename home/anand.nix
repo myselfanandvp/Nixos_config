@@ -16,7 +16,6 @@ in
   imports = [
     inputs.noctalia.homeModules.default
     ./git.nix
-    ./neovim.nix
     ./noctalia.nix
     ./tmux.nix
     ./zed.nix

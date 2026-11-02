@@ -37,6 +37,8 @@ in
     satty
     wf-recorder
     uv
+    unzip
+
     # ── Editors / Development ─────────────────────────────────
     git
     gh
@@ -66,12 +68,28 @@ in
     volantes-cursors
 
     #  ─────────── Languages ────────────
-    nodejs_24
+    nodejs_26
     go
     rustc
     cargo
-    unzip
     python314
     typescript
+
+    #  ──────── Lazyvim packages ────────
+    nixd
+    pyright
+    ruff
+    tree-sitter
+    lua-language-server
+    nixfmt
+    alejandra
+    stylua
+    typescript-language-server
+    ghostscript
+    bun
+    statix
+    less
+    lessc
+    fd
   ];
 }
