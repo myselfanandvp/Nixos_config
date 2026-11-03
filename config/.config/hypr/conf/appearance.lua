@@ -23,9 +23,9 @@ hl.config({
 	},
 
 	general = {
-		gaps_in = 4,
-		gaps_out = 6,
-		border_size = 2,
+		gaps_in = 1,
+		gaps_out = 1,
+		border_size = 1,
 
 		col = {
 			active_border = "rgba(ffffffff)",
@@ -43,7 +43,7 @@ hl.config({
 
 	decoration = {
 		-- Cleaned up zero-rounding properties
-		rounding = 8,
+		rounding = 0,
 
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,
