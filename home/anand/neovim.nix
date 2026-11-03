@@ -12,7 +12,6 @@
     sideloadInitLua = true;
     extraPackages = with pkgs; [
       # LazyVim basics
-      git
       ripgrep
       fd
       gcc # treesitter parser compilation
@@ -23,6 +22,8 @@
       nixfmt # pick one of nixfmt / alejandra
       statix
       lua-language-server
+      eslint
+      marksman
       stylua
       pyright
       ruff

@@ -11,5 +11,9 @@
       ];
     };
     dconf.enable = true;
+    git = {
+      enable = true;
+      lfs.enable = true;
+    };
   };
 }

@@ -35,8 +35,6 @@ in
     unzip
 
     # ── Editors / Development ─────────────────────────────────
-    git
-    gh
     gcc
     gnumake
     # ── Terminal ───────────────────────────────────────────────
