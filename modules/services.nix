@@ -36,12 +36,6 @@
       implementation = "broker";
     };
 
-    tuned = {
-      enable = true;
-      settings = {
-        dynamic_tuning = true;
-      };
-    };
     printing.enable = true;
     udisks2.enable = true;
     gvfs.enable = true;

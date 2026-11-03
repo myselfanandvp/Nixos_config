@@ -4,6 +4,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     qylock.url = "github:Darkkal44/qylock";
+    auto-cpufreq = {
+      url = "github:AdnanHodzic/auto-cpufreq";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     noctalia.url = "github:noctalia-dev/noctalia";
     yazi.url = "github:sxyazi/yazi";
     hyprland.url = "github:hyprwm/Hyprland";

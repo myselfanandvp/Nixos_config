@@ -1,6 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
+  imports = [
+    inputs.auto-cpufreq.nixosModules.default
+  ];
   programs = {
     fish.enable = true;
     nix-ld = {
@@ -14,6 +17,19 @@
     git = {
       enable = true;
       lfs.enable = true;
+    };
+    auto-cpufreq = {
+      enable = true;
+      settings = {
+        battery = {
+          governor = "powersaver";
+          turbo = "never";
+        };
+        charger = {
+          governor = "performance";
+          turbo = "auto";
+        };
+      };
     };
   };
 }
