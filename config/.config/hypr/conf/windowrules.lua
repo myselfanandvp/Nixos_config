@@ -38,6 +38,28 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	name = "Filepicker",
+	match = {
+		class = "xdg-desktop-portal-gtk",
+	},
+	float = true,
+	size = "1108 648",
+	center = true,
+	animation = "popin",
+})
+
+hl.window_rule({
+	name = "Screenpicker",
+	match = {
+		class = "xdg-desktop-portal-hyprland",
+	},
+	float = true,
+	size = "1108 648",
+	center = true,
+	animation = "popin",
+})
+
+hl.window_rule({
 	name = "SoundRecorder",
 	match = {
 		class = "org.gnome.SoundRecorder",
