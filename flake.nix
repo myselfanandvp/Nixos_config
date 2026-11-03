@@ -63,7 +63,7 @@
           pkgs = nixpkgs.legacyPackages.${system};
           extraSpecialArgs = { inherit inputs; };
           modules = [
-            ./home/anand.nix
+            ./home/anand/home.nix
           ];
         };
       };

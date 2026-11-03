@@ -24,7 +24,7 @@
     useUserPackages = true;
     extraSpecialArgs = { inherit inputs; };
     users = {
-      anand = ../../home/anand.nix;
+      anand = ../../home/anand/home.nix;
     };
   };
   system.stateVersion = "26.05";
