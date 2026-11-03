@@ -62,6 +62,7 @@ in
       bun
       ghostscript
       uv
+      devenv
     ];
   };
 

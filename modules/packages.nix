@@ -27,7 +27,6 @@ in
     fzf
     ripgrep
     btop
-    devenv
     wl-clipboard
     grim
     slurp
