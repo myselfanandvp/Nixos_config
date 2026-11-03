@@ -77,7 +77,7 @@ hl.config({
 		},
 
 		wobble = {
-			enabled = true,
+			enabled = false,
 			mesh = 12,
 			stiffness = 300,
 			mass = 1,
