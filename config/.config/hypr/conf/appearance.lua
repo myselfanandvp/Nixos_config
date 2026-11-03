@@ -75,6 +75,17 @@ hl.config({
 			scale = 1.0,
 			sharp = false,
 		},
+
+		wobble = {
+			enabled = true,
+			mesh = 12,
+			stiffness = 300,
+			mass = 1,
+			intensity = 0.2,
+			damping = 12,
+			value_epsilon = 0.50,
+			velocity_epsilon = 2,
+		},
 	},
 
 	animations = {
