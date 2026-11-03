@@ -52,7 +52,6 @@ in
       lazygit
       lazydocker
       herdr
-      inputs.artcraft.packages.${pkgs.stdenv.hostPlatform.system}.filmcraft
       noctalia
       rustc
       cargo
