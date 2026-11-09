@@ -10,28 +10,16 @@
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/6bee910a-3d0f-4798-aeaa-8b5c4c233d9a";
-      fsType = "btrfs";
-    };
-
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/6bee910a-3d0f-4798-aeaa-8b5c4c233d9a";
-      fsType = "btrfs";
-      options = [ "subvol=home" ];
-    };
-
-  fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/6bee910a-3d0f-4798-aeaa-8b5c4c233d9a";
-      fsType = "btrfs";
-      options = [ "subvol=nix" ];
+    { device = "/dev/disk/by-uuid/e521b5f5-13b5-4b08-b196-e6e2bcf1521d";
+      fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/0A49-4031";
+    { device = "/dev/disk/by-uuid/6E2D-DA98";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
