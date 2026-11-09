@@ -68,13 +68,11 @@ in
   xdg.configFile = {
     "fish".source = outOfStore "${DotConfig}/fish";
     "starship.toml".source = outOfStore "${DotConfig}/starship.toml";
-    "niri".source = outOfStore "${DotConfig}/niri";
     "mpv".source = outOfStore "${DotConfig}/mpv";
     "kitty".source = outOfStore "${DotConfig}/kitty";
     "fastfetch".source = outOfStore "${DotConfig}/fastfetch";
     "ghostty".source = outOfStore "${DotConfig}/ghostty";
     "wezterm".source = outOfStore "${DotConfig}/wezterm";
-    "umbriel".source = outOfStore "${DotConfig}/umbriel";
     "hypr".source = outOfStore "${DotConfig}/hypr";
     "nvim".source = outOfStore "${DotConfig}/nvim";
 
