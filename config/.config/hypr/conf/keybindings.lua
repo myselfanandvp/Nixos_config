@@ -18,6 +18,8 @@ local browser = "google-chrome-stable"
 
 local mail = "thunderbird"
 
+local current_monitor = "eDP-1"
+
 -- Helper function to change zoom safely
 local function adjust_zoom(offset)
 	local current = hl.get_config("cursor.zoom_factor") or 1.0
@@ -64,6 +66,28 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("~/.config/hypr/scripts/btop_toggle.s
 hl.bind(mainMod .. " + ALT + B", hl.dsp.exec_cmd("google-chrome-stable --incognito"))
 
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("~/.config/hypr/scripts/yazi.sh"))
+
+--    ╭────────────────────────────╮
+--    │     Display Management     │
+--    ╰────────────────────────────╯
+
+-- Disables mouse movement waking the screen up
+hl.config({
+	["misc.mouse_move_enables_dpms"] = false,
+	["misc.key_press_enables_dpms"] = false,
+})
+
+-- Keybinding: SUPER + O turns OFF the specific monitor defined at the top
+hl.bind("SUPER + O", function()
+	hl.timer(function()
+		hl.dispatch(hl.dsp.dpms({ monitor = current_monitor, action = "disable" }))
+	end, { timeout = 600, type = "oneshot" })
+end)
+
+-- Keybinding: SUPER + SHIFT + O turns ON the monitor safely
+hl.bind("SUPER + SHIFT + O", function()
+	hl.dispatch(hl.dsp.dpms({ monitor = current_monitor, action = "enable" }))
+end)
 
 --    ╭────────────────────────────╮
 --    │     WINDOW MANAGEMENT      │
