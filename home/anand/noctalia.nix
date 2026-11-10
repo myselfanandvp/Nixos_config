@@ -1,5 +1,5 @@
 {
-  _,
+  config,
   ...
 }:
 
@@ -8,8 +8,6 @@
     enable = true;
 
     settings = {
-      config_version = 15;
-
       # Audio
       audio.enable_sounds = true;
 
@@ -245,9 +243,9 @@
           categories = false;
           layout = "simple";
           pinned = [
-            "zen"
-            "com.mitchellh.ghostty"
-            "brave-browser"
+            "kitty"
+            "vivaldi-stable"
+            "floorp"
           ];
         };
 
@@ -274,12 +272,9 @@
             "gtk3"
             "gtk4"
             "ghostty"
-            "helix"
             "hyprland"
             "kcolorscheme"
             "kitty"
-            "mango"
-            "niri"
             "qt"
             "starship"
             "wezterm"
@@ -342,4 +337,6 @@
       };
     };
   };
+  xdg.stateFile."noctalia/settings.toml".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nixos_config/config/settings.toml";
 }
