@@ -3,14 +3,12 @@
   pkgs,
   ...
 }:
-let
-  zen-browser = inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default;
-in
 {
 
   imports = [
     inputs.home-manager.nixosModules.home-manager
   ];
+
   environment.systemPackages = with pkgs; [
     # ── CLI / Shell ─────────────────────────────────────────────
     home-manager
@@ -48,8 +46,8 @@ in
     obs-studio
     mediawriter
     nautilus
-    brave
-    zen-browser
+    vivaldi
+    floorp-bin
 
     # ── Containers ─────────────────────────────────────────────
     distrobox
