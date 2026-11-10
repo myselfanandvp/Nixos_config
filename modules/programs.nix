@@ -1,9 +1,6 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
-  imports = [
-    inputs.auto-cpufreq.nixosModules.default
-  ];
   programs = {
     fish.enable = true;
     nix-ld = {
