@@ -56,6 +56,8 @@ in
       rustc
       cargo
       go
+      zathura
+      zathuraPkgs.zathura_pdf_mupdf
       nodejs_26
       python314
       bun
