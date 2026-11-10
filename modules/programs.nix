@@ -18,18 +18,5 @@
       enable = true;
       lfs.enable = true;
     };
-    auto-cpufreq = {
-      enable = true;
-      settings = {
-        battery = {
-          governor = "powersaver";
-          turbo = "never";
-        };
-        charger = {
-          governor = "performance";
-          turbo = "auto";
-        };
-      };
-    };
   };
 }

@@ -63,6 +63,10 @@
       wireplumber.enable = true;
     };
 
+    tuned = {
+      enable = true;
+    };
+
   };
 
   hardware = {
