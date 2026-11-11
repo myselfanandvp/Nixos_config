@@ -15,6 +15,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    brotracker.url = "github:myselfanandvp/brotracker-flake";
   };
 
   outputs =

@@ -3,6 +3,9 @@ config_version = 20
 [dock]
 pinned = [ "kitty", "floorp" ]
 
+[shell.launcher]
+pinned = []
+
 [theme]
 builtin = "Kanagawa"
 mode = "dark"

@@ -10,6 +10,7 @@ let
   outOfStore = config.lib.file.mkOutOfStoreSymlink;
   hyrprPlugin = inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system};
   noctalia = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  brotracker = inputs.brotracker.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 
 {
@@ -63,6 +64,7 @@ in
       bun
       ghostscript
       uv
+      brotracker
       devenv
     ];
   };
