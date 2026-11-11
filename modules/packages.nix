@@ -21,6 +21,7 @@
     eza
     openssl
     cmake
+    clang
     gcc
     tree
     trash-cli

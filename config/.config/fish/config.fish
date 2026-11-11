@@ -83,26 +83,6 @@ if status is-interactive
     alias ...='cd ../..'
     alias grep='grep --color=auto'
 
-    # ---- Package manager abstraction ----
-    if type -q pacman
-        alias update='sudo pacman -Syu'
-        function cleanup
-            set -l orphans (pacman -Qtdq)
-            if test (count $orphans) -gt 0
-                sudo pacman -Rns $orphans
-            else
-                echo "No orphan packages found."
-            end
-        end
-        alias update_repo="sudo reflector --country India --protocol https --sort rate --latest 10 --save /etc/pacman.d/mirrorlist"
-    else if type -q dnf
-        alias update='sudo dnf upgrade --refresh'
-        alias cleanup='sudo dnf autoremove'
-    else if type -q apt
-        alias update='sudo apt update && sudo apt upgrade'
-        alias cleanup='sudo apt autoremove'
-    end
-
     # ---- Misc useful ----
     alias wget='wget -c'
     alias tarnow='tar -acf'
@@ -114,7 +94,7 @@ if status is-interactive
     alias tx="tmux"
     alias up="topgrade"
     alias txk="tmux kill-session"
-    alias tl="tmux  ls"
+    alias tl="tmux ls"
     alias yt="yt-dlp"
     alias ff="fastfetch"
     alias hr="herdr"
