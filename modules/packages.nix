@@ -19,6 +19,9 @@
     wlr-randr
     starship
     eza
+    openssl
+    cmake
+    gcc
     tree
     trash-cli
     fish
