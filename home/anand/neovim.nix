@@ -1,5 +1,5 @@
 {
-  pkgs,
+  config,
   ...
 }:
 
@@ -10,25 +10,9 @@
     viAlias = true;
     vimAlias = true;
     sideloadInitLua = true;
-    extraPackages = with pkgs; [
-      # LazyVim basics
-      ripgrep
-      fd
-      gcc # treesitter parser compilation
-      tree-sitter
-      lazygit
-      # LSPs / formatters (use these instead of Mason on NixOS)
-      nixd
-      nixfmt # pick one of nixfmt / alejandra
-      statix
-      lua-language-server
-      eslint
-      marksman
-      stylua
-      pyright
-      ruff
-      typescript-language-server
-    ];
   };
+
+  xdg.configFile."nvim".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nixos_config/config/.config/nvim";
 
 }

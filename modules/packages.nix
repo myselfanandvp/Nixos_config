@@ -22,6 +22,8 @@
     openssl
     cmake
     clang
+    ripgrep
+    fd
     gcc
     tree
     trash-cli
@@ -33,12 +35,14 @@
     grim
     slurp
     satty
+    gnumake
     wf-recorder
     unzip
+    marksman
+    statix
+    nixd
+    nixfmt
 
-    # ── Editors / Development ─────────────────────────────────
-    gcc
-    gnumake
     # ── Terminal ───────────────────────────────────────────────
     ghostty
     kitty

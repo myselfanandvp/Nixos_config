@@ -79,7 +79,6 @@ in
     "ghostty".source = outOfStore "${DotConfig}/ghostty";
     "wezterm".source = outOfStore "${DotConfig}/wezterm";
     "hypr".source = outOfStore "${DotConfig}/hypr";
-    "nvim".source = outOfStore "${DotConfig}/nvim";
 
     "qt5ct/qt5ct.conf".text = ''
       [Appearance]
