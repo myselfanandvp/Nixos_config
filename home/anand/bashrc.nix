@@ -47,13 +47,18 @@
       export PATH
     '';
 
+    # ---- Starship ----
+    initExtra = ''
+      if [ "$TERM" != "dumb" ] && command -v starship >/dev/null; then
+        eval "$(starship init bash)"
+      fi
+    '';
     # ---- Aliases ----
     shellAliases = {
       # Navigation
       ".." = "cd ..";
       "..." = "cd ../..";
       grep = "grep --color=auto";
-
       # eza
       ls = "eza -al --group-directories-first --icons";
       gl = "eza -al --group-directories-first --icons --git";
@@ -82,5 +87,7 @@
       update = "sudo nixos-rebuild switch --flake /etc/nixos/#desktop";
       cleanup = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
     };
+
   };
+
 }

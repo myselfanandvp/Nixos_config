@@ -56,6 +56,7 @@ in
       noctalia
       rustc
       cargo
+      typescript
       go
       zathura
       zathuraPkgs.zathura_pdf_mupdf
