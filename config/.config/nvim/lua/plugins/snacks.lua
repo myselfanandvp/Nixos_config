@@ -2,6 +2,7 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
+      bigfile = { enable = false },
       terminal = {
         win = {
           keys = {
