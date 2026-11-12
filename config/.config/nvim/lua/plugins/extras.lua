@@ -17,6 +17,7 @@ return {
       servers = {
         cssls = {}, -- CSS language server
         tailwindcss = {}, -- (Optional) Uncomment if you use Tailwind CSS
+        eslint = { enabled = false, mason = false },
       },
     },
   },
