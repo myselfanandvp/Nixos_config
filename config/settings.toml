@@ -15,13 +15,13 @@ source = "builtin"
     builtin_ids = [ "alacritty", "btop", "gtk3", "gtk4", "ghostty", "helix", "hyprland", "kcolorscheme", "kitty", "qt", "wezterm" ]
 
 [wallpaper.default]
-path = "/home/anand/Pictures/Wallpapers/spider-man-snowy-new-york-city-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/pirate-ship-ghost-galleon-stormy-sea-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.last]
-path = "/home/anand/Pictures/Wallpapers/spider-man-snowy-new-york-city-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/pirate-ship-ghost-galleon-stormy-sea-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/anand/Pictures/Wallpapers/spider-man-snowy-new-york-city-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/pirate-ship-ghost-galleon-stormy-sea-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/anand/Pictures/Wallpapers/spider-man-snowy-new-york-city-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/pirate-ship-ghost-galleon-stormy-sea-desktop-wallpaper-variant_1k.jpg"
