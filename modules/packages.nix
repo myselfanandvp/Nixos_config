@@ -24,7 +24,6 @@
     wlr-randr
     starship
     eza
-    nur.repos.signalridge.clinvk
     brave
     openssl
     cmake
@@ -61,7 +60,6 @@
     obs-studio
     mediawriter
     nautilus
-    vivaldi
     floorp-bin
 
     # ── Containers ─────────────────────────────────────────────

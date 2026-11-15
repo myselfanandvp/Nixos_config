@@ -1,7 +1,7 @@
 config_version = 20
 
 [dock]
-pinned = [ "kitty", "floorp", "vivaldi-stable" ]
+pinned = [ "kitty", "floorp", "brave-browser" ]
 
 [shell.launcher]
 pinned = []
@@ -14,6 +14,7 @@ source = "community"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "btop", "gtk3", "gtk4", "ghostty", "helix", "hyprland", "kcolorscheme", "kitty", "qt", "wezterm" ]
+    community_ids = [ "brave", "telegram", "fastfetch", "zathura", "papirus-icons", "herdr", "yazi" ]
 
 [wallpaper.default]
 path = "/home/anand/Pictures/Wallpapers/kung-fu-panda-4-po-3840x2160-15597.jpg"
