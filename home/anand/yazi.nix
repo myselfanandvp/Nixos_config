@@ -15,6 +15,7 @@ in
     plugins = {
       full-border = pkgs.yaziPlugins.full-border;
       recycle-bin = pkgs.yaziPlugins.recycle-bin;
+      mount = pkgs.yaziPlugins.mount;
     };
   };
 

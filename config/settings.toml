@@ -1,27 +1,28 @@
 config_version = 20
 
 [dock]
-pinned = [ "kitty", "floorp" ]
+pinned = [ "kitty", "floorp", "vivaldi-stable" ]
 
 [shell.launcher]
 pinned = []
 
 [theme]
 builtin = "Kanagawa"
+community_palette = "Horizon"
 mode = "dark"
-source = "builtin"
+source = "community"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "btop", "gtk3", "gtk4", "ghostty", "helix", "hyprland", "kcolorscheme", "kitty", "qt", "wezterm" ]
 
 [wallpaper.default]
-path = "/home/anand/Pictures/Wallpapers/pirate-ship-ghost-galleon-stormy-sea-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/kung-fu-panda-4-po-3840x2160-15597.jpg"
 
 [wallpaper.last]
-path = "/home/anand/Pictures/Wallpapers/pirate-ship-ghost-galleon-stormy-sea-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/kung-fu-panda-4-po-3840x2160-15597.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/anand/Pictures/Wallpapers/pirate-ship-ghost-galleon-stormy-sea-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/kung-fu-panda-4-po-3840x2160-15597.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/anand/Pictures/Wallpapers/pirate-ship-ghost-galleon-stormy-sea-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/kung-fu-panda-4-po-3840x2160-15597.jpg"
