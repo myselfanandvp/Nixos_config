@@ -3,6 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     qylock.url = "github:Darkkal44/qylock";
     noctalia.url = "github:noctalia-dev/noctalia";
     yazi.url = "github:sxyazi/yazi";
@@ -22,6 +26,7 @@
     {
       self,
       nixpkgs,
+      nur,
       ...
     }@inputs:
     let
@@ -34,6 +39,7 @@
           inherit system;
           specialArgs = { inherit inputs; };
           modules = [
+            nur.modules.nixos.default
             ./hosts/desktop/configuration.nix
           ];
 
@@ -43,6 +49,7 @@
           inherit system;
           specialArgs = { inherit inputs; };
           modules = [
+            nur.modules.nixos.default
             ./hosts/laptop/configuration.nix
           ];
         };
@@ -54,6 +61,7 @@
           pkgs = nixpkgs.legacyPackages.${system};
           extraSpecialArgs = { inherit inputs; };
           modules = [
+            nur.modules.nixos.default
             ./home/anand/home.nix
           ];
         };

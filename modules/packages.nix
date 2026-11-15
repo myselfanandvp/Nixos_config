@@ -9,6 +9,11 @@
     inputs.home-manager.nixosModules.home-manager
   ];
 
+  nixpkgs.config.packageOverrides = pkgs: {
+    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/main.tar.gz") {
+      inherit pkgs;
+    };
+  };
   environment.systemPackages = with pkgs; [
     # ── CLI / Shell ─────────────────────────────────────────────
     home-manager
@@ -19,6 +24,8 @@
     wlr-randr
     starship
     eza
+    nur.repos.signalridge.clinvk
+    brave
     openssl
     cmake
     clang
