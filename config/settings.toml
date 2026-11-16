@@ -1,7 +1,13 @@
 config_version = 20
 
+[bar.default]
+center = [ "clock", "widget" ]
+
 [dock]
 pinned = [ "kitty", "floorp", "brave-browser" ]
+
+[plugins]
+enabled = [ "noctalia/notes" ]
 
 [shell.launcher]
 pinned = []
@@ -17,13 +23,16 @@ source = "community"
     community_ids = [ "brave", "telegram", "fastfetch", "zathura", "papirus-icons", "herdr", "yazi" ]
 
 [wallpaper.default]
-path = "/home/anand/Pictures/Wallpapers/kung-fu-panda-4-po-3840x2160-15597.jpg"
+path = "/home/anand/Pictures/Wallpapers/mini-john-cooper-3840x2160-27762.jpg"
 
 [wallpaper.last]
-path = "/home/anand/Pictures/Wallpapers/kung-fu-panda-4-po-3840x2160-15597.jpg"
+path = "/home/anand/Pictures/Wallpapers/mini-john-cooper-3840x2160-27762.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/anand/Pictures/Wallpapers/kung-fu-panda-4-po-3840x2160-15597.jpg"
+path = "/home/anand/Pictures/Wallpapers/mini-john-cooper-3840x2160-27762.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/anand/Pictures/Wallpapers/kung-fu-panda-4-po-3840x2160-15597.jpg"
+path = "/home/anand/Pictures/Wallpapers/mini-john-cooper-3840x2160-27762.jpg"
+
+[widget.widget]
+type = "amaurisd97/screen-capture:widget"
