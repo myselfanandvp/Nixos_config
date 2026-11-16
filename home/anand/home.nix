@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  nur,
   ...
 }:
 
@@ -14,6 +15,7 @@ let
 in
 
 {
+
   imports = [
     inputs.noctalia.homeModules.default
     ./git.nix
@@ -53,6 +55,7 @@ in
       lazygit
       lazydocker
       herdr
+      nur.repos.Ev357.helium
       noctalia
       rustc
       cargo

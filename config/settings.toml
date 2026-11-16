@@ -14,7 +14,7 @@ pinned = []
 
 [theme]
 builtin = "Kanagawa"
-community_palette = "Horizon"
+community_palette = "GitHub Dark"
 mode = "dark"
 source = "community"
 
@@ -23,16 +23,16 @@ source = "community"
     community_ids = [ "brave", "telegram", "fastfetch", "zathura", "papirus-icons", "herdr", "yazi" ]
 
 [wallpaper.default]
-path = "/home/anand/Pictures/Wallpapers/mini-john-cooper-3840x2160-27762.jpg"
+path = "/home/anand/Pictures/Wallpapers/minimalist-1969-ford-mustang-mach-1-black-front-view-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.last]
-path = "/home/anand/Pictures/Wallpapers/mini-john-cooper-3840x2160-27762.jpg"
+path = "/home/anand/Pictures/Wallpapers/minimalist-1969-ford-mustang-mach-1-black-front-view-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/anand/Pictures/Wallpapers/mini-john-cooper-3840x2160-27762.jpg"
+path = "/home/anand/Pictures/Wallpapers/minimalist-1969-ford-mustang-mach-1-black-front-view-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/anand/Pictures/Wallpapers/mini-john-cooper-3840x2160-27762.jpg"
+path = "/home/anand/Pictures/Wallpapers/minimalist-1969-ford-mustang-mach-1-black-front-view-desktop-wallpaper-variant_1k.jpg"
 
 [widget.widget]
 type = "amaurisd97/screen-capture:widget"

@@ -59,9 +59,11 @@
       homeConfigurations = {
         anand = inputs.home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.${system};
-          extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = {
+            inherit inputs;
+            nur = inputs.nur.legacyPackages.${system};
+          };
           modules = [
-            nur.modules.nixos.default
             ./home/anand/home.nix
           ];
         };
