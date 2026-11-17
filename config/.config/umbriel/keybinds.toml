@@ -12,11 +12,11 @@
 
 "Mod+RETURN" = "spawn kitty"
 "ALT+RETURN" = "spawn wezterm"
-"Mod+E" = "spawn ~/Dotfiles/config/.config/umbriel/scripts/yazi.sh"
-"Mod+Z" = "spawn ~/Dotfiles/config/.config/umbriel/scripts/hyprmag.sh"
+"Mod+E" = "spawn ~/.config/umbriel/scripts/yazi.sh"
+"Mod+Z" = "spawn ~/.config/umbriel/scripts/hyprmag.sh"
 "Mod+ALT+E" = "spawn nautilus"
-"Mod+T" = "spawn ~/Dotfiles/config/.config/umbriel/scripts/kitty_toggle.sh"
-"Mod+B" = "spawn ~/Dotfiles/config/.config/umbriel/scripts/btop_toggle.sh"
+"Mod+T" = "spawn ~/.config/umbriel/scripts/kitty_toggle.sh"
+"Mod+B" = "spawn ~/.config/umbriel/scripts/btop_toggle.sh"
 
 #    ╭────────────────────────────╮
 #    │          Overview          │
