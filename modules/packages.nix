@@ -27,7 +27,6 @@
       eza
       brave
       openssl
-      davinci-resolve
       cmake
       clang
       ripgrep
@@ -71,10 +70,5 @@
       bibata-cursors
       volantes-cursors
     ];
-
-    variables = {
-      RUSTICL_ENABLE = "radeonsi";
-    };
-
   };
 }
