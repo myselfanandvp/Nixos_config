@@ -1,2 +1,5 @@
 [input.focus]
 follows_mouse = "sloppy"
+[input.cursor]
+theme = ""
+size = 10
