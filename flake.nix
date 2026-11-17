@@ -26,7 +26,6 @@
     {
       self,
       nixpkgs,
-      nur,
       ...
     }@inputs:
     let
@@ -39,7 +38,7 @@
           inherit system;
           specialArgs = { inherit inputs; };
           modules = [
-            nur.modules.nixos.default
+            inputs.nur.modules.nixos.default
             ./hosts/desktop/configuration.nix
           ];
 
@@ -49,7 +48,7 @@
           inherit system;
           specialArgs = { inherit inputs; };
           modules = [
-            nur.modules.nixos.default
+            inputs.nur.modules.nixos.default
             ./hosts/laptop/configuration.nix
           ];
         };
@@ -61,9 +60,9 @@
           pkgs = nixpkgs.legacyPackages.${system};
           extraSpecialArgs = {
             inherit inputs;
-            nur = inputs.nur.legacyPackages.${system};
           };
           modules = [
+            inputs.nur.modules.nixos.default
             ./home/anand/home.nix
           ];
         };
