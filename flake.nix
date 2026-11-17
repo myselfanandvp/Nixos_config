@@ -62,7 +62,7 @@
             inherit inputs;
           };
           modules = [
-            inputs.nur.modules.nixos.default
+            inputs.nur.modules.homeManager.default
             ./home/anand/home.nix
           ];
         };

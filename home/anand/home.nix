@@ -65,6 +65,7 @@ in
       nodejs_26
       python314
       bun
+      gh
       ghostscript
       uv
       brotracker
