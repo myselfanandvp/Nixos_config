@@ -17,6 +17,7 @@ in
 
   imports = [
     inputs.noctalia.homeModules.default
+    inputs.nur.modules.homeManager.default
     ./git.nix
     ./noctalia.nix
     ./tmux.nix
@@ -85,6 +86,7 @@ in
     "ghostty".source = outOfStore "${DotConfig}/ghostty";
     "wezterm".source = outOfStore "${DotConfig}/wezterm";
     "hypr".source = outOfStore "${DotConfig}/hypr";
+    "umbriel".source = outOfStore "${DotConfig}/umbriel";
 
     "qt5ct/qt5ct.conf".text = ''
       [Appearance]

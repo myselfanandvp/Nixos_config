@@ -1,11 +1,10 @@
 {
-  inputs,
+  _,
   ...
 }:
 
 {
   imports = [
-    inputs.home-manager.nixosModules.home-manager
     ./hardware-configuration.nix
     ../../modules/boot.nix
     ../../modules/networking.nix
@@ -19,13 +18,5 @@
     ../../modules/nix.nix
     ../../modules/security.nix
   ];
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      anand = ../../home/anand/home.nix;
-    };
-  };
   system.stateVersion = "26.05";
 }

@@ -1,0 +1,55 @@
+[[window_rule]]
+# Keep normal application windows fully opaque. Per-app rules below can override this.
+opacity = 1.0
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker"
+default_floating = true
+default_floating_size_px = { width = 800, height = 600 }
+
+
+[[window_rule]]
+match.title = "yazi-float"
+default_floating = true
+default_floating_size_px = { width = 1000, height = 600 }
+
+
+[[window_rule]]
+match.title = "btop-float"
+default_floating = true
+default_floating_size_px = { width = 1000, height = 600 }
+
+
+[[window_rule]]
+match.title = "float-term"
+default_floating = true
+default_floating_size_px = { width = 1000, height = 600 }
+
+
+[[window_rule]]
+match.app_id = "^workfolio$"
+default_scratchpad = "workfolio"
+default_floating_size_px = { width = 1000, height = 600 }
+
+
+# Move the Google Meet sharing dialogue to the default scratchpad.
+[[window_rule]]
+match.title = "^meet\\.google\\.com is sharing a window\\.$"
+default_scratchpad = "googlemeet"
+default_floating = true
+default_focused = false
+
+# Move the Google Meet sharing dialogue to the default scratchpad.
+[[window_rule]]
+match.title = "^meet\\.google\\.com is sharing your screen\\.$"
+default_scratchpad = "googlemeet"
+default_floating = true
+default_focused = false
+
+[[window_rule]]
+match.app_id = "^org.gnome.Nautilus$"
+default_floating = true
+default_floating_size_px = { width = 1000, height = 600 }
+
+[screencast]
+disable_dynamic_confirmation = true

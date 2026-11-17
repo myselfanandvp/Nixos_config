@@ -1,0 +1,23 @@
+
+[general]
+autostart = ["noctalia", "workfolio"]
+mod_key = "Super"
+xwayland = true
+xwayland_native_resolution = true
+show_cheatsheet = false
+focus_on_activate = false
+honor_restored_maximize = false
+
+
+[include]
+files = [
+  "keybinds.toml",
+  "layout.toml",
+  "inputs.toml",
+  "appearance.toml",
+  "scratchpads.toml",
+  "window_rules.toml",
+  "workspace.toml",
+  "animation.toml",
+  "monitors.toml",
+]

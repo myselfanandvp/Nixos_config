@@ -13,26 +13,26 @@ enabled = [ "noctalia/notes" ]
 pinned = []
 
 [theme]
-builtin = "Kanagawa"
+builtin = "Noctalia"
 community_palette = "GitHub Dark"
 mode = "dark"
-source = "community"
+source = "builtin"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "btop", "gtk3", "gtk4", "ghostty", "helix", "hyprland", "kcolorscheme", "kitty", "qt", "wezterm" ]
     community_ids = [ "brave", "telegram", "fastfetch", "zathura", "papirus-icons", "herdr", "yazi" ]
 
 [wallpaper.default]
-path = "/home/anand/Pictures/Wallpapers/minimalist-1969-ford-mustang-mach-1-black-front-view-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/winter-train-snowy-mountain-landscape-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.last]
-path = "/home/anand/Pictures/Wallpapers/minimalist-1969-ford-mustang-mach-1-black-front-view-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/winter-train-snowy-mountain-landscape-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/anand/Pictures/Wallpapers/minimalist-1969-ford-mustang-mach-1-black-front-view-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/winter-train-snowy-mountain-landscape-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/anand/Pictures/Wallpapers/minimalist-1969-ford-mustang-mach-1-black-front-view-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/winter-train-snowy-mountain-landscape-desktop-wallpaper-variant_1k.jpg"
 
 [widget.widget]
 type = "amaurisd97/screen-capture:widget"

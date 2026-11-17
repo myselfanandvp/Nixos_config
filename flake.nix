@@ -7,6 +7,7 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    umbriel.url = "github:noctalia-dev/umbriel";
     qylock.url = "github:Darkkal44/qylock";
     noctalia.url = "github:noctalia-dev/noctalia";
     yazi.url = "github:sxyazi/yazi";
@@ -38,7 +39,6 @@
           inherit system;
           specialArgs = { inherit inputs; };
           modules = [
-            inputs.nur.modules.nixos.default
             ./hosts/desktop/configuration.nix
           ];
 
@@ -48,7 +48,6 @@
           inherit system;
           specialArgs = { inherit inputs; };
           modules = [
-            inputs.nur.modules.nixos.default
             ./hosts/laptop/configuration.nix
           ];
         };
@@ -65,7 +64,6 @@
             inherit inputs;
           };
           modules = [
-            inputs.nur.modules.homeManager.default
             ./home/anand/home.nix
           ];
         };

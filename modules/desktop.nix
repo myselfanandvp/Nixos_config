@@ -7,10 +7,22 @@ let
   pkgs-unstable = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 in
 {
-  imports = [
-    inputs.qylock.nixosModules.default
-    inputs.hyprland.nixosModules.default
+  imports = with inputs; [
+    home-manager.nixosModules.home-manager
+    qylock.nixosModules.default
+    hyprland.nixosModules.default
+    umbriel.nixosModules.default
+    nur.modules.nixos.default
   ];
+
+  home-manager = {
+    useGlobalPkgs = false;
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      anand = ../home/anand/home.nix;
+    };
+  };
 
   programs = {
     qylock = {
@@ -25,6 +37,8 @@ in
       portalPackage =
         inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
+
+    umbriel.enable = true;
   };
 
   # Change this part to use the GNOME portal backend for Niri
@@ -39,7 +53,7 @@ in
     package = pkgs-unstable.mesa;
     enable32Bit = true;
     package32 = pkgs-unstable.pkgsi686Linux.mesa;
-    extraPackages = with pkgs; [
+    extraPackages = with pkgs-unstable; [
       mesa.opencl # Enables Rusticl (OpenCL) support
     ];
   };
