@@ -1,6 +1,6 @@
 custom-shader = ./sonic_boom_cursor.glsl
 custom-shader = ./cursor_warp.glsl
-background-opacity = 0.8
+background-opacity = 0.9
 background-blur = 1
 confirm-close-surface = false
 adjust-cursor-thickness = 50%
