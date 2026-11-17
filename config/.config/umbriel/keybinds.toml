@@ -30,6 +30,7 @@
 
 "Mod+H" = "window-focus-left"
 "Mod+L" = "window-focus-right"
+"Mod+Shift+L" = "workspace-set-layout toggle scrolling dwindle"
 
 #    ╭────────────────────────────╮
 #    │           Mouse            │

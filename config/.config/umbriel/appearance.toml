@@ -34,8 +34,8 @@ urgent_text = "#11131BFF"
 prefer_no_csd = true
 border_width = 2
 outer_border_width = 0
-corner_radius = 10
-drag_opacity = 0.82
+corner_radius = 0
+drag_opacity = 0.80
 opaque_fullscreen = true
 
 [appearance.tab_bar]
