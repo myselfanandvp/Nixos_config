@@ -26,12 +26,6 @@ default_floating = true
 default_floating_size_px = { width = 1000, height = 600 }
 
 
-[[window_rule]]
-match.app_id = "^workfolio$"
-default_scratchpad = "workfolio"
-default_floating_size_px = { width = 1000, height = 600 }
-
-
 # Move the Google Meet sharing dialogue to the default scratchpad.
 [[window_rule]]
 match.title = "^meet\\.google\\.com is sharing a window\\.$"
