@@ -50,6 +50,7 @@ in
       bibata-cursors
       papirus-icon-theme
       gruvbox-plus-icons
+      davinci-resolve
       nerd-fonts.jetbrains-mono
       lazygit
       lazydocker

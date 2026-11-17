@@ -14,59 +14,67 @@
       inherit pkgs;
     };
   };
-  environment.systemPackages = with pkgs; [
-    # ── CLI / Shell ─────────────────────────────────────────────
-    home-manager
-    loupe
-    hyprpicker
-    hyprshot
-    fastfetch
-    wlr-randr
-    starship
-    eza
-    brave
-    openssl
-    cmake
-    clang
-    ripgrep
-    fd
-    gcc
-    tree
-    trash-cli
-    fish
-    fzf
-    ripgrep
-    btop
-    wl-clipboard
-    grim
-    slurp
-    satty
-    gnumake
-    wf-recorder
-    unzip
-    marksman
-    statix
-    nixd
-    nixfmt
+  environment = {
+    systemPackages = with pkgs; [
+      # ── CLI / Shell ─────────────────────────────────────────────
+      home-manager
+      loupe
+      hyprpicker
+      hyprshot
+      fastfetch
+      wlr-randr
+      starship
+      eza
+      brave
+      openssl
+      davinci-resolve
+      cmake
+      clang
+      ripgrep
+      fd
+      gcc
+      tree
+      trash-cli
+      fish
+      fzf
+      ripgrep
+      btop
+      wl-clipboard
+      grim
+      slurp
+      satty
+      gnumake
+      wf-recorder
+      unzip
+      marksman
+      statix
+      nixd
+      nixfmt
 
-    # ── Terminal ───────────────────────────────────────────────
-    ghostty
-    kitty
-    wezterm
+      # ── Terminal ───────────────────────────────────────────────
+      ghostty
+      kitty
+      wezterm
 
-    # ── Applications ──────────────────────────────────────────
-    mpv
-    vlc
-    obs-studio
-    mediawriter
-    nautilus
-    floorp-bin
+      # ── Applications ──────────────────────────────────────────
+      mpv
+      vlc
+      obs-studio
+      mediawriter
+      nautilus
+      floorp-bin
 
-    # ── Containers ─────────────────────────────────────────────
-    distrobox
+      # ── Containers ─────────────────────────────────────────────
+      distrobox
 
-    # ── Wayland / Desktop ──────────────────────────────────────
-    bibata-cursors
-    volantes-cursors
-  ];
+      # ── Wayland / Desktop ──────────────────────────────────────
+      bibata-cursors
+      volantes-cursors
+    ];
+
+    variables = {
+      RUSTICL_ENABLE = "radeonsi";
+    };
+
+  };
 }

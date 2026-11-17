@@ -39,5 +39,9 @@ in
     package = pkgs-unstable.mesa;
     enable32Bit = true;
     package32 = pkgs-unstable.pkgsi686Linux.mesa;
+    extraPackages = with pkgs; [
+      mesa.opencl # Enables Rusticl (OpenCL) support
+    ];
   };
+
 }
