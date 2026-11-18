@@ -20,7 +20,7 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
     box_height = 196.0
     box_width = 720.0
     cx = 718.5001220703125
-    cy = 616.52093505859375
+    cy = 616.52099609375
     output = "HDMI-A-1"
     placement_height = 808.0
     placement_width = 1437.0
@@ -91,13 +91,13 @@ source = "builtin"
     community_ids = [ "brave", "telegram", "fastfetch", "zathura", "papirus-icons", "herdr", "yazi" ]
 
 [wallpaper.default]
-path = "/home/anand/Pictures/Wallpapers/winter-train-snowy-mountain-landscape-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/black-panther-marvel-comics-wakanda-jungle-hunt-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.last]
-path = "/home/anand/Pictures/Wallpapers/winter-train-snowy-mountain-landscape-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/black-panther-marvel-comics-wakanda-jungle-hunt-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/anand/Pictures/Wallpapers/winter-train-snowy-mountain-landscape-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/black-panther-marvel-comics-wakanda-jungle-hunt-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.eDP-1]
 path = "/home/anand/Pictures/Wallpapers/winter-train-snowy-mountain-landscape-desktop-wallpaper-variant_1k.jpg"
