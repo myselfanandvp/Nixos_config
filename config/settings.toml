@@ -91,26 +91,13 @@ source = "builtin"
     community_ids = [ "brave", "telegram", "fastfetch", "zathura", "papirus-icons", "herdr", "yazi" ]
 
 [wallpaper.default]
-<<<<<<< HEAD
-path = "/home/anand/Pictures/Wallpapers/cool-penguin-on-tropical-beach-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/porsche-718-cayman-gt4-rs-manthey-kit-orange-rear-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.last]
-path = "/home/anand/Pictures/Wallpapers/cool-penguin-on-tropical-beach-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/porsche-718-cayman-gt4-rs-manthey-kit-orange-rear-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/anand/Pictures/Wallpapers/cool-penguin-on-tropical-beach-desktop-wallpaper-variant_1k.jpg"
-=======
-path = "/home/anand/Pictures/Wallpapers/sunrays-through-trees-morning-fog-desktop-wallpaper-variant_1k.jpg"
-
-[wallpaper.last]
-path = "/home/anand/Pictures/Wallpapers/sunrays-through-trees-morning-fog-desktop-wallpaper-variant_1k.jpg"
-
-[wallpaper.monitors.HDMI-A-1]
-path = "/home/anand/Pictures/Wallpapers/sunrays-through-trees-morning-fog-desktop-wallpaper-variant_1k.jpg"
->>>>>>> origin
+path = "/home/anand/Pictures/Wallpapers/porsche-718-cayman-gt4-rs-manthey-kit-orange-rear-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/anand/Pictures/Wallpapers/cool-penguin-on-tropical-beach-desktop-wallpaper-variant_1k.jpg"
-
-[widget.widget]
-type = "amaurisd97/screen-capture:widget"
+path = "/home/anand/Pictures/Wallpapers/porsche-718-cayman-gt4-rs-manthey-kit-orange-rear-desktop-wallpaper-variant_1k.jpg"

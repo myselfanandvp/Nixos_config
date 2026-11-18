@@ -17,5 +17,6 @@ require("conf.workspaces")
 require("conf.windowrules")
 require("conf.layerrules")
 
+
 -- For Noctalia Color templates
 require("noctalia").apply_theme()

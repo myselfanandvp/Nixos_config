@@ -20,7 +20,6 @@ config.window_padding = {
 config.default_cursor_style = "BlinkingBar"
 
 -- Theme
-config.color_scheme = "Noctalia"
 
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
@@ -114,4 +113,5 @@ config.keys = {
 	},
 }
 
+config.color_scheme = "Noctalia"
 return config
