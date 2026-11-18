@@ -38,7 +38,7 @@ in
         inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
 
-    umbriel.enable = true;
+    umbriel.enable = false;
   };
 
   # Change this part to use the GNOME portal backend for Niri
