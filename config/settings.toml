@@ -4,7 +4,7 @@ config_version = 20
 center = [ "clock", "widget" ]
 
 [dock]
-pinned = [ "kitty", "floorp", "brave-browser" ]
+pinned = [ "kitty", "floorp", "brave-browser", "dev.zed.Zed", "helium" ]
 
 [lockscreen_widgets]
 enabled = false
@@ -19,11 +19,11 @@ widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@eDP-1" ]
     [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
     box_height = 196.0
     box_width = 720.0
-    cx = 718.5001220703125
-    cy = 616.52099609375
+    cx = 683.0001220703125
+    cy = 586.000244140625
     output = "HDMI-A-1"
-    placement_height = 808.0
-    placement_width = 1437.0
+    placement_height = 768.0
+    placement_width = 1366.0
     rotation = 0.0
     type = "login_box"
 
@@ -81,7 +81,7 @@ enabled = [ "noctalia/notes" ]
 pinned = []
 
 [theme]
-builtin = "Noctalia"
+builtin = "Kanagawa"
 community_palette = "GitHub Dark"
 mode = "dark"
 source = "builtin"
@@ -91,13 +91,13 @@ source = "builtin"
     community_ids = [ "brave", "telegram", "fastfetch", "zathura", "papirus-icons", "herdr", "yazi" ]
 
 [wallpaper.default]
-path = "/home/anand/Pictures/Wallpapers/black-panther-marvel-comics-wakanda-jungle-hunt-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/sunrays-through-trees-morning-fog-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.last]
-path = "/home/anand/Pictures/Wallpapers/black-panther-marvel-comics-wakanda-jungle-hunt-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/sunrays-through-trees-morning-fog-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/anand/Pictures/Wallpapers/black-panther-marvel-comics-wakanda-jungle-hunt-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/sunrays-through-trees-morning-fog-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.eDP-1]
 path = "/home/anand/Pictures/Wallpapers/winter-train-snowy-mountain-landscape-desktop-wallpaper-variant_1k.jpg"
