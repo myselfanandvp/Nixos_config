@@ -13,6 +13,7 @@
     initrd = {
       kernelModules = [
         "amdgpu"
+        "i915"
       ];
     };
 
