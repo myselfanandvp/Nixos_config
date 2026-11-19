@@ -55,7 +55,6 @@ in
       lazygit
       lazydocker
       herdr
-      nur.repos.Ev357.helium
       noctalia
       rustc
       cargo
