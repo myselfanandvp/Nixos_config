@@ -56,6 +56,7 @@ in
       lazydocker
       herdr
       noctalia
+      nur.repos.ahmet-cetinkaya.gridcraft-bin
       rustc
       cargo
       typescript
