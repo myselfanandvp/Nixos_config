@@ -59,6 +59,7 @@ in
       noctalia
       rustc
       cargo
+      firefox
       typescript
       go
       zathura
