@@ -24,8 +24,8 @@
       fastfetch
       wlr-randr
       starship
+      firefox
       eza
-      brave
       openssl
       cmake
       clang

@@ -59,8 +59,8 @@ in
       noctalia
       rustc
       cargo
-      firefox
       typescript
+      brave
       go
       zathura
       zathuraPkgs.zathura_pdf_mupdf
