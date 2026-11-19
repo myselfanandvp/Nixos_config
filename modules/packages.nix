@@ -61,7 +61,6 @@
       obs-studio
       mediawriter
       nautilus
-      floorp-bin
 
       # ── Containers ─────────────────────────────────────────────
       distrobox
