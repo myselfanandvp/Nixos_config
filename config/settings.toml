@@ -81,10 +81,10 @@ enabled = [ "noctalia/notes" ]
 pinned = []
 
 [theme]
-builtin = "Kanagawa"
-community_palette = "GitHub Dark"
+builtin = "Catppuccin"
+community_palette = "Catppuccin Mocha Sapphire"
 mode = "dark"
-source = "builtin"
+source = "community"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "btop", "gtk3", "gtk4", "ghostty", "helix", "hyprland", "kcolorscheme", "kitty", "qt", "wezterm" ]
