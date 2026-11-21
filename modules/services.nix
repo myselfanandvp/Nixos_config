@@ -21,10 +21,6 @@
     };
 
     xserver = {
-      videoDrivers = [
-        "amdgpu"
-        "nvidia"
-      ];
       xkb = {
         layout = "us";
         variant = "";

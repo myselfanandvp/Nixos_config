@@ -91,13 +91,13 @@ source = "builtin"
     community_ids = [ "brave", "telegram", "fastfetch", "zathura", "papirus-icons", "herdr", "yazi" ]
 
 [wallpaper.default]
-path = "/home/anand/Pictures/Wallpapers/majestic-snowy-mountains-above-clouds-dusk-sky-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/lush-green-canyon-river-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.last]
-path = "/home/anand/Pictures/Wallpapers/majestic-snowy-mountains-above-clouds-dusk-sky-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/lush-green-canyon-river-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/anand/Pictures/Wallpapers/majestic-snowy-mountains-above-clouds-dusk-sky-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/lush-green-canyon-river-desktop-wallpaper-variant_1k.jpg"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/anand/Pictures/Wallpapers/majestic-snowy-mountains-above-clouds-dusk-sky-desktop-wallpaper-variant_1k.jpg"
+path = "/home/anand/Pictures/Wallpapers/lush-green-canyon-river-desktop-wallpaper-variant_1k.jpg"
